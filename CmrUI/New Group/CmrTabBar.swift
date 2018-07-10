@@ -44,7 +44,7 @@ class CmrTabBar: UITabBarController {
         super.viewDidLayoutSubviews()
         
         for barItem in tabBar.items! {
-            let offset = (2.0 * CmrTabBarSizes.radiusBarItem  - (barItem.image?.size.height ?? 30)) / 2 + 20
+            let offset = CmrTabBarSizes.bottomOffset - 4
             barItem.imageInsets = UIEdgeInsetsMake( -offset, barItem.imageInsets.left, offset, barItem.imageInsets.right);
         }
     }
