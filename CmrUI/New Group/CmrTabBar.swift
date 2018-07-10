@@ -44,8 +44,8 @@ class CmrTabBar: UITabBarController {
         super.viewDidLayoutSubviews()
         
         for barItem in tabBar.items! {
-            let offset = (2.0 * CmrTabBarSizes.radiusBarItem  - (barItem.image?.size.height ?? 20)) / 2 + CmrTabBarSizes.bottomOffset
-            barItem.imageInsets = UIEdgeInsetsMake( -offset, 0, 0, 0);
+            let offset = (2.0 * CmrTabBarSizes.radiusBarItem  - (barItem.image?.size.height ?? 30)) / 2 + 20
+            barItem.imageInsets = UIEdgeInsetsMake( -offset, barItem.imageInsets.left, offset, barItem.imageInsets.right);
         }
     }
 
@@ -60,7 +60,7 @@ class CmrTabBar: UITabBarController {
     func drawBackgroundView () -> UIView {
         let barView = UIView.init(frame: CGRect(x: CmrTabBarSizes.sideOffset,
                                              y: CGFloat(self.view.frame.size.height) - CmrTabBarSizes.bottomOffset - 2.0 * CmrTabBarSizes.radiusBarItem,
-                                             width: self.view.frame.size.width - 2CmrTabBarSizes.sideOffset,
+                                             width: self.view.frame.size.width - 2 * CmrTabBarSizes.sideOffset,
                                              height: 2 * CmrTabBarSizes.radiusBarItem) )
         barView.layer.cornerRadius = CmrTabBarSizes.radiusBarItem
         barView.backgroundColor = CmrTabBarColours.tabBarBackgroundColor
@@ -71,7 +71,7 @@ class CmrTabBar: UITabBarController {
 /*
     MARK: - Navigation
 */
-extension CmrTabBar : UITabBarDelegate {
+extension CmrTabBar {
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
     }
     

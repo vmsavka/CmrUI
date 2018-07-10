@@ -21,11 +21,12 @@ extension CmrTabBar {
     func setupControllers() {
         
         let feedController = UIViewController() //FeedController()
-        feedController.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem(rawValue: CmrTabBarItems.feedItem)!, tag: 0)
-        
+        feedController.tabBarItem = UITabBarItem.init(title: "", image: UIImage.init(named: "GalleryTabBarIco"), tag: 0)
+            //UITabBarItem(tabBarSystemItem: UITabBarSystemItem(rawValue: CmrTabBarItems.feedItem)!, tag: 0)
         
         let galleryController = UIViewController() //GalleryController()
         galleryController.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem(rawValue: CmrTabBarItems.galleryItem)!, tag: 1)
+        galleryController.tabBarItem.imageInsets = UIEdgeInsetsMake( 0, 10, 0, -10);
         
         let itemsItem = UIViewController() //AllItemsViewController()
         itemsItem.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem(rawValue: CmrTabBarItems.itemsItem)!, tag: 2)
