@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F05A53220F4D2B200D11049 /* CmrTabBar+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05A53120F4D2B200D11049 /* CmrTabBar+DataSource.swift */; };
-		0F05A53420F4D88E00D11049 /* CmrTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05A53320F4D88E00D11049 /* CmrTabBar.swift */; };
-		0F4F223820F3A8DD00A0F5A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F223720F3A8DD00A0F5A4 /* AppDelegate.swift */; };
-		0F4F223A20F3A8DD00A0F5A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F223920F3A8DD00A0F5A4 /* ViewController.swift */; };
-		0F4F223D20F3A8DD00A0F5A4 /* CmrTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4F223B20F3A8DD00A0F5A4 /* CmrTabBar.storyboard */; };
-		0F4F223F20F3A8DE00A0F5A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F4F223E20F3A8DE00A0F5A4 /* Assets.xcassets */; };
-		0F4F224220F3A8DE00A0F5A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4F224020F3A8DE00A0F5A4 /* LaunchScreen.storyboard */; };
+		0F05A54220F5F58200D11049 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05A54120F5F58200D11049 /* AppDelegate.swift */; };
+		0F05A54720F5F5B700D11049 /* CmrTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05A54420F5F5B700D11049 /* CmrTabBar.swift */; };
+		0F05A54920F5F5B700D11049 /* CmrTabBar+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05A54620F5F5B700D11049 /* CmrTabBar+DataSource.swift */; };
+		0F05A55B20F5F6A700D11049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F05A55420F5F6A700D11049 /* Assets.xcassets */; };
+		0F05A55E20F5F6A700D11049 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F05A55920F5F6A700D11049 /* Info.plist */; };
+		0F05A56120F5F6EE00D11049 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F05A55F20F5F6EE00D11049 /* LaunchScreen.storyboard */; };
+		0F05A56220F5F6EE00D11049 /* CmrTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F05A56020F5F6EE00D11049 /* CmrTabBar.storyboard */; };
 		0F4F224D20F3A8DE00A0F5A4 /* CmrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F224C20F3A8DE00A0F5A4 /* CmrUITests.swift */; };
 		0F4F225820F3A8DE00A0F5A4 /* CmrUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F225720F3A8DE00A0F5A4 /* CmrUIUITests.swift */; };
+		0FE9455F20F5F759005AA6EF /* CmrContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE9455E20F5F759005AA6EF /* CmrContainerVC.swift */; };
+		0FE9456120F60850005AA6EF /* CmrContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE9456020F60850005AA6EF /* CmrContainer.storyboard */; };
+		0FE9456220F60850005AA6EF /* CmrContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE9456020F60850005AA6EF /* CmrContainer.storyboard */; };
+		0FE9456320F60850005AA6EF /* CmrContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE9456020F60850005AA6EF /* CmrContainer.storyboard */; };
+		0FE9456520F6097A005AA6EF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FE9456420F6097A005AA6EF /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,21 +41,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F05A53120F4D2B200D11049 /* CmrTabBar+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CmrTabBar+DataSource.swift"; sourceTree = "<group>"; };
-		0F05A53320F4D88E00D11049 /* CmrTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmrTabBar.swift; sourceTree = "<group>"; };
+		0F05A54120F5F58200D11049 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = CmrUI/App/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		0F05A54420F5F5B700D11049 /* CmrTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CmrTabBar.swift; path = Navigation/CmrTabBar.swift; sourceTree = "<group>"; };
+		0F05A54620F5F5B700D11049 /* CmrTabBar+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CmrTabBar+DataSource.swift"; path = "Navigation/CmrTabBar+DataSource.swift"; sourceTree = "<group>"; };
+		0F05A55420F5F6A700D11049 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F05A55920F5F6A700D11049 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F05A55F20F5F6EE00D11049 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0F05A56020F5F6EE00D11049 /* CmrTabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CmrTabBar.storyboard; sourceTree = "<group>"; };
 		0F4F223420F3A8DD00A0F5A4 /* CmrUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CmrUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F4F223720F3A8DD00A0F5A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0F4F223920F3A8DD00A0F5A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0F4F223C20F3A8DD00A0F5A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CmrTabBar.storyboard; sourceTree = "<group>"; };
-		0F4F223E20F3A8DE00A0F5A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0F4F224120F3A8DE00A0F5A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0F4F224320F3A8DE00A0F5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F4F224820F3A8DE00A0F5A4 /* CmrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CmrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4F224C20F3A8DE00A0F5A4 /* CmrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmrUITests.swift; sourceTree = "<group>"; };
 		0F4F224E20F3A8DE00A0F5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F4F225320F3A8DE00A0F5A4 /* CmrUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CmrUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4F225720F3A8DE00A0F5A4 /* CmrUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmrUIUITests.swift; sourceTree = "<group>"; };
 		0F4F225920F3A8DE00A0F5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FE9455E20F5F759005AA6EF /* CmrContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CmrContainerVC.swift; path = Navigation/CmrContainerVC.swift; sourceTree = "<group>"; };
+		0FE9456020F60850005AA6EF /* CmrContainer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CmrContainer.storyboard; sourceTree = "<group>"; };
+		0FE9456420F6097A005AA6EF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,15 +85,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F05A53520F4E5CE00D11049 /* CmrNavigation */ = {
+		0F05A54020F5F55300D11049 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				0F05A53320F4D88E00D11049 /* CmrTabBar.swift */,
-				0F05A53120F4D2B200D11049 /* CmrTabBar+DataSource.swift */,
+				0F05A54120F5F58200D11049 /* AppDelegate.swift */,
 			);
-			name = CmrNavigation;
-			path = "New Group";
+			name = App;
+			path = CmrUI;
+			sourceTree = SOURCE_ROOT;
+		};
+		0F05A54320F5F5A600D11049 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0FE9455E20F5F759005AA6EF /* CmrContainerVC.swift */,
+				0F05A54420F5F5B700D11049 /* CmrTabBar.swift */,
+				0F05A54620F5F5B700D11049 /* CmrTabBar+DataSource.swift */,
+			);
+			name = Navigation;
+			path = CmrUI;
+			sourceTree = SOURCE_ROOT;
+		};
+		0F05A55120F5F5FD00D11049 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Screens;
 			sourceTree = "<group>";
+		};
+		0F05A55220F5F6A700D11049 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0FE9456420F6097A005AA6EF /* Default-568h@2x.png */,
+				0F05A55320F5F6A700D11049 /* Storyboards */,
+				0F05A55A20F5F6A700D11049 /* Localization */,
+				0F05A55420F5F6A700D11049 /* Assets.xcassets */,
+				0F05A55920F5F6A700D11049 /* Info.plist */,
+			);
+			name = Resources;
+			path = CmrUI/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		0F05A55320F5F6A700D11049 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0F05A56020F5F6EE00D11049 /* CmrTabBar.storyboard */,
+				0F05A55F20F5F6EE00D11049 /* LaunchScreen.storyboard */,
+				0FE9456020F60850005AA6EF /* CmrContainer.storyboard */,
+			);
+			name = Storyboards;
+			path = CmrUI/Resources/Storyboards;
+			sourceTree = SOURCE_ROOT;
+		};
+		0F05A55A20F5F6A700D11049 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Localization;
+			path = CmrUI/Resources/Localization;
+			sourceTree = SOURCE_ROOT;
 		};
 		0F4F222B20F3A8DD00A0F5A4 = {
 			isa = PBXGroup;
@@ -111,13 +167,10 @@
 		0F4F223620F3A8DD00A0F5A4 /* CmrUI */ = {
 			isa = PBXGroup;
 			children = (
-				0F4F223720F3A8DD00A0F5A4 /* AppDelegate.swift */,
-				0F4F223920F3A8DD00A0F5A4 /* ViewController.swift */,
-				0F4F223B20F3A8DD00A0F5A4 /* CmrTabBar.storyboard */,
-				0F4F223E20F3A8DE00A0F5A4 /* Assets.xcassets */,
-				0F4F224020F3A8DE00A0F5A4 /* LaunchScreen.storyboard */,
-				0F4F224320F3A8DE00A0F5A4 /* Info.plist */,
-				0F05A53520F4E5CE00D11049 /* CmrNavigation */,
+				0F05A55220F5F6A700D11049 /* Resources */,
+				0F05A55120F5F5FD00D11049 /* Screens */,
+				0F05A54320F5F5A600D11049 /* Navigation */,
+				0F05A54020F5F55300D11049 /* App */,
 			);
 			path = CmrUI;
 			sourceTree = "<group>";
@@ -244,9 +297,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F4F224220F3A8DE00A0F5A4 /* LaunchScreen.storyboard in Resources */,
-				0F4F223F20F3A8DE00A0F5A4 /* Assets.xcassets in Resources */,
-				0F4F223D20F3A8DD00A0F5A4 /* CmrTabBar.storyboard in Resources */,
+				0F05A55B20F5F6A700D11049 /* Assets.xcassets in Resources */,
+				0F05A56120F5F6EE00D11049 /* LaunchScreen.storyboard in Resources */,
+				0FE9456120F60850005AA6EF /* CmrContainer.storyboard in Resources */,
+				0F05A55E20F5F6A700D11049 /* Info.plist in Resources */,
+				0F05A56220F5F6EE00D11049 /* CmrTabBar.storyboard in Resources */,
+				0FE9456520F6097A005AA6EF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE9456220F60850005AA6EF /* CmrContainer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE9456320F60850005AA6EF /* CmrContainer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,10 +329,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F05A53420F4D88E00D11049 /* CmrTabBar.swift in Sources */,
-				0F05A53220F4D2B200D11049 /* CmrTabBar+DataSource.swift in Sources */,
-				0F4F223A20F3A8DD00A0F5A4 /* ViewController.swift in Sources */,
-				0F4F223820F3A8DD00A0F5A4 /* AppDelegate.swift in Sources */,
+				0F05A54720F5F5B700D11049 /* CmrTabBar.swift in Sources */,
+				0FE9455F20F5F759005AA6EF /* CmrContainerVC.swift in Sources */,
+				0F05A54920F5F5B700D11049 /* CmrTabBar+DataSource.swift in Sources */,
+				0F05A54220F5F58200D11049 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,25 +366,6 @@
 			targetProxy = 0F4F225420F3A8DE00A0F5A4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		0F4F223B20F3A8DD00A0F5A4 /* CmrTabBar.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0F4F223C20F3A8DD00A0F5A4 /* Base */,
-			);
-			name = CmrTabBar.storyboard;
-			sourceTree = "<group>";
-		};
-		0F4F224020F3A8DE00A0F5A4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0F4F224120F3A8DE00A0F5A4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0F4F225A20F3A8DE00A0F5A4 /* Debug */ = {
@@ -449,7 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3Y5PA9K7M;
-				INFOPLIST_FILE = CmrUI/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CmrUI/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3Y5PA9K7M;
-				INFOPLIST_FILE = CmrUI/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CmrUI/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

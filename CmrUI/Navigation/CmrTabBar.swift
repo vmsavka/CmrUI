@@ -59,7 +59,7 @@ class CmrTabBar: UITabBarController {
     
     func drawBackgroundView () -> UIView {
         let barView = UIView.init(frame: CGRect(x: CmrTabBarSizes.sideOffset,
-                                             y: CGFloat(self.view.frame.size.height) - CmrTabBarSizes.bottomOffset - 2.0 * CmrTabBarSizes.radiusBarItem,
+                                             y: self.view.frame.size.height - CmrTabBarSizes.bottomOffset - 2.0 * CmrTabBarSizes.radiusBarItem,
                                              width: self.view.frame.size.width - 2 * CmrTabBarSizes.sideOffset,
                                              height: 2 * CmrTabBarSizes.radiusBarItem) )
         barView.layer.cornerRadius = CmrTabBarSizes.radiusBarItem
