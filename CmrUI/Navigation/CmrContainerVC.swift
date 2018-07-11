@@ -9,6 +9,10 @@ class CmrContainerVC: UIViewController {
     
     private var tab: ContainerTab?
     private var currentVC: UIViewController?
+    @IBOutlet weak var containerBarButtonsView: UIView!
+    @IBOutlet weak var barButtonsView: UIView!
+    private var barButtonsVC: CmrBarButtonsVC?
+    
     
     var alert: UIAlertController? // Will implement it later, maybe it will replaced by PXAlertView
     private lazy var activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray) // Will move it to separate class later
@@ -30,23 +34,14 @@ class CmrContainerVC: UIViewController {
         //Make navigation bar transparent
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        //Hide line under NavigationBar
         
         if tab == nil {
             transition(to: .feedItem)
         }
-        navigationItem.title = NSLocalizedString((tab?.tabTitle())!, comment: "")
-        
-        //It's a stub, don't pay attention for it
-        //I'm going to create separate ViewController for Bar buttons
-        let storyboard = UIStoryboard(name: "CmrTabBar", bundle: nil)
-        let cmr: CmrTabBar? = storyboard.instantiateViewController(withIdentifier: "CmrTabBar") as? CmrTabBar
-        let backgroundView = cmr?.drawBackgroundView()
-        view.addSubview(backgroundView!)
-        self.view.bringSubview(toFront: backgroundView!)
-        
-        //setupBarButtons()
-        
+    }
+    
+    func updateBarButtons() {
+        view.bringSubview(toFront: barButtonsView)
     }
     
     func loadInitialView() {
@@ -65,16 +60,15 @@ class CmrContainerVC: UIViewController {
         // Provides interface for error handling
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if type(of: segue.destination) == CmrBarButtonsVC.self {
+            barButtonsVC = (segue.destination as! CmrBarButtonsVC)
+            barButtonsVC?.delegateContainer = self
+        }
     }
-    */
-
 }
 
 // MARK: - Tranasitions
@@ -83,9 +77,12 @@ extension CmrContainerVC {
     func transition(to newTab: ContainerTab) {
         currentVC?.removeFromParentViewController()
         let vc = viewController(for: newTab)
+        vc.view.backgroundColor = UIColor.random()
         add(vc)
         currentVC = vc
         tab = newTab
+        updateBarButtons()
+        navigationItem.title = NSLocalizedString((newTab.tabTitle()), comment: "")
     }
     
     func add(_ child: UIViewController) {
@@ -102,6 +99,12 @@ extension CmrContainerVC {
             willMove(toParentViewController: nil)
             removeFromParentViewController()
             view.removeFromSuperview()
+    }
+}
+
+extension CmrContainerVC: CmrBarButtonsProtocol {
+    func selectTab(tab: ContainerTab) {
+        self.transition(to: tab)
     }
 }
 
@@ -124,8 +127,7 @@ private extension CmrContainerVC {
     }
 }
 
-extension CmrContainerVC {
-    enum ContainerTab: Int {
+enum ContainerTab: Int {
         typealias RawValue = Int
         
         case feedItem = 0
@@ -157,7 +159,7 @@ extension CmrContainerVC {
             case .settingsItem:
                 return UIImage(named:"SettingsTabBarIco")
             case .cartItem:
-                return UIImage(named:"FeedTabBarIco")
+                return UIImage(named:"CartTabBarIco")
             case .count:
                 return nil
             }
@@ -166,7 +168,6 @@ extension CmrContainerVC {
         static func countOfTabs() -> Int {
             return ContainerTab.count.rawValue
         }
-    }
 }
 
 //Will move it later

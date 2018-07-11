@@ -18,29 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K97-tw-syt">
-                                <rect key="frame" x="38" y="477" width="298" height="67"/>
+                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K97-tw-syt">
+                                <rect key="frame" x="24" y="575" width="327" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="ic9-96-tih"/>
+                                    <constraint firstAttribute="height" constant="70" id="ic9-96-tih"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="jpc-lq-YL1" kind="embed" id="hGs-fS-OvV"/>
+                                    <segue destination="eoO-uD-ayx" kind="embed" id="wCE-c8-VDS"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="K97-tw-syt" firstAttribute="leading" secondItem="cPI-JT-1Xl" secondAttribute="leading" constant="38" id="3wl-D6-tUk"/>
-                            <constraint firstItem="cPI-JT-1Xl" firstAttribute="bottom" secondItem="K97-tw-syt" secondAttribute="bottom" constant="123" id="NBI-Df-Y2G"/>
-                            <constraint firstItem="cPI-JT-1Xl" firstAttribute="trailing" secondItem="K97-tw-syt" secondAttribute="trailing" constant="39" id="YNQ-KT-HUx"/>
+                            <constraint firstItem="K97-tw-syt" firstAttribute="leading" secondItem="cPI-JT-1Xl" secondAttribute="leading" constant="24" id="3wl-D6-tUk"/>
+                            <constraint firstItem="cPI-JT-1Xl" firstAttribute="bottom" secondItem="K97-tw-syt" secondAttribute="bottom" constant="22" id="NBI-Df-Y2G"/>
+                            <constraint firstItem="cPI-JT-1Xl" firstAttribute="trailing" secondItem="K97-tw-syt" secondAttribute="trailing" constant="24" id="YNQ-KT-HUx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cPI-JT-1Xl"/>
                     </view>
                     <navigationItem key="navigationItem" id="BOx-0Q-Y3M"/>
+                    <connections>
+                        <outlet property="barButtonsView" destination="K97-tw-syt" id="4W0-mB-yBu"/>
+                        <outlet property="containerBarButtonsView" destination="K97-tw-syt" id="vqh-RQ-hho"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QoZ-gM-bAq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791.20000000000005" y="96.7016491754123"/>
+            <point key="canvasLocation" x="913" y="97"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jek-vd-VLn">
@@ -58,39 +62,36 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRt-DW-GhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38" y="97"/>
+            <point key="canvasLocation" x="150" y="97"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="rOJ-Yn-gEb">
+        <!--Cmr Bar ButtonsVC-->
+        <scene sceneID="8CN-UB-Nb4">
             <objects>
-                <viewController id="jpc-lq-YL1" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7wp-hk-oHF">
-                        <rect key="frame" x="0.0" y="0.0" width="298" height="67"/>
+                <collectionViewController id="eoO-uD-ayx" customClass="CmrBarButtonsVC" customModule="CmrUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" id="UAi-30-zCL">
+                        <rect key="frame" x="0.0" y="0.0" width="327" height="70"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATX-dW-Vv8">
-                                <rect key="frame" x="0.0" y="0.0" width="298" height="67"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="9qt-4R-HlT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="Nav Buttons will appear threre. It will be UIVC">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.66592248720000002" green="1" blue="0.56950622319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="ATX-dW-Vv8" firstAttribute="top" secondItem="7wp-hk-oHF" secondAttribute="top" id="3kr-mz-0Mj"/>
-                            <constraint firstAttribute="bottom" secondItem="ATX-dW-Vv8" secondAttribute="bottom" id="8m3-Lx-vNs"/>
-                            <constraint firstAttribute="trailing" secondItem="ATX-dW-Vv8" secondAttribute="trailing" id="U1b-2M-ubc"/>
-                            <constraint firstItem="ATX-dW-Vv8" firstAttribute="leading" secondItem="7wp-hk-oHF" secondAttribute="leading" id="dzN-im-ZqH"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oma-3d-Rci" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewLayout key="collectionViewLayout" id="7US-Xr-WbZ" customClass="CmrBarButtonsViewLayout" customModule="CmrUI" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="" id="VwD-op-e1l">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="eoO-uD-ayx" id="5Eb-xG-Aas"/>
+                            <outlet property="delegate" destination="eoO-uD-ayx" id="KSD-r7-GaL"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seo-Ob-j4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="913" y="581"/>
         </scene>
     </scenes>
 </document>
