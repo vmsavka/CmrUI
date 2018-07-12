@@ -5,6 +5,12 @@
 
 import UIKit
 
+fileprivate struct CmrBarButtonsSizes {
+    static let kSideOffset: CGFloat = 0.064
+    static let kBottomOffset: CGFloat = 0.055
+    static let kHeightBar: CGFloat = 0.176
+}
+
 class CmrContainerVC: UIViewController {
     
     private var tab: ContainerTab?
@@ -13,9 +19,14 @@ class CmrContainerVC: UIViewController {
     @IBOutlet weak var barButtonsView: UIView!
     private var barButtonsVC: CmrBarButtonsVC?
     
-    
     var alert: UIAlertController? // Will implement it later, maybe it will replaced by PXAlertView
     private lazy var activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray) // Will move it to separate class later
+    
+    //Constraints for sizes and insects of bar buttons view
+    @IBOutlet weak var leadingBarConstraint: NSLayoutConstraint!
+    @IBOutlet weak var trailingBarConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomBarConstraint: NSLayoutConstraint!
+    @IBOutlet weak var heightBarConstraint: NSLayoutConstraint!
     
     fileprivate var dataSource = [ContainerTab]()
 
@@ -38,6 +49,16 @@ class CmrContainerVC: UIViewController {
         if tab == nil {
             transition(to: .feedItem)
         }
+        
+        barButtonsView.clipsToBounds = true
+        barButtonsView.layer.masksToBounds = true
+        
+        //Adjust size of bar buttons
+        let width = view.frame.size.width
+        leadingBarConstraint.constant = width * CmrBarButtonsSizes.kSideOffset
+        trailingBarConstraint.constant = width * CmrBarButtonsSizes.kSideOffset
+        bottomBarConstraint.constant = width * CmrBarButtonsSizes.kBottomOffset
+        heightBarConstraint.constant = width * CmrBarButtonsSizes.kHeightBar
     }
     
     func updateBarButtons() {
@@ -139,11 +160,11 @@ enum ContainerTab: Int {
         
         func tabTitle() -> String {
             switch self {
-            case .feedItem: return "Feed"
-            case .galleryItem: return "Gallery"
-            case .itemsItem: return "Items"
+            case .feedItem: return "Newsfeed"
+            case .galleryItem: return "Profile"
+            case .itemsItem: return "Gallery"
             case .settingsItem: return "Settings"
-            case .cartItem: return "Cart"
+            case .cartItem: return "Shopping"
             case .count: return ""
             }
         }

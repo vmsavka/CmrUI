@@ -11,9 +11,7 @@ struct CmrTabBarColours {
 }
 
 fileprivate struct CmrTabBarSizes {
-    static let bottomOffset: CGFloat = 40.0
-    static let sideOffset: CGFloat = 24.0
-    static let radiusBarItem: CGFloat = 35.0
+    static let kRadiusBarItem: CGFloat = 0.088
 }
 
 protocol CmrBarButtonsProtocol {
@@ -26,7 +24,8 @@ class CmrBarButtonsVC: UICollectionViewController, CmrBarButtonsLayoutDelegate {
     
     fileprivate var dataSource = [ContainerTab]()
     var delegateContainer: CmrBarButtonsProtocol?
-
+    var selectedIndex: IndexPath?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,27 +33,29 @@ class CmrBarButtonsVC: UICollectionViewController, CmrBarButtonsLayoutDelegate {
         
         // Register cell classes
         self.collectionView?.register(UINib(nibName: "CmrBarButtonCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
-        //self.collectionView!.register(CmrBarButtonCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         setupAppearance()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(true)
+        
+        collectionView?.selectItem(at: IndexPath.init(row: 0, section: 0), animated: false, scrollPosition: UICollectionViewScrollPosition.left)
+    }
+    
     func setupAppearance() {
-        view.layer.cornerRadius = CmrTabBarSizes.radiusBarItem
+        view.layer.cornerRadius = (delegateContainer as! UIViewController).view.frame.size.width * CmrTabBarSizes.kRadiusBarItem
         view.backgroundColor = CmrTabBarColours.tabBarBackgroundColor
+        view.layer.masksToBounds = true
         
         self.customCollectionViewLayout?.delegate = self
         self.customCollectionViewLayout?.numberOfColumns = dataSource.count
-        
-        self.view.backgroundColor = UIColor.white
-        self.view.layer.cornerRadius = 35.0
-        self.view.layer.masksToBounds = true
         
         setupButtons()
     }
     
     func setupButtons() {
-        
+        //collectionView?.selectItem(at: IndexPath.init(row: 0, section: 0), animated: false, scrollPosition: UICollectionViewScrollPosition.bottom)
     }
     
     public var customCollectionViewLayout: CmrBarButtonsViewLayout? {
@@ -68,16 +69,6 @@ class CmrBarButtonsVC: UICollectionViewController, CmrBarButtonsLayoutDelegate {
         }
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using [segue destinationViewController].
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
     // MARK: UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -90,26 +81,44 @@ class CmrBarButtonsVC: UICollectionViewController, CmrBarButtonsLayoutDelegate {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CmrBarButtonCell
-        cell.backgroundColor = UIColor.random()
+        cell.backgroundColor = CmrTabBarColours.tabBarBackgroundColor
         cell.setImage(image: dataSource[indexPath.row].image() ?? UIImage())
-        // Configure the cell
+        cell.layer.shadowColor = UIColor.black.cgColor
         
+        //It does not work properly, will finish it later
+        //One cell overlaps the shadows of neighboring one
+        /*
+        cell.clipsToBounds = false
+        cell.layer.masksToBounds = false
+        cell.layer.shadowRadius = 15
+        cell.layer.shadowOpacity = 0.8
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+ */
         return cell
     }
+}
+
+// MARK: UICollectionViewDelegate
+
+extension CmrBarButtonsVC {
     
-    // MARK: UICollectionViewDelegate
-    /*
-     // Uncomment this method to specify if the specified item should be highlighted during tracking
-     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-     // Uncomment this method to specify if the specified item should be selected
-     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
         self.delegateContainer?.selectTab(tab: dataSource[indexPath.row])
+        let cell = collectionView.cellForItem(at: indexPath) as! CmrBarButtonCell
+        
+        cell.updateSelection(isSelected: true)
+        //collectionView.cellForItem(at: indexPath)?.backgroundColor = CmrTabBarColours.tabBarSelectedItemColor
+        
+        if let index = selectedIndex, index.row != indexPath.row  {
+            //cell.updateSelection(isSelected: false)
+            collectionView.cellForItem(at: index)?.backgroundColor = CmrTabBarColours.tabBarBackgroundColor
+        }
+        selectedIndex = indexPath
+        
         return true
-     }
+    }
 }
 
 // MARK: CmrBarButtonsLayoutDelegate

@@ -39,7 +39,11 @@
                     <navigationItem key="navigationItem" id="BOx-0Q-Y3M"/>
                     <connections>
                         <outlet property="barButtonsView" destination="K97-tw-syt" id="4W0-mB-yBu"/>
+                        <outlet property="bottomBarConstraint" destination="NBI-Df-Y2G" id="Lcv-U8-b9V"/>
                         <outlet property="containerBarButtonsView" destination="K97-tw-syt" id="vqh-RQ-hho"/>
+                        <outlet property="heightBarConstraint" destination="ic9-96-tih" id="hv8-T6-kW2"/>
+                        <outlet property="leadingBarConstraint" destination="3wl-D6-tUk" id="BiL-um-n2k"/>
+                        <outlet property="trailingBarConstraint" destination="YNQ-KT-HUx" id="lzd-9f-Gx8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QoZ-gM-bAq" userLabel="First Responder" sceneMemberID="firstResponder"/>

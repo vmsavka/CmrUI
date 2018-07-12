@@ -17,9 +17,8 @@ class CmrBarButtonCell: UICollectionViewCell {
         backgroundImageView.image = image
     }
     
-    func setSelected(isSelected: Bool) {
-        backgroundImageView.setTint(color: isSelected ? CmrTabBarColours.tabBarSelectedItemColor : CmrTabBarColours.tabBarBackgroundColor)
-        backgroundColor = isSelected ? CmrTabBarColours.tabBarSelectedItemColor : CmrTabBarColours.tabBarBackgroundColor
+    func updateSelection(isSelected: Bool) {
+        //backgroundImageView.setTint(color: isSelected ? CmrTabBarColours.tabBarSelectedItemColor : CmrTabBarColours.tabBarBackgroundColor)
+        self.backgroundColor = isSelected ? CmrTabBarColours.tabBarSelectedItemColor : CmrTabBarColours.tabBarBackgroundColor
     }
-
 }
