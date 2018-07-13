@@ -85,17 +85,6 @@ class CmrBarButtonsVC: UICollectionViewController, CmrBarButtonsLayoutDelegate {
         cell.setImage(image: dataSource[indexPath.row].image() ?? UIImage())
         cell.layer.shadowColor = UIColor.black.cgColor
         
-        //It does not work properly, will finish it later
-        //One cell overlaps the shadows of neighboring one
-        /*
-        cell.clipsToBounds = false
-        cell.layer.masksToBounds = false
-        cell.layer.shadowRadius = 15
-        cell.layer.shadowOpacity = 0.8
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
-        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
- */
         return cell
     }
 }
@@ -109,15 +98,38 @@ extension CmrBarButtonsVC {
         let cell = collectionView.cellForItem(at: indexPath) as! CmrBarButtonCell
         
         cell.updateSelection(isSelected: true)
+        updateShadowForCell(isShown: true, indexPath: indexPath)
         //collectionView.cellForItem(at: indexPath)?.backgroundColor = CmrTabBarColours.tabBarSelectedItemColor
         
         if let index = selectedIndex, index.row != indexPath.row  {
             //cell.updateSelection(isSelected: false)
+            updateShadowForCell(isShown: false, indexPath: index)
             collectionView.cellForItem(at: index)?.backgroundColor = CmrTabBarColours.tabBarBackgroundColor
         }
         selectedIndex = indexPath
         
+        collectionView.bringSubview(toFront: cell)
+        
         return true
+    }
+    
+    func updateShadowForCell(isShown: Bool, indexPath: IndexPath) {
+        let cell = collectionView?.cellForItem(at: indexPath) as! CmrBarButtonCell
+        if (isShown) {
+            //It does not work properly, will finish it later
+            //One cell overlaps the shadows of neighboring one
+            cell.clipsToBounds = false
+            cell.layer.masksToBounds = false
+            cell.layer.shadowRadius = 15
+            cell.layer.shadowOpacity = 0.8
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOffset = CGSize(width: 0, height: 0)
+            cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+        } else {
+            cell.clipsToBounds = true
+            cell.layer.masksToBounds = true
+            cell.layer.shadowOpacity = 0.8
+        }
     }
 }
 
