@@ -45,6 +45,8 @@ class CmrContainerVC: UIViewController {
         //Make navigation bar transparent
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.setNavigationBarHidden(true, animated: true)
+
         
         if tab == nil {
             transition(to: .feedItem)
@@ -133,7 +135,9 @@ private extension CmrContainerVC {
     func viewController(for tab: ContainerTab) -> UIViewController {
         switch tab {
         case .feedItem:
-            return UIViewController()
+            let board = UIStoryboard.storyboardWith(name: .newsFeed)
+            let controller = board.instantiateViewController(withIdentifier: "NewsFeedVC")
+            return controller
         case .galleryItem:
             return UIViewController()
         case .itemsItem:

@@ -116,8 +116,6 @@ extension CmrBarButtonsVC {
     func updateShadowForCell(isShown: Bool, indexPath: IndexPath) {
         let cell = collectionView?.cellForItem(at: indexPath) as! CmrBarButtonCell
         if (isShown) {
-            //It does not work properly, will finish it later
-            //One cell overlaps the shadows of neighboring one
             cell.clipsToBounds = false
             cell.layer.masksToBounds = false
             cell.layer.shadowRadius = 15
