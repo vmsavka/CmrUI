@@ -6,8 +6,9 @@
 import UIKit
 
 struct CmrTabBarColours {
-    static let tabBarBackgroundColor = UIColor(red: 159.0/255.0, green: 193.0/255.0, blue: 205.0/255.0, alpha: 1.0)
-    static let tabBarSelectedItemColor = UIColor(red: 39.0/255.0, green: 42.0/255.0, blue: 45.0/255.0, alpha: 1.0)
+    static let tabBarBackgroundColor = UIColor(red: 151.0/255.0, green: 194.0/255.0, blue: 207.0/255.0, alpha: 1.0)
+    static let tabBarSelectedItemColor = UIColor(red: 38.0/255.0, green: 42.0/255.0, blue: 45.0/255.0, alpha: 1.0)
+    static let notificationColor = UIColor(red: 253.0/255.0, green: 291.0/255.0, blue: 0.0/255.0, alpha: 1.0)
 }
 
 fileprivate struct CmrTabBarSizes {
@@ -40,7 +41,13 @@ class CmrBarButtonsVC: UICollectionViewController, CmrBarButtonsLayoutDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(true)
         
-        collectionView?.selectItem(at: IndexPath.init(row: 0, section: 0), animated: false, scrollPosition: UICollectionViewScrollPosition.left)
+        selectedIndex = IndexPath(row: 0, section: 0)
+        let cell = collectionView?.cellForItem(at: selectedIndex!) as! CmrBarButtonCell
+        cell.updateSelection(isSelected: true)
+        updateShadowForCell(isShown: true, indexPath: selectedIndex!)
+        collectionView?.bringSubview(toFront: cell)
+        
+        //collectionView?.selectItem(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: UICollectionViewScrollPosition.left)
     }
     
     func setupAppearance() {

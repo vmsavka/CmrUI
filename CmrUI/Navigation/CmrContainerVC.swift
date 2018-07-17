@@ -28,7 +28,11 @@ class CmrContainerVC: UIViewController {
     @IBOutlet weak var bottomBarConstraint: NSLayoutConstraint!
     @IBOutlet weak var heightBarConstraint: NSLayoutConstraint!
     
+    static let sharedInstance = CmrContainerVC()
+    
     fileprivate var dataSource = [ContainerTab]()
+    
+    var stackViews: [UIView]? = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +51,7 @@ class CmrContainerVC: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.setNavigationBarHidden(true, animated: true)
 
+        NavigationRouter.shared.navigationContiner = self
         
         if tab == nil {
             transition(to: .feedItem)
@@ -63,12 +68,28 @@ class CmrContainerVC: UIViewController {
         heightBarConstraint.constant = width * CmrBarButtonsSizes.kHeightBar
     }
     
-    func updateBarButtons() {
-        view.bringSubview(toFront: barButtonsView)
+    func updateBarButtons(fromView someView: UIView) {
+        /*var isSubview: Bool = false
+        for view in someView.subviews {
+            if view == someView {
+                isSubview = true
+            }
+        }
+        if !isSubview {
+            someView.addSubview(self.barButtonsView)
+        }*/
+        someView.bringSubview(toFront: barButtonsView)
     }
     
     func loadInitialView() {
         showActivityIndicator()
+    }
+    
+    func clearStackSubviews() {
+        for view in stackViews! {
+            view.removeFromSuperview()
+        }
+        stackViews = []
     }
 
     private func showActivityIndicator() {
@@ -99,12 +120,13 @@ class CmrContainerVC: UIViewController {
 extension CmrContainerVC {
     func transition(to newTab: ContainerTab) {
         currentVC?.removeFromParentViewController()
+        clearStackSubviews()
         let vc = viewController(for: newTab)
         vc.view.backgroundColor = UIColor.random()
         add(vc)
         currentVC = vc
         tab = newTab
-        updateBarButtons()
+        updateBarButtons(fromView: view)
         navigationItem.title = NSLocalizedString((newTab.tabTitle()), comment: "")
     }
     
@@ -112,6 +134,7 @@ extension CmrContainerVC {
             addChildViewController(child)
             view.addSubview(child.view)
             child.didMove(toParentViewController: self)
+            stackViews?.append(child.view)
         }
         
     func remove() {
@@ -136,8 +159,9 @@ private extension CmrContainerVC {
         switch tab {
         case .feedItem:
             let board = UIStoryboard.storyboardWith(name: .newsFeed)
-            let controller = board.instantiateViewController(withIdentifier: "NewsFeedVC")
-            return controller
+            //let controller = board.instantiateViewController(withIdentifier: "NewsFeedVC")
+            let controller = board.instantiateInitialViewController()
+            return controller!
         case .galleryItem:
             return UIViewController()
         case .itemsItem:
