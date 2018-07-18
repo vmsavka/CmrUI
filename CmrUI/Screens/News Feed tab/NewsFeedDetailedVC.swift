@@ -30,6 +30,7 @@ class NewsFeedDetailedVC: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var wristcamLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +38,12 @@ class NewsFeedDetailedVC: UIViewController, UINavigationControllerDelegate {
         NavigationRouter.shared.refreshNavigationBar(fromView: self.view)
         self.navigationController?.delegate = self
         addCloseButton()
+        setupAppearance()
     }
     
+    @IBAction func panGestureRecognizerEvent(_ sender: Any) {
+        let s = sender
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -47,10 +52,11 @@ class NewsFeedDetailedVC: UIViewController, UINavigationControllerDelegate {
             subtitleLabel.text = feedItem?.subtitle
             backgroundImageView.image = feedItem?.image ?? nil
             contentLabel.text = feedItem?.content
-            heightConstraint.constant = feedItem?.image == nil ? 0 : 320
+            heightConstraint.constant = feedItem?.image == nil ? 10 : 320 - (30 + titleLabel.frame.size.height)
         }
-        setupAppearance()
     }
+    
+    
     
     func setupAppearance() {
         

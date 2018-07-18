@@ -97,6 +97,7 @@ class NewsFeedVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 70, height: 20))
         label.font = UIFont(name: "Noteworthy-Bold", size: 25)
         label.text = "wristcam"
+        label.textAlignment = NSTextAlignment.center
         self.navigationItem.titleView = label
     }
     

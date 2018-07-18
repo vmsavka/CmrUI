@@ -122,7 +122,9 @@ extension CmrContainerVC {
         currentVC?.removeFromParentViewController()
         clearStackSubviews()
         let vc = viewController(for: newTab)
-        vc.view.backgroundColor = UIColor.random()
+        if (newTab != .feedItem) {
+            vc.view.backgroundColor = UIColor.random()
+        }
         add(vc)
         currentVC = vc
         tab = newTab
