@@ -37,7 +37,7 @@ class FeedNewsLayout: BaseCollectionViewFlowLayout {
         let itemWidth = (contentWidthWithoutIndents - (CGFloat(totalColumns) - 1) * interItemsSpacing) / CGFloat(totalColumns)
         let itemHeight = itemWidth * kItemHeightAspect
         
-        var _itemSize: CGSize! = CGSize(width: itemWidth, height: itemHeight)
+        let _itemSize: CGSize! = CGSize(width: itemWidth, height: itemHeight)
         
         // Calculating offsets by X for each column
         _columnsXoffset = []
@@ -52,7 +52,7 @@ class FeedNewsLayout: BaseCollectionViewFlowLayout {
     override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
-    
+        
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         guard let layoutAttributes = super.layoutAttributesForElements(in: rect) else { return nil }
         

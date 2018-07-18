@@ -32,6 +32,8 @@
 		0F9EB2DF20FC4BB800C6E978 /* FeedNewsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EB2DD20FC4BB800C6E978 /* FeedNewsSectionHeader.swift */; };
 		0F9EB2E220FC4BE100C6E978 /* FeedNewsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9EB2E120FC4BE100C6E978 /* FeedNewsSectionHeader.xib */; };
 		0F9EB2E420FC4F7400C6E978 /* NewsFeedDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EB2E320FC4F7400C6E978 /* NewsFeedDetailedVC.swift */; };
+		0F9EB2E620FCCD6E00C6E978 /* ZoomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EB2E520FCCD6E00C6E978 /* ZoomTransition.swift */; };
+		0F9EB2E820FCCEB300C6E978 /* CustomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EB2E720FCCEB300C6E978 /* CustomInteractor.swift */; };
 		0FE9455F20F5F759005AA6EF /* CmrContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE9455E20F5F759005AA6EF /* CmrContainerVC.swift */; };
 		0FE9456120F60850005AA6EF /* CmrContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE9456020F60850005AA6EF /* CmrContainer.storyboard */; };
 		0FE9456220F60850005AA6EF /* CmrContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE9456020F60850005AA6EF /* CmrContainer.storyboard */; };
@@ -90,6 +92,8 @@
 		0F9EB2DD20FC4BB800C6E978 /* FeedNewsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNewsSectionHeader.swift; sourceTree = "<group>"; };
 		0F9EB2E120FC4BE100C6E978 /* FeedNewsSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedNewsSectionHeader.xib; sourceTree = "<group>"; };
 		0F9EB2E320FC4F7400C6E978 /* NewsFeedDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedDetailedVC.swift; sourceTree = "<group>"; };
+		0F9EB2E520FCCD6E00C6E978 /* ZoomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomTransition.swift; sourceTree = "<group>"; };
+		0F9EB2E720FCCEB300C6E978 /* CustomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInteractor.swift; sourceTree = "<group>"; };
 		0FE9455E20F5F759005AA6EF /* CmrContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CmrContainerVC.swift; path = Navigation/CmrContainerVC.swift; sourceTree = "<group>"; };
 		0FE9456020F60850005AA6EF /* CmrContainer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CmrContainer.storyboard; sourceTree = "<group>"; };
 		0FE9456420F6097A005AA6EF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				0F9EB2C020FB401100C6E978 /* BaseCollectionViewFlowLayout.swift */,
+				0F9EB2E520FCCD6E00C6E978 /* ZoomTransition.swift */,
+				0F9EB2E720FCCEB300C6E978 /* CustomInteractor.swift */,
 			);
 			path = "Shared and External classes";
 			sourceTree = "<group>";
@@ -258,11 +264,11 @@
 			isa = PBXGroup;
 			children = (
 				0F9EB2D720FC49E400C6E978 /* NewsFeedVC.swift */,
+				0F9EB2E320FC4F7400C6E978 /* NewsFeedDetailedVC.swift */,
 				0F9EB2D520FC49E400C6E978 /* FeedNewsLayout.swift */,
 				0F9EB2D620FC49E400C6E978 /* FeedNewsCell.swift */,
 				0F9EB2D820FC49E400C6E978 /* FeedNewsTextCell.swift */,
 				0F9EB2DD20FC4BB800C6E978 /* FeedNewsSectionHeader.swift */,
-				0F9EB2E320FC4F7400C6E978 /* NewsFeedDetailedVC.swift */,
 			);
 			name = "News Feed tab";
 			path = "Screens/News Feed tab";
@@ -422,9 +428,11 @@
 			files = (
 				0F9EB2C120FB401100C6E978 /* BaseCollectionViewFlowLayout.swift in Sources */,
 				0F9EB2DB20FC49E400C6E978 /* NewsFeedVC.swift in Sources */,
+				0F9EB2E820FCCEB300C6E978 /* CustomInteractor.swift in Sources */,
 				0FE9456C20F63F0E005AA6EF /* Color+Random.swift in Sources */,
 				0F9EB2B020F6844500C6E978 /* CmrBarButtonsVC.swift in Sources */,
 				0FE9455F20F5F759005AA6EF /* CmrContainerVC.swift in Sources */,
+				0F9EB2E620FCCD6E00C6E978 /* ZoomTransition.swift in Sources */,
 				0F9EB2DF20FC4BB800C6E978 /* FeedNewsSectionHeader.swift in Sources */,
 				0F9EB2AE20F6821900C6E978 /* UIImageView+Tint.swift in Sources */,
 				0F9EB2E420FC4F7400C6E978 /* NewsFeedDetailedVC.swift in Sources */,

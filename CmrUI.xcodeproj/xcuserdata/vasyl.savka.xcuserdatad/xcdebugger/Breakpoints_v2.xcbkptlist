@@ -25,13 +25,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CmrUI/Screens/News Feed tab/NewsFeedVC.swift"
-            timestampString = "553407858.518285"
+            filePath = "CmrUI/Shared and External classes/CustomInteractor.swift"
+            timestampString = "553493184.031916"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "collectionView(_:viewForSupplementaryElementOfKind:at:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "handleBackGesture(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CmrUI/Screens/News Feed tab/NewsFeedDetailedVC.swift"
+            timestampString = "553590953.8594559"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "animationControllerForPresentedController(presented:presentingController:sourceController:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,12 +58,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CmrUI/Screens/News Feed tab/NewsFeedVC.swift"
-            timestampString = "553407858.5183589"
+            timestampString = "553590953.859548"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "collectionView(_:willDisplaySupplementaryView:forElementKind:at:)"
+            startingLineNumber = "299"
+            endingLineNumber = "299"
+            landmarkName = "navigationController(_:interactionControllerFor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CmrUI/Screens/News Feed tab/NewsFeedVC.swift"
+            timestampString = "553590953.85991"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "323"
+            endingLineNumber = "323"
+            landmarkName = "animationControllerForPresentedController(presented:presentingController:sourceController:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

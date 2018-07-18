@@ -11,6 +11,12 @@ import UIKit
 class NavigationRouter: NSObject {
     static let shared = NavigationRouter()
     
+    public weak var navigationContiner: CmrContainerVC?
+    
+    func refreshNavigationBar(fromView view: UIView) {
+        navigationContiner?.updateBarButtons(fromView: view)
+    }
+    
     func presentBarController() {
         let board = UIStoryboard.storyboardWith(name: .cmrContainer)
         let controller = board.instantiateInitialViewController()
@@ -35,7 +41,7 @@ class NavigationRouter: NSObject {
         }
         
         if let nav = controller as? UINavigationController,
-            let root = nav.viewControllers[0] as? NewsFeedVC {
+            let _ = nav.viewControllers[0] as? NewsFeedVC {
         }
         
         UIApplication.shared.keyWindow?.rootViewController = controller
