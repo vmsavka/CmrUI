@@ -75,7 +75,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udt-r3-g4i">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptg-cE-YNl">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udt-r3-g4i">
                                 <rect key="frame" x="16" y="70" width="343" height="581"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2W-el-hz1">
@@ -83,6 +87,7 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I1T-bm-hwW">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="320"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="320" id="aHY-5M-7Qb"/>
                                                 </constraints>
@@ -90,6 +95,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IN-O3-gZd">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="0.49269584760273971" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="ig9-pZ-OSH"/>
                                                 </constraints>
@@ -100,18 +106,21 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSE-hq-OeM">
                                                 <rect key="frame" x="0.0" y="40" width="343" height="21.5"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.49716395547945208" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na5-Kw-gtr">
                                                 <rect key="frame" x="0.0" y="261.5" width="343" height="21"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="2IN-O3-gZd" firstAttribute="top" secondItem="A2W-el-hz1" secondAttribute="top" id="1LK-2H-e34"/>
                                             <constraint firstItem="2IN-O3-gZd" firstAttribute="leading" secondItem="A2W-el-hz1" secondAttribute="leading" id="83g-oc-ugx"/>
@@ -130,12 +139,16 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="A2W-el-hz1" secondAttribute="trailing" id="2Eq-sw-cC6"/>
                                     <constraint firstItem="A2W-el-hz1" firstAttribute="leading" secondItem="Udt-r3-g4i" secondAttribute="leading" id="388-Af-0gc"/>
                                     <constraint firstItem="A2W-el-hz1" firstAttribute="top" secondItem="Udt-r3-g4i" secondAttribute="top" id="g5c-ar-iVO"/>
                                     <constraint firstAttribute="bottom" secondItem="A2W-el-hz1" secondAttribute="bottom" id="mlF-gZ-1S2"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="E2b-H9-O15" id="mKj-N4-27w"/>
+                                </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92U-GY-g9c">
                                 <rect key="frame" x="325" y="78" width="30" height="30"/>
@@ -167,37 +180,36 @@
                         <constraints>
                             <constraint firstItem="Udt-r3-g4i" firstAttribute="leading" secondItem="FbW-OW-ioD" secondAttribute="leading" constant="16" id="5h5-hW-kt9"/>
                             <constraint firstItem="Udt-r3-g4i" firstAttribute="top" secondItem="3Nh-gH-Ntb" secondAttribute="bottom" constant="50" id="5xh-8r-kLL"/>
+                            <constraint firstItem="Udt-r3-g4i" firstAttribute="top" secondItem="ptg-cE-YNl" secondAttribute="bottom" id="7xe-WF-GMW"/>
                             <constraint firstItem="1fv-oI-Umd" firstAttribute="centerX" secondItem="FbW-OW-ioD" secondAttribute="centerX" id="Bxj-ZM-sUM"/>
+                            <constraint firstItem="ptg-cE-YNl" firstAttribute="top" secondItem="3Nh-gH-Ntb" secondAttribute="bottom" id="Gwm-Qr-GFm"/>
                             <constraint firstItem="1fv-oI-Umd" firstAttribute="top" secondItem="3Nh-gH-Ntb" secondAttribute="bottom" constant="2" id="Huw-n2-mZz"/>
                             <constraint firstItem="92U-GY-g9c" firstAttribute="top" secondItem="Udt-r3-g4i" secondAttribute="top" constant="8" id="XLS-oV-AQa"/>
                             <constraint firstAttribute="trailing" secondItem="A2W-el-hz1" secondAttribute="trailing" constant="16" id="Yao-Ak-9ch"/>
+                            <constraint firstAttribute="trailing" secondItem="ptg-cE-YNl" secondAttribute="trailing" id="c47-fj-my5"/>
                             <constraint firstItem="Nor-rG-KqY" firstAttribute="top" secondItem="Udt-r3-g4i" secondAttribute="bottom" constant="16" id="imA-6M-3ke"/>
+                            <constraint firstItem="ptg-cE-YNl" firstAttribute="leading" secondItem="FbW-OW-ioD" secondAttribute="leading" id="nhE-bt-1EX"/>
                             <constraint firstAttribute="trailing" secondItem="Udt-r3-g4i" secondAttribute="trailing" constant="16" id="oFb-xw-ztD"/>
                             <constraint firstItem="A2W-el-hz1" firstAttribute="leading" secondItem="FbW-OW-ioD" secondAttribute="leading" constant="16" id="tuE-f0-CVk"/>
                             <constraint firstAttribute="trailing" secondItem="92U-GY-g9c" secondAttribute="trailing" constant="20" id="wRE-Uw-m8Z"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="6oW-5h-1Xi" appends="YES" id="vhZ-wO-RKT"/>
-                        </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="OLc-fV-xt1"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="I1T-bm-hwW" id="bTF-UG-v7f"/>
                         <outlet property="closeButton" destination="92U-GY-g9c" id="R7l-ON-V1i"/>
                         <outlet property="contentLabel" destination="na5-Kw-gtr" id="1Cn-uh-j4P"/>
                         <outlet property="heightConstraint" destination="dQS-Gy-xIa" id="wA5-j1-1S7"/>
+                        <outlet property="scrollView" destination="Udt-r3-g4i" id="8MM-Ok-ReW"/>
                         <outlet property="subtitleLabel" destination="2IN-O3-gZd" id="mjb-YH-4vu"/>
                         <outlet property="titleLabel" destination="ZSE-hq-OeM" id="zsg-XW-MiZ"/>
+                        <outlet property="titleView" destination="ptg-cE-YNl" id="Uvu-LV-tcD"/>
                         <outlet property="wristcamLabel" destination="1fv-oI-Umd" id="g4J-wv-xlH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iee-Zs-OJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="6oW-5h-1Xi">
-                    <connections>
-                        <action selector="panGestureRecognizerEvent:" destination="E2b-H9-O15" id="ue5-uh-rrU"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4132" y="119.1904047976012"/>
         </scene>

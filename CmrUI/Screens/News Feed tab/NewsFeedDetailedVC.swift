@@ -12,6 +12,7 @@ private let feedNewsTextCellColor = UIColor(red: 226.0/255.0, green: 229.0/255.0
 private let backgroundColor = UIColor(red: 235.0/255.0, green: 235.0/255.0, blue: 235.0/255.0, alpha: 1.0)
 private let closeButtonColor = UIColor(red: 215.0/255.0, green: 215.0/255.0, blue: 215.0/255.0, alpha: 1.0)
 private let closeButtonTextColor = UIColor(red: 155.0/255.0, green: 155.0/255.0, blue: 155.0/255.0, alpha: 1.0)
+private let longPressDuration = 0.5
 
 fileprivate struct NewsFeedCloseButtonPosition {
     static let kLeftOffset: CGFloat = 0.9
@@ -31,6 +32,12 @@ class NewsFeedDetailedVC: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var wristcamLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
+    var longPressActivated: Bool = false
+    var startPoint: CGPoint? = nil
+    var endPoint: CGPoint? = nil
+    @IBOutlet weak var titleView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +48,7 @@ class NewsFeedDetailedVC: UIViewController, UINavigationControllerDelegate {
         setupAppearance()
     }
     
-    @IBAction func panGestureRecognizerEvent(_ sender: Any) {
-        let s = sender
-    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -56,13 +61,15 @@ class NewsFeedDetailedVC: UIViewController, UINavigationControllerDelegate {
         }
     }
     
-    
-    
     func setupAppearance() {
+        //Init touch events
+        scrollView.addGestureRecognizer(getLongPressGR())
+        titleView.addGestureRecognizer(getLongPressGR())
+        wristcamLabel.addGestureRecognizer(getLongPressGR())
         
         view.backgroundColor = backgroundColor
         backgroundImageView.backgroundColor = feedNewsTextCellColor
-        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.setNavigationBarHidden(true, animated: false)
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
@@ -91,15 +98,9 @@ class NewsFeedDetailedVC: UIViewController, UINavigationControllerDelegate {
         //closeButton.translatesAutoresizingMaskIntoConstraints = true
     }
 
-    @objc func buttonAction(_ sender:UIButton!)
-    {        self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: nil)
-        print("Button tapped")
-
-    }
-    
     @IBAction func dismissVC() {
         self.dismiss(animated: true, completion: nil)
+        //self.navigationController?.popViewController(animated: true)
     }
     
     func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
@@ -151,4 +152,46 @@ class NewsFeedDetailedVC: UIViewController, UINavigationControllerDelegate {
     }
     */
 
+}
+
+extension NewsFeedDetailedVC: UIScrollViewDelegate {
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if self.scrollView.contentOffset.y < -100 {
+            dismissVC()
+        }
+    }
+}
+
+// MARK: - Gesture recognizers
+
+extension NewsFeedDetailedVC {
+    @objc func longPressEvent(_ sender: UILongPressGestureRecognizer) {
+        longPressActivated = true
+        switch sender.state {
+        case .began:
+            startPoint = sender.location(in: self.view)
+            longPressActivated = true
+        case .ended:
+            endPoint = sender.location(in: self.view)
+            longPressActivated = false
+            evaluateDragGesture()
+        default:
+            break
+        }
+    }
+    
+    func evaluateDragGesture() {
+        guard let start = startPoint else { return }
+        guard let end = endPoint else { return }
+        if end.y - start.y > 50 {
+            dismissVC()
+        }
+    }
+    
+    func getLongPressGR() -> UILongPressGestureRecognizer {
+        let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressEvent(_:)))
+        recognizer.minimumPressDuration = longPressDuration
+        return recognizer
+    }
 }
