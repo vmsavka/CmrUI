@@ -57,7 +57,7 @@ class SettingsVC: UIViewController {
         cloudStorageView.setBordColor(color: constants.greenStorageButtonColor)
         
         let attributes = [NSAttributedStringKey.foregroundColor: constants.redStorageButtonColor,
-                          NSAttributedStringKey.font:  UIFont(name: "HelveticaNeue-Medium", size: 13.0) ?? 15,
+                          NSAttributedStringKey.font:  UIFont(name: "HelveticaNeue-Medium", size: 12.0) ?? 15,
                           NSAttributedStringKey.underlineStyle: NSUnderlineStyle.styleSingle.rawValue
             ] as [NSAttributedStringKey : Any]
         moreStorageButton?.setAttributedTitle(NSAttributedString(string: "PURCHASE MORE STORAGE", attributes: attributes), for: .normal)
@@ -111,7 +111,6 @@ class SettingsVC: UIViewController {
         GradientHelper.updateGradientLayerFrame(on: gradientView)
     }
     
-    
     // MARK: Actions
     
     @IBAction func purchaseStoragePressed() {
@@ -130,7 +129,7 @@ class SettingsVC: UIViewController {
     }
     
     func showShareDialog(network: String) {
-        let alert = UIAlertController(title: "Would you loke to share to", message: network, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Would you like to share to", message: network, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "YES", style: .default) { (action:UIAlertAction!) in
             self.shareImage()
             self.removeFromParentViewController()

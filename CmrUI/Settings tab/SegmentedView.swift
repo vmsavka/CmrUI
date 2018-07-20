@@ -37,7 +37,6 @@ class SegmentedView: UIView {
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         segmentedView.setTitleTextAttributes(attributes, for: UIControlState.normal)
         segmentedView.setTitleTextAttributes(attributes, for: UIControlState.selected)
-        //segmentedView.setDividerImage(UIImage(), forLeftSegmentState: UIControlState.normal, rightSegmentState: UIControlState.normal, barMetrics: UIBarMetrics.default)
         for segment in segments! {
             segmentedView.insertSegment(withTitle: segment, at: (segments?.index(of: segment))!, animated: false)
         }

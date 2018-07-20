@@ -30,7 +30,7 @@ class DevicePropertiesView: UIView {
         super.draw(rect)
         
         let attributes = [NSAttributedStringKey.foregroundColor: UIColor.black,
-                          NSAttributedStringKey.font:  UIFont(name: "HelveticaNeue-Medium", size: 13.0) ?? 15,
+                          NSAttributedStringKey.font:  UIFont(name: "HelveticaNeue-Medium", size: 12.0) ?? 15,
                           NSAttributedStringKey.underlineStyle: NSUnderlineStyle.styleSingle.rawValue
             ] as [NSAttributedStringKey : Any]
         checkForUpgradeButton?.setAttributedTitle(NSAttributedString(string: "CHECK FOR UPGRADE", attributes: attributes), for: .normal)
