@@ -11,6 +11,15 @@
 		0F05A55B20F5F6A700D11049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F05A55420F5F6A700D11049 /* Assets.xcassets */; };
 		0F05A55E20F5F6A700D11049 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F05A55920F5F6A700D11049 /* Info.plist */; };
 		0F05A56120F5F6EE00D11049 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F05A55F20F5F6EE00D11049 /* LaunchScreen.storyboard */; };
+		0F4B120B21005F1F001BB140 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4B120A21005F1F001BB140 /* Settings.storyboard */; };
+		0F4B121021005F81001BB140 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B120F21005F81001BB140 /* SettingsVC.swift */; };
+		0F4B12162100676F001BB140 /* GradientHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B12152100676F001BB140 /* GradientHelper.swift */; };
+		0F4B121821007ECF001BB140 /* SettingsPropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B121721007ECF001BB140 /* SettingsPropertyView.swift */; };
+		0F4B121A2100A6BD001BB140 /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B12192100A6BD001BB140 /* SwitchView.swift */; };
+		0F4B121C2100C866001BB140 /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B121B2100C866001BB140 /* SegmentedView.swift */; };
+		0F4B121E2100D71C001BB140 /* DevicePropertiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B121D2100D71C001BB140 /* DevicePropertiesView.swift */; };
+		0F4B12202101B9E5001BB140 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B121F2101B9E5001BB140 /* UIImage+Color.swift */; };
+		0F4B12222101D1AF001BB140 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B12212101D1AF001BB140 /* Device.swift */; };
 		0F4F224D20F3A8DE00A0F5A4 /* CmrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F224C20F3A8DE00A0F5A4 /* CmrUITests.swift */; };
 		0F4F225820F3A8DE00A0F5A4 /* CmrUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F225720F3A8DE00A0F5A4 /* CmrUIUITests.swift */; };
 		0F9EB2A520F6678D00C6E978 /* CmrBarButtonsViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EB2A420F6678D00C6E978 /* CmrBarButtonsViewLayout.swift */; };
@@ -66,6 +75,15 @@
 		0F05A55420F5F6A700D11049 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F05A55920F5F6A700D11049 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F05A55F20F5F6EE00D11049 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0F4B120A21005F1F001BB140 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		0F4B120F21005F81001BB140 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		0F4B12152100676F001BB140 /* GradientHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientHelper.swift; sourceTree = "<group>"; };
+		0F4B121721007ECF001BB140 /* SettingsPropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPropertyView.swift; sourceTree = "<group>"; };
+		0F4B12192100A6BD001BB140 /* SwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
+		0F4B121B2100C866001BB140 /* SegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
+		0F4B121D2100D71C001BB140 /* DevicePropertiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePropertiesView.swift; sourceTree = "<group>"; };
+		0F4B121F2101B9E5001BB140 /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		0F4B12212101D1AF001BB140 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		0F4F223420F3A8DD00A0F5A4 /* CmrUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CmrUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4F224820F3A8DE00A0F5A4 /* CmrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CmrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4F224C20F3A8DE00A0F5A4 /* CmrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmrUITests.swift; sourceTree = "<group>"; };
@@ -150,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				0F9EB2D420FC49E400C6E978 /* News Feed tab */,
+				0F4B120E21005F54001BB140 /* Settings tab */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -174,6 +193,7 @@
 				0F05A55F20F5F6EE00D11049 /* LaunchScreen.storyboard */,
 				0FE9456020F60850005AA6EF /* CmrContainer.storyboard */,
 				0F9EB2B120F8D42B00C6E978 /* NewsFeed.storyboard */,
+				0F4B120A21005F1F001BB140 /* Settings.storyboard */,
 			);
 			name = Storyboards;
 			path = CmrUI/Resources/Storyboards;
@@ -186,6 +206,18 @@
 			name = Localization;
 			path = CmrUI/Resources/Localization;
 			sourceTree = SOURCE_ROOT;
+		};
+		0F4B120E21005F54001BB140 /* Settings tab */ = {
+			isa = PBXGroup;
+			children = (
+				0F4B120F21005F81001BB140 /* SettingsVC.swift */,
+				0F4B121721007ECF001BB140 /* SettingsPropertyView.swift */,
+				0F4B12192100A6BD001BB140 /* SwitchView.swift */,
+				0F4B121B2100C866001BB140 /* SegmentedView.swift */,
+				0F4B121D2100D71C001BB140 /* DevicePropertiesView.swift */,
+			);
+			path = "Settings tab";
+			sourceTree = "<group>";
 		};
 		0F4F222B20F3A8DD00A0F5A4 = {
 			isa = PBXGroup;
@@ -256,6 +288,7 @@
 				0F9EB2C020FB401100C6E978 /* BaseCollectionViewFlowLayout.swift */,
 				0F9EB2E520FCCD6E00C6E978 /* ZoomTransition.swift */,
 				0F9EB2E720FCCEB300C6E978 /* CustomInteractor.swift */,
+				0F4B12212101D1AF001BB140 /* Device.swift */,
 			);
 			path = "Shared and External classes";
 			sourceTree = "<group>";
@@ -282,6 +315,8 @@
 				0F9EB2B520F8D97000C6E978 /* NavigationRouter.swift */,
 				0F9EB2B720F902F400C6E978 /* UIStoryboard+Name.swift */,
 				0F9EB2C620FB673E00C6E978 /* UITextView+CalculateSize.swift */,
+				0F4B12152100676F001BB140 /* GradientHelper.swift */,
+				0F4B121F2101B9E5001BB140 /* UIImage+Color.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -354,6 +389,7 @@
 				TargetAttributes = {
 					0F4F223320F3A8DD00A0F5A4 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					0F4F224720F3A8DE00A0F5A4 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -392,6 +428,7 @@
 			files = (
 				0F9EB2B220F8D42B00C6E978 /* NewsFeed.storyboard in Resources */,
 				0F05A55B20F5F6A700D11049 /* Assets.xcassets in Resources */,
+				0F4B120B21005F1F001BB140 /* Settings.storyboard in Resources */,
 				0F9EB2C320FB47A400C6E978 /* FeedNewsCell.xib in Resources */,
 				0F9EB2D320FBA9D800C6E978 /* FeedNewsTextCell.xib in Resources */,
 				0F05A56120F5F6EE00D11049 /* LaunchScreen.storyboard in Resources */,
@@ -428,13 +465,21 @@
 			files = (
 				0F9EB2C120FB401100C6E978 /* BaseCollectionViewFlowLayout.swift in Sources */,
 				0F9EB2DB20FC49E400C6E978 /* NewsFeedVC.swift in Sources */,
+				0F4B121E2100D71C001BB140 /* DevicePropertiesView.swift in Sources */,
+				0F4B12222101D1AF001BB140 /* Device.swift in Sources */,
 				0F9EB2E820FCCEB300C6E978 /* CustomInteractor.swift in Sources */,
 				0FE9456C20F63F0E005AA6EF /* Color+Random.swift in Sources */,
 				0F9EB2B020F6844500C6E978 /* CmrBarButtonsVC.swift in Sources */,
+				0F4B121C2100C866001BB140 /* SegmentedView.swift in Sources */,
+				0F4B12202101B9E5001BB140 /* UIImage+Color.swift in Sources */,
 				0FE9455F20F5F759005AA6EF /* CmrContainerVC.swift in Sources */,
+				0F4B121A2100A6BD001BB140 /* SwitchView.swift in Sources */,
 				0F9EB2E620FCCD6E00C6E978 /* ZoomTransition.swift in Sources */,
 				0F9EB2DF20FC4BB800C6E978 /* FeedNewsSectionHeader.swift in Sources */,
 				0F9EB2AE20F6821900C6E978 /* UIImageView+Tint.swift in Sources */,
+				0F4B121021005F81001BB140 /* SettingsVC.swift in Sources */,
+				0F4B121821007ECF001BB140 /* SettingsPropertyView.swift in Sources */,
+				0F4B12162100676F001BB140 /* GradientHelper.swift in Sources */,
 				0F9EB2E420FC4F7400C6E978 /* NewsFeedDetailedVC.swift in Sources */,
 				0F9EB2A820F6805600C6E978 /* CmrBarButtonCell.swift in Sources */,
 				0F9EB2C720FB673E00C6E978 /* UITextView+CalculateSize.swift in Sources */,
@@ -600,6 +645,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3Y5PA9K7M;
 				INFOPLIST_FILE = "$(SRCROOT)/CmrUI/Resources/Info.plist";
@@ -609,6 +655,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CmrUI.CmrUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -618,6 +665,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3Y5PA9K7M;
 				INFOPLIST_FILE = "$(SRCROOT)/CmrUI/Resources/Info.plist";

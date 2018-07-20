@@ -161,7 +161,6 @@ private extension CmrContainerVC {
         switch tab {
         case .feedItem:
             let board = UIStoryboard.storyboardWith(name: .newsFeed)
-            //let controller = board.instantiateViewController(withIdentifier: "NewsFeedVC")
             let controller = board.instantiateInitialViewController()
             return controller!
         case .galleryItem:
@@ -169,7 +168,9 @@ private extension CmrContainerVC {
         case .itemsItem:
             return UIViewController()
         case .settingsItem:
-            return UIViewController()
+            let board = UIStoryboard.storyboardWith(name: .settings)
+            let controller = board.instantiateInitialViewController()
+            return controller!
         case .cartItem:
             return UIViewController()
         case .count:
