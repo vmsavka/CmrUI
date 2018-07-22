@@ -550,8 +550,8 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MOy-Vp-yMy">
                                                 <rect key="frame" x="0.0" y="43" width="343" height="37"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="Pza-yL-Xlh"/>
-                                                    <constraint firstAttribute="height" priority="250" constant="23" id="rS2-Fc-pEF"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="Pza-yL-Xlh"/>
+                                                    <constraint firstAttribute="height" priority="100" constant="23" id="rS2-Fc-pEF"/>
                                                 </constraints>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
@@ -571,7 +571,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="08b-mf-Ai6" firstAttribute="leading" secondItem="OcI-lc-HJf" secondAttribute="trailing" id="30h-Nz-Qng"/>
-                                            <constraint firstAttribute="height" priority="250" constant="80" id="990-of-j5e"/>
+                                            <constraint firstAttribute="height" priority="100" constant="80" id="990-of-j5e"/>
                                             <constraint firstItem="OhK-lF-bIa" firstAttribute="leading" secondItem="0MG-pf-U09" secondAttribute="leading" id="Cl6-RL-OEm"/>
                                             <constraint firstItem="5kB-vL-Yu1" firstAttribute="leading" secondItem="OhK-lF-bIa" secondAttribute="trailing" id="FQ4-fp-7dJ"/>
                                             <constraint firstItem="08b-mf-Ai6" firstAttribute="top" secondItem="5kB-vL-Yu1" secondAttribute="bottom" id="HH0-r2-Rpm"/>
@@ -611,7 +611,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="2R1-Yk-TYe"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="lXw-cB-Tqb"/>
-                                                    <constraint firstAttribute="height" priority="250" constant="21" id="zJm-Sg-tTe"/>
+                                                    <constraint firstAttribute="height" priority="100" constant="21" id="zJm-Sg-tTe"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                 <nil key="textColor"/>
@@ -623,7 +623,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="EnB-SY-lSq"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="J74-Ps-S53"/>
-                                                    <constraint firstAttribute="height" priority="200" constant="67" id="caG-ll-Isr"/>
+                                                    <constraint firstAttribute="height" priority="100" constant="67" id="caG-ll-Isr"/>
                                                 </constraints>
                                                 <state key="normal" image="facebook"/>
                                                 <connections>
@@ -633,7 +633,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXH-Zz-SKr">
                                                 <rect key="frame" x="138" y="15.5" width="67" height="50"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" priority="200" constant="80" id="EDt-pH-aXB"/>
+                                                    <constraint firstAttribute="height" priority="100" constant="80" id="EDt-pH-aXB"/>
                                                     <constraint firstAttribute="width" constant="67" id="Hzo-4g-fLv"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="oDU-L5-cID"/>
                                                 </constraints>
@@ -647,7 +647,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Jg1-bS-v3i"/>
-                                                    <constraint firstAttribute="height" priority="200" constant="65" id="gWS-Ki-YJd"/>
+                                                    <constraint firstAttribute="height" priority="100" constant="65" id="gWS-Ki-YJd"/>
                                                     <constraint firstAttribute="width" constant="70" id="oVs-oI-T4y"/>
                                                 </constraints>
                                                 <state key="normal" image="instagram"/>
@@ -705,7 +705,7 @@
                                             <constraint firstItem="bqF-Lh-JRy" firstAttribute="top" secondItem="Klq-l2-CGd" secondAttribute="bottom" id="dpa-pI-Ymp"/>
                                             <constraint firstItem="aiP-AY-x61" firstAttribute="centerX" secondItem="yXH-Zz-SKr" secondAttribute="centerX" id="kUX-1r-ztN"/>
                                             <constraint firstItem="yXH-Zz-SKr" firstAttribute="centerX" secondItem="PoS-FF-Gau" secondAttribute="centerX" id="oyP-lA-NjL"/>
-                                            <constraint firstAttribute="height" priority="250" constant="85" id="oyp-aB-ZmX"/>
+                                            <constraint firstAttribute="height" priority="100" constant="85" id="oyp-aB-ZmX"/>
                                             <constraint firstItem="bqF-Lh-JRy" firstAttribute="centerX" secondItem="BIU-Ha-FvL" secondAttribute="centerX" id="sfl-Ct-oAU"/>
                                         </constraints>
                                     </view>
