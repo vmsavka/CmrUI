@@ -13,6 +13,7 @@
 		0F05A56120F5F6EE00D11049 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F05A55F20F5F6EE00D11049 /* LaunchScreen.storyboard */; };
 		0F4F224D20F3A8DE00A0F5A4 /* CmrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F224C20F3A8DE00A0F5A4 /* CmrUITests.swift */; };
 		0F4F225820F3A8DE00A0F5A4 /* CmrUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F225720F3A8DE00A0F5A4 /* CmrUIUITests.swift */; };
+		0F73944921072AF70049FF31 /* NewsFeedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F73944821072AF70049FF31 /* NewsFeedVM.swift */; };
 		0F9EB2A520F6678D00C6E978 /* CmrBarButtonsViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EB2A420F6678D00C6E978 /* CmrBarButtonsViewLayout.swift */; };
 		0F9EB2A820F6805600C6E978 /* CmrBarButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9EB2A620F6805600C6E978 /* CmrBarButtonCell.swift */; };
 		0F9EB2AC20F6806F00C6E978 /* CmrBarButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9EB2AB20F6806F00C6E978 /* CmrBarButtonCell.xib */; };
@@ -73,6 +74,7 @@
 		0F4F225320F3A8DE00A0F5A4 /* CmrUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CmrUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4F225720F3A8DE00A0F5A4 /* CmrUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmrUIUITests.swift; sourceTree = "<group>"; };
 		0F4F225920F3A8DE00A0F5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F73944821072AF70049FF31 /* NewsFeedVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedVM.swift; sourceTree = "<group>"; };
 		0F9EB2A420F6678D00C6E978 /* CmrBarButtonsViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CmrBarButtonsViewLayout.swift; path = Navigation/CmrBarButtonsViewLayout.swift; sourceTree = "<group>"; };
 		0F9EB2A620F6805600C6E978 /* CmrBarButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CmrBarButtonCell.swift; path = Navigation/CmrBarButtonCell.swift; sourceTree = "<group>"; };
 		0F9EB2AB20F6806F00C6E978 /* CmrBarButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CmrBarButtonCell.xib; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				0F9EB2D720FC49E400C6E978 /* NewsFeedVC.swift */,
+				0F73944821072AF70049FF31 /* NewsFeedVM.swift */,
 				0F9EB2E320FC4F7400C6E978 /* NewsFeedDetailedVC.swift */,
 				0F9EB2D520FC49E400C6E978 /* FeedNewsLayout.swift */,
 				0F9EB2D620FC49E400C6E978 /* FeedNewsCell.swift */,
@@ -437,6 +440,7 @@
 				0F9EB2AE20F6821900C6E978 /* UIImageView+Tint.swift in Sources */,
 				0F9EB2E420FC4F7400C6E978 /* NewsFeedDetailedVC.swift in Sources */,
 				0F9EB2A820F6805600C6E978 /* CmrBarButtonCell.swift in Sources */,
+				0F73944921072AF70049FF31 /* NewsFeedVM.swift in Sources */,
 				0F9EB2C720FB673E00C6E978 /* UITextView+CalculateSize.swift in Sources */,
 				0F9EB2B820F902F400C6E978 /* UIStoryboard+Name.swift in Sources */,
 				0F9EB2DC20FC49E400C6E978 /* FeedNewsTextCell.swift in Sources */,
