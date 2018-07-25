@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CmrUI/Shared and External classes/CustomInteractor.swift"
-            timestampString = "554127094.9791861"
+            timestampString = "554216900.2480921"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "handleBackGesture(_:)"
             landmarkType = "7">
          </BreakpointContent>

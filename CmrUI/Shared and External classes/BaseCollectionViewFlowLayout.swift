@@ -31,10 +31,18 @@ class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
         return _contentSize
     }
     
+    func getLayoutMap() -> [IndexPath : UICollectionViewLayoutAttributes] {
+        return _layoutMap
+    }
+    
     //MARK: Override methods
     override func prepare() {
         _layoutMap.removeAll()
         _columnsYoffset = Array(repeating: 0, count: totalColumns)
+        var totalHeight: CGFloat = 0.0
+        let countSections: Int = (collectionView?.numberOfSections)!
+        
+        //for i in 0...countSections-1 {
         
         totalItemsInSection = collectionView!.numberOfItems(inSection: 0)
         
@@ -59,23 +67,25 @@ class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
                 itemIndex += 1
             }
             
-            
-            _contentSize = CGSize(width: collectionView!.bounds.width - contentInsets.left - contentInsets.right,
-                                  height: contentSizeHeight)
+            totalHeight += contentSizeHeight
         }
+//}
+            
+        _contentSize = CGSize(width: collectionView!.bounds.width - contentInsets.left - contentInsets.right,
+                                  height: totalHeight)
     }
     
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        var layoutAttributesArray = [UICollectionViewLayoutAttributes]()
-        
-        for (_, layoutAttributes) in _layoutMap {
-            if rect.intersects(layoutAttributes.frame) {
-                layoutAttributesArray.append(layoutAttributes)
-            }
-        }
-        
-        return layoutAttributesArray
-    }
+//    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+//        var layoutAttributesArray = [UICollectionViewLayoutAttributes]()
+//
+//        for (_, layoutAttributes) in _layoutMap {
+//            if rect.intersects(layoutAttributes.frame) {
+//                layoutAttributesArray.append(layoutAttributes)
+//            }
+//        }
+//
+//        return layoutAttributesArray
+//    }
     
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         return _layoutMap[indexPath]
