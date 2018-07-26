@@ -56,7 +56,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="UMQ-mc-ZA9" id="MiS-TW-Slm"/>
-                        <segue destination="E2b-H9-O15" kind="modal" identifier="DetailedFeedNews" id="ey2-0P-PDK"/>
+                        <segue destination="E2b-H9-O15" kind="show" identifier="DetailedFeedNews" id="ey2-0P-PDK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k19-n5-lCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
