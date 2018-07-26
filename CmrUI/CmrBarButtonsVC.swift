@@ -46,8 +46,6 @@ class CmrBarButtonsVC: UICollectionViewController, CmrBarButtonsLayoutDelegate {
         cell.updateSelection(isSelected: true)
         updateShadowForCell(isShown: true, indexPath: selectedIndex!)
         collectionView?.bringSubview(toFront: cell)
-        
-        //collectionView?.selectItem(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: UICollectionViewScrollPosition.left)
     }
     
     func setupAppearance() {
@@ -57,12 +55,6 @@ class CmrBarButtonsVC: UICollectionViewController, CmrBarButtonsLayoutDelegate {
         
         self.customCollectionViewLayout?.delegate = self
         self.customCollectionViewLayout?.numberOfColumns = dataSource.count
-        
-        setupButtons()
-    }
-    
-    func setupButtons() {
-        //collectionView?.selectItem(at: IndexPath.init(row: 0, section: 0), animated: false, scrollPosition: UICollectionViewScrollPosition.bottom)
     }
     
     public var customCollectionViewLayout: CmrBarButtonsViewLayout? {

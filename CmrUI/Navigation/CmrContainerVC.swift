@@ -69,15 +69,6 @@ class CmrContainerVC: UIViewController {
     }
     
     func updateBarButtons(fromView someView: UIView) {
-        /*var isSubview: Bool = false
-        for view in someView.subviews {
-            if view == someView {
-                isSubview = true
-            }
-        }
-        if !isSubview {
-            someView.addSubview(self.barButtonsView)
-        }*/
         someView.bringSubview(toFront: barButtonsView)
     }
     

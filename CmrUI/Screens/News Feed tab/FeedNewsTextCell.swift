@@ -22,5 +22,6 @@ class FeedNewsTextCell: UITableViewCell {
         self.containerView.layer.cornerRadius = 15
         self.clipsToBounds = true
         self.containerView.backgroundColor = feedNewsTextCellColor
+        self.selectionStyle = .none
     }
 }

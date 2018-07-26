@@ -20,5 +20,6 @@ class FeedNewsCell: UITableViewCell {
         
         self.containerView.layer.cornerRadius = 15
         self.containerView.clipsToBounds = true
+        self.selectionStyle = .none
     }
 }

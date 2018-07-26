@@ -50,7 +50,8 @@ public struct FeedItem {
     let time: Date?
 }
 
-class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate, NewsFeedVMProtocol {
+class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NewsFeedVMProtocol {
+    //UIViewControllerTransitioningDelegate, UINavigationControllerDelegate,  {
 
     @IBOutlet weak var tableView: UITableView!
     fileprivate var transitionIndexPath: IndexPath? = IndexPath()
@@ -97,6 +98,7 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.setNavigationBarHidden(false, animated: false)
+        self.endAppearanceTransition()
     }
     
     // MARK: - Navigation
@@ -104,12 +106,13 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if type(of: segue.destination) == NewsFeedDetailedVC.self {
-            let feedDetailedVC = (segue.destination as! NewsFeedDetailedVC)
-            let item  = viewModel.feedItemForIndex(index: transitionIndexPath!)
-            feedDetailedVC.feedItem = item
-            //feedDetailedVC.transitioningDelegate = self
-            feedDetailedVC.modalPresentationStyle = UIModalPresentationStyle.custom
-            feedDetailedVC.navigationItem.hidesBackButton = true
+            if let feedDetailedVC = segue.destination as? NewsFeedDetailedVC {
+                let item  = viewModel.feedItemForIndex(index: transitionIndexPath!)
+                feedDetailedVC.feedItem = item
+                //feedDetailedVC.transitioningDelegate = self
+                //feedDetailedVC.modalPresentationStyle = UIModalPresentationStyle.custom
+                feedDetailedVC.navigationItem.hidesBackButton = true
+            }
         }
     }
     
@@ -151,7 +154,14 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         transitionIndexPath = indexPath
         
-        self.performSegue(withIdentifier: SegueID.detailedFeedNews.rawValue, sender: nil)
+        let storyboard = UIStoryboard(name: "NewsFeed", bundle: nil)
+        let feedDetailedVC = storyboard.instantiateViewController(withIdentifier: "NewsFeedDetailedVC") as! NewsFeedDetailedVC
+        
+        let item  = viewModel.feedItemForIndex(index: transitionIndexPath!)
+        feedDetailedVC.feedItem = item
+        feedDetailedVC.navigationItem.hidesBackButton = true
+        self.navigationController?.present(feedDetailedVC, animated: true, completion: nil)
+
         return true
     }
     
@@ -188,7 +198,6 @@ extension NewsFeedVC {
 }
 
 // MARK: Navigation transition
-
 
 extension NewsFeedVC {
     func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0F05A54220F5F58200D11049 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05A54120F5F58200D11049 /* AppDelegate.swift */; };
 		0F05A55B20F5F6A700D11049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F05A55420F5F6A700D11049 /* Assets.xcassets */; };
-		0F05A55E20F5F6A700D11049 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F05A55920F5F6A700D11049 /* Info.plist */; };
 		0F05A56120F5F6EE00D11049 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F05A55F20F5F6EE00D11049 /* LaunchScreen.storyboard */; };
 		0F4F224D20F3A8DE00A0F5A4 /* CmrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F224C20F3A8DE00A0F5A4 /* CmrUITests.swift */; };
 		0F4F225820F3A8DE00A0F5A4 /* CmrUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F225720F3A8DE00A0F5A4 /* CmrUIUITests.swift */; };
@@ -407,7 +406,6 @@
 				0F9EB2AC20F6806F00C6E978 /* CmrBarButtonCell.xib in Resources */,
 				0F739459210855E50049FF31 /* FeedNewsSectionHeader.xib in Resources */,
 				0FE9456120F60850005AA6EF /* CmrContainer.storyboard in Resources */,
-				0F05A55E20F5F6A700D11049 /* Info.plist in Resources */,
 				0FE9456520F6097A005AA6EF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

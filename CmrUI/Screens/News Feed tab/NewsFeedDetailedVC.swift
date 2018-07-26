@@ -42,7 +42,7 @@ class NewsFeedDetailedVC: UIViewController, UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NavigationRouter.shared.refreshNavigationBar(fromView: self.view)
+
         self.navigationController?.delegate = self
         addCloseButton()
         setupAppearance()
@@ -52,6 +52,7 @@ class NewsFeedDetailedVC: UIViewController, UINavigationControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        NavigationRouter.shared.refreshNavigationBar(fromView: self.view)
         if (feedItem != nil) {
             titleLabel.text = feedItem?.title
             subtitleLabel.text = feedItem?.subtitle
@@ -101,6 +102,7 @@ class NewsFeedDetailedVC: UIViewController, UINavigationControllerDelegate {
     @IBAction func dismissVC() {
         self.dismiss(animated: true, completion: nil)
         //self.navigationController?.popViewController(animated: true)
+        //self.view.removeFromSuperview()
     }
     
     func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {

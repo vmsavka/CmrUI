@@ -83,16 +83,7 @@ class NewsFeedVM: NewsFeedDataSource {
     func updateDataSource() {
         populateDataSource()
     }
-    /*
-    fileprivate func sorterTime(this: FeedItem, that: FeedItem) -> Bool {
-        if let thisTime = this.time, let thatTime = that.time {
-            return thisTime > thatTime
-        }
-        else {
-            return false
-        }
-    }
-    */
+
     func groupDatesToSections(sortedData: [FeedItem]) {
         //Based on custom grouping infix operator ≡
         groupedDataSource = sortedData.grouped(by: { (feed: FeedItem) -> Date in

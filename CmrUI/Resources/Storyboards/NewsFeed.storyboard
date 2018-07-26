@@ -43,7 +43,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="f71-B1-Nri" id="JEI-8G-b5o"/>
-                        <segue destination="E2b-H9-O15" kind="modal" identifier="DetailedFeedNews" id="ey2-0P-PDK"/>
+                        <segue destination="E2b-H9-O15" kind="show" identifier="DetailedFeedNews" animates="NO" id="EqQ-ca-XQ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k19-n5-lCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -157,7 +157,7 @@
                                     <constraint firstAttribute="width" constant="100" id="EFh-35-PA6"/>
                                     <constraint firstAttribute="height" constant="40" id="PAC-mu-z8n"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -198,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iee-Zs-OJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4132" y="119.1904047976012"/>
+            <point key="canvasLocation" x="4194" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oma-Y0-01F">

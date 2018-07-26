@@ -40,9 +40,6 @@ class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
         _layoutMap.removeAll()
         _columnsYoffset = Array(repeating: 0, count: totalColumns)
         var totalHeight: CGFloat = 0.0
-        let countSections: Int = (collectionView?.numberOfSections)!
-        
-        //for i in 0...countSections-1 {
         
         totalItemsInSection = collectionView!.numberOfItems(inSection: 0)
         
