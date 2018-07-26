@@ -40,15 +40,6 @@ class SettingsVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        gradientView.addGradient(colors: [constants.darkGradientColor,
-                                            constants.lightGradientColor],
-                                   start: CGPoint(x:0.5, y:0),
-                                   end: CGPoint(x:0.5, y:1))
-    }
-    
     func setupAppearance() {
         containerView.layer.cornerRadius = 15
         containerView.clipsToBounds = true
@@ -94,6 +85,11 @@ class SettingsVC: UIViewController {
         devicePropertiesView.checkForUpgradecallback = { [weak self] in
             self?.showAlert(value: 0)
         }
+        
+        gradientView.addGradient(colors: [constants.darkGradientColor,
+                                          constants.lightGradientColor],
+                                 start: CGPoint(x:0.5, y:0),
+                                 end: CGPoint(x:0.5, y:1))
     }
     
     func showAlert(value: Int) {

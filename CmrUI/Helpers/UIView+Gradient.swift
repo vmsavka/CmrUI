@@ -9,7 +9,7 @@
 import UIKit
 import ObjectiveC
 
-private var GradientLayerKey: UInt8 = 0
+private let GradientLayerName: String = "gradientLayer"
 
 extension UIView {
 
@@ -30,19 +30,20 @@ extension UIView {
         gradient.startPoint = startPoint
         gradient.endPoint = endPoint
         self.layer.addSublayer(gradient)
-        self.setGradientLayer(gradient)
+        gradient.name = GradientLayerName
     }
     
     func gradientLayer() -> CALayer? {
         if self.layer.sublayers == nil {
             return nil
         }
-        let ppgog = objc_getAssociatedObject(self, "🔑") as? CALayer
-        return objc_getAssociatedObject(self, "🔑") as? CALayer
-    }
-    
-    func setGradientLayer(_ layer: CALayer?) {
-        objc_setAssociatedObject(self, "🔑", layer, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        let layerArray = self.layer.sublayers?.filter({ $0.name == GradientLayerName  })
+        if layerArray?.isEmpty == false {
+            return layerArray?[0]
+        }
+        else {
+            return nil
+        }
     }
     
     func updateGradientLayerFrame() {
@@ -51,5 +52,4 @@ extension UIView {
             layer?.frame = self.bounds 
         }
     }
-    
 }
