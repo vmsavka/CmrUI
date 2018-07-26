@@ -11,15 +11,15 @@ import ObjectiveC
 
 private var GradientLayerKey: UInt8 = 0
 
-class GradientHelper: NSObject {
+extension UIView {
 
-    class func addGradient(onTopOf view: UIView?, colors: [UIColor]?, start startPoint: CGPoint, end endPoint: CGPoint) {
-        let layer: CALayer? = self.gradientLayer(for: view)
+    func addGradient(colors: [UIColor]?, start startPoint: CGPoint, end endPoint: CGPoint) {
+        let layer: CALayer? = self.gradientLayer()
         if layer != nil {
             return
         }
         let gradient = CAGradientLayer()
-        gradient.frame = view?.bounds ?? CGRect.zero
+        gradient.frame = bounds
         var cgcolors = [AnyHashable]()
         for color: UIColor? in colors ?? [UIColor?]() {
             if let aColor = color?.cgColor {
@@ -29,25 +29,26 @@ class GradientHelper: NSObject {
         gradient.colors = cgcolors
         gradient.startPoint = startPoint
         gradient.endPoint = endPoint
-        view?.layer.addSublayer(gradient)
-        self.setGradientLayer(gradient, for: view)
+        self.layer.addSublayer(gradient)
+        self.setGradientLayer(gradient)
     }
     
-    class func gradientLayer(for view: UIView?) -> CALayer? {
-        if view == nil || view?.layer.sublayers == nil {
+    func gradientLayer() -> CALayer? {
+        if self.layer.sublayers == nil {
             return nil
         }
-        return objc_getAssociatedObject(self, &GradientLayerKey) as? CALayer
+        let ppgog = objc_getAssociatedObject(self, "🔑") as? CALayer
+        return objc_getAssociatedObject(self, "🔑") as? CALayer
     }
     
-    class func setGradientLayer(_ layer: CALayer?, for view: UIView?) {
-        objc_setAssociatedObject(view ?? UIView(), &GradientLayerKey, layer, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+    func setGradientLayer(_ layer: CALayer?) {
+        objc_setAssociatedObject(self, "🔑", layer, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
     
-    class func updateGradientLayerFrame(on view: UIView?) {
-        let layer: CALayer? = self.gradientLayer(for: view)
+    func updateGradientLayerFrame() {
+        let layer: CALayer? = self.gradientLayer()
         if layer != nil {
-            layer?.frame = view?.bounds ?? CGRect.zero
+            layer?.frame = self.bounds 
         }
     }
     

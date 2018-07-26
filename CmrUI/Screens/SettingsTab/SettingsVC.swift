@@ -43,8 +43,7 @@ class SettingsVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        GradientHelper.addGradient(onTopOf: gradientView,
-                                   colors: [constants.darkGradientColor,
+        gradientView.addGradient(colors: [constants.darkGradientColor,
                                             constants.lightGradientColor],
                                    start: CGPoint(x:0.5, y:0),
                                    end: CGPoint(x:0.5, y:1))
@@ -108,7 +107,7 @@ class SettingsVC: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews();
         
-        GradientHelper.updateGradientLayerFrame(on: gradientView)
+        gradientView.updateGradientLayerFrame()
     }
     
     // MARK: Actions

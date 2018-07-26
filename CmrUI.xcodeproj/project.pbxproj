@@ -314,10 +314,10 @@
 		E18B7815210432CE00183F85 /* SettingsTab */ = {
 			isa = PBXGroup;
 			children = (
+				E18B7824210432E300183F85 /* SettingsVC.swift */,
 				E18B7825210432E300183F85 /* DevicePropertiesView.swift */,
 				E18B7822210432E300183F85 /* SegmentedView.swift */,
 				E18B7823210432E300183F85 /* SettingsPropertyView.swift */,
-				E18B7824210432E300183F85 /* SettingsVC.swift */,
 				E18B7826210432E300183F85 /* SwitchView.swift */,
 			);
 			name = SettingsTab;
