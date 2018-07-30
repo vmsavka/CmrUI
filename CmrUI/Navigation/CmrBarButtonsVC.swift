@@ -30,7 +30,7 @@ class CmrBarButtonsVC: UICollectionViewController, CmrBarButtonsLayoutDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataSource = [.feedItem, .galleryItem, .itemsItem, .settingsItem, .cartItem]
+        dataSource = [.feedItem, .profileItem, .galleryItem, .settingsItem, .shoppingItem]
         
         // Register cell classes
         self.collectionView?.register(UINib(nibName: "CmrBarButtonCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)

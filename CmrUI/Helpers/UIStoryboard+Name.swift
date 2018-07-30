@@ -12,6 +12,7 @@ import UIKit
 @objc enum StoryboardName: Int {
     case cmrContainer
     case newsFeed
+    case profile
     case settings
 }
 
@@ -23,6 +24,8 @@ extension UIStoryboard {
             storyboardName = "CmrContainer"
         case .newsFeed:
             storyboardName = "NewsFeed"
+        case .profile:
+            storyboardName = "Profile"
         case .settings:
             storyboardName = "Settings"
         }
