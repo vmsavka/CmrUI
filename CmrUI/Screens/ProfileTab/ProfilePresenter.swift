@@ -72,8 +72,15 @@ class ProfilePresenterImplementation: ProfilePresenter {
         
         cell.display(title: profileItem.title ?? "")
         cell.setBackground(color: UIColor.red)
-        //cell.display(image: profileItem.image ?? UIImage())
-        //cell.display(date: profileItem.time ?? Date())
+        
+        switch row {
+        case 1:
+            if let batteryCell = cell as? BatteryRemainingCell {
+                batteryCell.display(title: "Battery Remaining")
+                batteryCell.displayBatteryLevel(percentage: 65.5)
+            }
+        default: break
+        }
     }
     
     func didSelect(row: Int) {
