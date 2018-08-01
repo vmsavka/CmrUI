@@ -85,6 +85,13 @@ class ProfilePresenterImplementation: ProfilePresenter {
                 sunsetCell.displayTime(hoursRemaining: 22)
                 sunsetCell.display(image: UIImage(named: "sunset") ?? UIImage())
             }
+        case 3:
+            if let chartCell = cell as? TotalPhotosChartCell {
+                chartCell.display(title: "Photos - Total")
+                chartCell.displayPhotosCount(totalValue: 179)
+                chartCell.dispalyPhotoesStatistics(["2018/05/02" : 6, "2018/01/15" : 33, "2018/01/08" : 2, "2018/01/01" : 11, "2018/03/08" : 20, "2018/02/28" : 3])
+                chartCell.setProgressIndicator(isEnabled: false)
+            }
         default: break
         }
     }
