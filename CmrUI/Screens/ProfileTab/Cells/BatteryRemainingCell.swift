@@ -24,6 +24,7 @@ class BatteryRemainingCell: UICollectionViewCell, ProfileCellView {
     @IBOutlet weak var batteryRemainingTitleLabel: UILabel!
     @IBOutlet weak var batteryRemainingValueLabel: UILabel!
     @IBOutlet weak var verticalOffsetConstraint: NSLayoutConstraint!
+    @IBOutlet weak var valueLabelWidthConstraint: NSLayoutConstraint!
     
     var circleLayer: CAShapeLayer!
     var drawDuration: Double = 1
@@ -65,7 +66,8 @@ class BatteryRemainingCell: UICollectionViewCell, ProfileCellView {
                                       radius: frame.size.width * Constants.kCircleRadius / 2,
                                       startAngle: Constants.kStartAxisCorner,
                                       endAngle: value, clockwise: true)
-        verticalOffsetConstraint.constant = -Constants.verticalCircleOffset
+        verticalOffsetConstraint.constant = Device.IS_4_INCHES_OR_SMALLER() ? -Constants.verticalCircleOffset - 3 : -Constants.verticalCircleOffset
+        valueLabelWidthConstraint.constant = Device.IS_4_INCHES_OR_SMALLER() ? 40 : 55
         
         // Setup the CAShapeLayer with the path, colors, and line width
         circleLayer = CAShapeLayer()

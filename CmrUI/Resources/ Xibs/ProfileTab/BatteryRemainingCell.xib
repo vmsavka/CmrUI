@@ -19,10 +19,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="65%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kU-Su-tmp">
-                        <rect key="frame" x="35" y="40" width="59.5" height="28"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="65%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="8kU-Su-tmp">
+                        <rect key="frame" x="37.5" y="40" width="55" height="28"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="55" id="Lis-pd-CvJ"/>
                             <constraint firstAttribute="height" constant="28" id="ulE-40-II8"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
@@ -53,6 +54,7 @@
             <connections>
                 <outlet property="batteryRemainingTitleLabel" destination="3yQ-4Q-jvf" id="SXZ-kj-UG3"/>
                 <outlet property="batteryRemainingValueLabel" destination="8kU-Su-tmp" id="boI-tP-iwb"/>
+                <outlet property="valueLabelWidthConstraint" destination="Lis-pd-CvJ" id="T3A-9Y-Pjk"/>
                 <outlet property="verticalOffsetConstraint" destination="FNO-pr-mad" id="6tZ-LK-B3i"/>
             </connections>
             <point key="canvasLocation" x="158" y="162"/>

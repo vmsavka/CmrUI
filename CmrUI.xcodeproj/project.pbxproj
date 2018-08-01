@@ -68,6 +68,7 @@
 		0F01FC89210EF7E0003448AB /* BatteryRemainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FC85210EF7E0003448AB /* BatteryRemainingCell.xib */; };
 		0F01FC8A210EF7E0003448AB /* SunsetRemainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FC86210EF7E0003448AB /* SunsetRemainingCell.xib */; };
 		0F01FC8B210EF7E0003448AB /* ProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FC87210EF7E0003448AB /* ProfileInfoCell.xib */; };
+		0F01FC8D2110F8B2003448AB /* EllipsesLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC8C2110F8B2003448AB /* EllipsesLogoView.swift */; };
 		0F4F224D20F3A8DE00A0F5A4 /* CmrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F224C20F3A8DE00A0F5A4 /* CmrUITests.swift */; };
 		0F4F225820F3A8DE00A0F5A4 /* CmrUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F225720F3A8DE00A0F5A4 /* CmrUIUITests.swift */; };
 /* End PBXBuildFile section */
@@ -152,6 +153,7 @@
 		0F01FC85210EF7E0003448AB /* BatteryRemainingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BatteryRemainingCell.xib; sourceTree = "<group>"; };
 		0F01FC86210EF7E0003448AB /* SunsetRemainingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SunsetRemainingCell.xib; sourceTree = "<group>"; };
 		0F01FC87210EF7E0003448AB /* ProfileInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileInfoCell.xib; sourceTree = "<group>"; };
+		0F01FC8C2110F8B2003448AB /* EllipsesLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipsesLogoView.swift; sourceTree = "<group>"; };
 		0F4F223420F3A8DD00A0F5A4 /* CmrUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CmrUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4F224820F3A8DE00A0F5A4 /* CmrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CmrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4F224C20F3A8DE00A0F5A4 /* CmrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmrUITests.swift; sourceTree = "<group>"; };
@@ -316,9 +318,9 @@
 		0F01FBFA210B2B33003448AB /* SettingsTab */ = {
 			isa = PBXGroup;
 			children = (
+				0F01FBFD210B2B33003448AB /* SettingsVC.swift */,
 				0F01FBFB210B2B33003448AB /* SegmentedView.swift */,
 				0F01FBFC210B2B33003448AB /* SettingsPropertyView.swift */,
-				0F01FBFD210B2B33003448AB /* SettingsVC.swift */,
 				0F01FBFE210B2B33003448AB /* DevicePropertiesView.swift */,
 				0F01FBFF210B2B33003448AB /* SwitchView.swift */,
 			);
@@ -389,10 +391,11 @@
 		0F01FC5E210D49EE003448AB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				0F01FC60210D49EE003448AB /* TotalPhotosChartCell.swift */,
-				0F01FC61210D49EE003448AB /* BatteryRemainingCell.swift */,
 				0F01FC7B210EF6DC003448AB /* ProfileInfoCell.swift */,
+				0F01FC61210D49EE003448AB /* BatteryRemainingCell.swift */,
 				0F01FC7F210EF6EE003448AB /* SunsetRemainingCell.swift */,
+				0F01FC60210D49EE003448AB /* TotalPhotosChartCell.swift */,
+				0F01FC8C2110F8B2003448AB /* EllipsesLogoView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				0F01FC4A210B2B33003448AB /* CmrContainerVC.swift in Sources */,
 				0F01FC31210B2B33003448AB /* GalleryItem.swift in Sources */,
 				0F01FC4C210B2B33003448AB /* Result.swift in Sources */,
+				0F01FC8D2110F8B2003448AB /* EllipsesLogoView.swift in Sources */,
 				0F01FC56210B2B33003448AB /* UIView+Gradient.swift in Sources */,
 				0F01FC70210DCD0C003448AB /* ProfileItem.swift in Sources */,
 				0F01FC59210B2B33003448AB /* UIImage+Color.swift in Sources */,

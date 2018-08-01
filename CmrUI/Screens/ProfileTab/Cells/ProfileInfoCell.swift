@@ -10,6 +10,34 @@ import UIKit
 
 class ProfileInfoCell: UICollectionViewCell , ProfileCellView {
     
+    @IBOutlet weak var badgesCallectionView: UICollectionView!
+    @IBOutlet weak var ellipseView: UIView!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.backgroundColor = UIColor.red
+        self.layer.cornerRadius = 15
+        self.clipsToBounds = true
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        setup()
+    }
+
+    func setup() {
+        ellipseView.backgroundColor = UIColor.magenta
+    }
+    
+}
+
+extension ProfileInfoCell {
+    
     func display(title: String) {
         
     }
@@ -24,13 +52,5 @@ class ProfileInfoCell: UICollectionViewCell , ProfileCellView {
     
     func setBackground(color: UIColor) {
         self.backgroundColor = color
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        self.backgroundColor = UIColor.red
-        self.layer.cornerRadius = 15
-        self.clipsToBounds = true
     }
 }

@@ -79,6 +79,12 @@ class ProfilePresenterImplementation: ProfilePresenter {
                 batteryCell.display(title: "Battery Remaining")
                 batteryCell.displayBatteryLevel(percentage: 65.5)
             }
+        case 2:
+            if let sunsetCell = cell as? SunsetRemainingCell {
+                sunsetCell.display(title: "hrs.\nuntil sunset")
+                sunsetCell.displayTime(hoursRemaining: 22)
+                sunsetCell.display(image: UIImage(named: "sunset") ?? UIImage())
+            }
         default: break
         }
     }
