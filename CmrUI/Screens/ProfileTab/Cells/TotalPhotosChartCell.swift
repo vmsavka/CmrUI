@@ -14,6 +14,10 @@ private struct Constants {
     
     static let cornerCircleWidth: CGFloat = 2
     static let cornerCircleColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1)
+    static let kMaxYAxisOffset: Double = 1.5
+    
+    static let markerColor = NSUIColor.black
+    static let markerFocusedColor = NSUIColor.white
 }
 
 class TotalPhotosChartCell: UICollectionViewCell, ProfileCellView {
@@ -24,6 +28,7 @@ class TotalPhotosChartCell: UICollectionViewCell, ProfileCellView {
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var chartPhotosView: LineChartView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    var circleColors = [NSUIColor]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -110,10 +115,6 @@ extension TotalPhotosChartCell {
         if let minTimeInterval = (dates.map { $0.timeIntervalSince1970 }).min() {
             referenceTimeInterval = minTimeInterval
         }
-        var maximumTimeInterval: TimeInterval = 0
-        if let maxTimeInterval = (dates.map { $0.timeIntervalSince1970 }).max() {
-            maximumTimeInterval = maxTimeInterval
-        }
  
         // Define chart entries
         var entries = [ChartDataEntry]()
@@ -166,14 +167,17 @@ extension TotalPhotosChartCell {
         chartPhotosView.xAxis.enabled = false
         chartPhotosView.leftAxis.drawGridLinesEnabled = false
         chartPhotosView.leftAxis.axisMinimum = 0
-        chartPhotosView.leftAxis.axisMaximum = Double(maxValue)
+        chartPhotosView.leftAxis.axisMaximum = Double(maxValue) * Constants.kMaxYAxisOffset
         chartPhotosView.leftAxis.labelCount = 0
         chartPhotosView.data = chartData
     }
     
     func setupLineChart() {
         //Configure Chart View
+        chartPhotosView.delegate = self
         chartPhotosView.chartDescription?.enabled = false
+        
+        refreshMarkerColors()
         //chartPhotosView.dragEnabled = true
         //chartPhotosView.setScaleEnabled(true)
         //chartPhotosView.pinchZoomEnabled = true
@@ -188,6 +192,7 @@ extension TotalPhotosChartCell {
         chartPhotosView.xAxis.drawGridLinesEnabled = false
         chartPhotosView.leftAxis.drawLabelsEnabled = false
         chartPhotosView.extraBottomOffset = 0
+        chartPhotosView.highlightPerTapEnabled = true
         
         let marker = BalloonMarker(color: UIColor.clear,
                                    font: .systemFont(ofSize: 12),
@@ -196,7 +201,44 @@ extension TotalPhotosChartCell {
         marker.chartView = chartPhotosView
         marker.minimumSize = CGSize(width: 30, height: 18)
         chartPhotosView.marker = marker
+        chartPhotosView.tintColor = UIColor.blue
 
         chartPhotosView.animate(xAxisDuration: 0.5)
+    }
+    
+    func refreshMarkerColors() {
+        var points = LineChartDataSet()
+        guard let dataSets = chartPhotosView.data?.dataSets else { return }
+        if dataSets.count > 0 {
+            points = (dataSets[0] as? LineChartDataSet)!
+            circleColors = [NSUIColor](repeating: Constants.markerColor, count: points.values.count)
+        }
+    }
+}
+
+    // MARK: - ChartViewDelegate
+
+extension TotalPhotosChartCell: ChartViewDelegate {
+    public func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        var dataSet = LineChartDataSet()
+        dataSet = (chartView.data?.dataSets[0] as? LineChartDataSet)!
+        let values = dataSet.values
+        let index = values.index(where: {$0.x == highlight.x})
+        
+        refreshMarkerColors()
+        dataSet.circleColors = circleColors
+        dataSet.circleColors[index!] = Constants.markerFocusedColor
+        
+        chartView.data?.notifyDataChanged()
+        chartView.notifyDataSetChanged()
+    }
+    
+    public func chartValueNothingSelected(_ chartView: ChartViewBase) {
+        var dataSet = LineChartDataSet()
+        dataSet = (chartView.data?.dataSets[0] as? LineChartDataSet)!
+        dataSet.circleColors = circleColors
+        
+        chartView.data?.notifyDataChanged()
+        chartView.notifyDataSetChanged()
     }
 }

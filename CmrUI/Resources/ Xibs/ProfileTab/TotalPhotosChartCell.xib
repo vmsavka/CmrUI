@@ -27,15 +27,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="246" height="162"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vz7-iU-4a2" customClass="LineChartView" customModule="CmrUI" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="51" width="246" height="106"/>
+                                <rect key="frame" x="0.0" y="0.0" width="246" height="157"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="gBr-70-mKS">
-                                <rect key="frame" x="113" y="93.5" width="20" height="20"/>
+                                <rect key="frame" x="113" y="68.5" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vz7-iU-4a2" firstAttribute="top" secondItem="3Ly-dh-uAu" secondAttribute="top" id="2M7-n7-Idw"/>
                             <constraint firstItem="gBr-70-mKS" firstAttribute="centerY" secondItem="vz7-iU-4a2" secondAttribute="centerY" id="6jJ-3o-cFU"/>
                             <constraint firstItem="gBr-70-mKS" firstAttribute="centerX" secondItem="vz7-iU-4a2" secondAttribute="centerX" id="Rfe-bb-T5f"/>
                             <constraint firstAttribute="bottom" secondItem="vz7-iU-4a2" secondAttribute="bottom" constant="5" id="eBb-dR-uZl"/>
@@ -72,7 +73,6 @@
                 <constraint firstItem="3Ly-dh-uAu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GCR-eJ-3mV"/>
                 <constraint firstItem="AiD-GN-28U" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="I4j-hS-QTx"/>
                 <constraint firstItem="AiD-GN-28U" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Ime-nb-ZnA"/>
-                <constraint firstItem="vz7-iU-4a2" firstAttribute="top" secondItem="VVM-2t-RRn" secondAttribute="bottom" id="Lnf-SH-HWQ"/>
                 <constraint firstAttribute="trailing" secondItem="941-E1-iaH" secondAttribute="trailing" id="aA8-tp-vt8"/>
                 <constraint firstAttribute="trailing" secondItem="3Ly-dh-uAu" secondAttribute="trailing" id="eLD-0G-OWa"/>
                 <constraint firstItem="3Ly-dh-uAu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gWd-bN-Xyy"/>
