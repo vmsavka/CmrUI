@@ -31,7 +31,6 @@ class ProfileInfoCell: UICollectionViewCell , ProfileCellView {
     }
 
     func setup() {
-        ellipseView.backgroundColor = UIColor.magenta
     }
     
 }

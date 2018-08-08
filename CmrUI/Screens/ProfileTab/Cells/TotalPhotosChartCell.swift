@@ -17,7 +17,7 @@ private struct Constants {
     static let kMaxYAxisOffset: Double = 1.5
     
     static let markerColor = NSUIColor.black
-    static let markerFocusedColor = NSUIColor.white
+    static let markerFocusedColor = NSUIColor.yellow
 }
 
 class TotalPhotosChartCell: UICollectionViewCell, ProfileCellView {

@@ -68,7 +68,6 @@
 		0F01FC89210EF7E0003448AB /* BatteryRemainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FC85210EF7E0003448AB /* BatteryRemainingCell.xib */; };
 		0F01FC8A210EF7E0003448AB /* SunsetRemainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FC86210EF7E0003448AB /* SunsetRemainingCell.xib */; };
 		0F01FC8B210EF7E0003448AB /* ProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FC87210EF7E0003448AB /* ProfileInfoCell.xib */; };
-		0F01FC8D2110F8B2003448AB /* EllipsesLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC8C2110F8B2003448AB /* EllipsesLogoView.swift */; };
 		0F01FD292111AC57003448AB /* DataApproximator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC932111AC57003448AB /* DataApproximator.swift */; };
 		0F01FD2A2111AC57003448AB /* DataApproximator+N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC942111AC57003448AB /* DataApproximator+N.swift */; };
 		0F01FD2B2111AC57003448AB /* RadarChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC962111AC57003448AB /* RadarChartRenderer.swift */; };
@@ -208,6 +207,9 @@
 		0F01FDB22111C625003448AB /* TotalPhotosCirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDB12111C625003448AB /* TotalPhotosCirclesView.swift */; };
 		0F01FDB42111DE00003448AB /* ChartXAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDB32111DE00003448AB /* ChartXAxisFormatter.swift */; };
 		0F01FDB62111F661003448AB /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDB52111F661003448AB /* BalloonMarker.swift */; };
+		0F01FDEB211ACDA7003448AB /* TriangleLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDE8211ACDA7003448AB /* TriangleLogoView.swift */; };
+		0F01FDEC211ACDA7003448AB /* EllipsesLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDE9211ACDA7003448AB /* EllipsesLogoView.swift */; };
+		0F01FDED211ACDA7003448AB /* EllipticCurvesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDEA211ACDA7003448AB /* EllipticCurvesView.swift */; };
 		0F4F224D20F3A8DE00A0F5A4 /* CmrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F224C20F3A8DE00A0F5A4 /* CmrUITests.swift */; };
 		0F4F225820F3A8DE00A0F5A4 /* CmrUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F225720F3A8DE00A0F5A4 /* CmrUIUITests.swift */; };
 /* End PBXBuildFile section */
@@ -292,7 +294,6 @@
 		0F01FC85210EF7E0003448AB /* BatteryRemainingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BatteryRemainingCell.xib; sourceTree = "<group>"; };
 		0F01FC86210EF7E0003448AB /* SunsetRemainingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SunsetRemainingCell.xib; sourceTree = "<group>"; };
 		0F01FC87210EF7E0003448AB /* ProfileInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileInfoCell.xib; sourceTree = "<group>"; };
-		0F01FC8C2110F8B2003448AB /* EllipsesLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipsesLogoView.swift; sourceTree = "<group>"; };
 		0F01FC932111AC57003448AB /* DataApproximator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataApproximator.swift; sourceTree = "<group>"; };
 		0F01FC942111AC57003448AB /* DataApproximator+N.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataApproximator+N.swift"; sourceTree = "<group>"; };
 		0F01FC962111AC57003448AB /* RadarChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarChartRenderer.swift; sourceTree = "<group>"; };
@@ -432,6 +433,9 @@
 		0F01FDB12111C625003448AB /* TotalPhotosCirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPhotosCirclesView.swift; sourceTree = "<group>"; };
 		0F01FDB32111DE00003448AB /* ChartXAxisFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisFormatter.swift; sourceTree = "<group>"; };
 		0F01FDB52111F661003448AB /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		0F01FDE8211ACDA7003448AB /* TriangleLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleLogoView.swift; sourceTree = "<group>"; };
+		0F01FDE9211ACDA7003448AB /* EllipsesLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipsesLogoView.swift; sourceTree = "<group>"; };
+		0F01FDEA211ACDA7003448AB /* EllipticCurvesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticCurvesView.swift; sourceTree = "<group>"; };
 		0F4F223420F3A8DD00A0F5A4 /* CmrUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CmrUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4F224820F3A8DE00A0F5A4 /* CmrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CmrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4F224C20F3A8DE00A0F5A4 /* CmrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmrUITests.swift; sourceTree = "<group>"; };
@@ -658,6 +662,7 @@
 		0F01FC5B210D49EE003448AB /* ProfileTab */ = {
 			isa = PBXGroup;
 			children = (
+				0F01FDE7211ACDA7003448AB /* Views */,
 				0F01FC5E210D49EE003448AB /* Cells */,
 				0F01FC5C210D49EE003448AB /* ProfileVC.swift */,
 				0F01FC5D210D49EE003448AB /* ProfilePresenter.swift */,
@@ -675,7 +680,6 @@
 				0F01FC61210D49EE003448AB /* BatteryRemainingCell.swift */,
 				0F01FC7F210EF6EE003448AB /* SunsetRemainingCell.swift */,
 				0F01FC60210D49EE003448AB /* TotalPhotosChartCell.swift */,
-				0F01FC8C2110F8B2003448AB /* EllipsesLogoView.swift */,
 				0F01FDB12111C625003448AB /* TotalPhotosCirclesView.swift */,
 			);
 			path = Cells;
@@ -954,6 +958,16 @@
 				0F01FD282111AC57003448AB /* BubbleChartDataProvider.swift */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		0F01FDE7211ACDA7003448AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0F01FDE9211ACDA7003448AB /* EllipsesLogoView.swift */,
+				0F01FDE8211ACDA7003448AB /* TriangleLogoView.swift */,
+				0F01FDEA211ACDA7003448AB /* EllipticCurvesView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0F4F222B20F3A8DD00A0F5A4 = {
@@ -1242,7 +1256,6 @@
 				0F01FD6A2111AC57003448AB /* ViewPortHandler.swift in Sources */,
 				0F01FC4C210B2B33003448AB /* Result.swift in Sources */,
 				0F01FD492111AC57003448AB /* BarHighlighter.swift in Sources */,
-				0F01FC8D2110F8B2003448AB /* EllipsesLogoView.swift in Sources */,
 				0F01FC56210B2B33003448AB /* UIView+Gradient.swift in Sources */,
 				0F01FD4D2111AC57003448AB /* HorizontalBarHighlighter.swift in Sources */,
 				0F01FD6C2111AC57003448AB /* Platform.swift in Sources */,
@@ -1262,10 +1275,12 @@
 				0F01FC4D210B2B33003448AB /* ZoomTransition.swift in Sources */,
 				0F01FC81210EF6EE003448AB /* SunsetRemainingCell.swift in Sources */,
 				0F01FD972111AC57003448AB /* CandleChartData.swift in Sources */,
+				0F01FDEB211ACDA7003448AB /* TriangleLogoView.swift in Sources */,
 				0F01FD8C2111AC57003448AB /* LineRadarChartDataSet.swift in Sources */,
 				0F01FDAF2111AC57003448AB /* ScatterChartDataProvider.swift in Sources */,
 				0F01FD722111AC57003448AB /* MarkerImage.swift in Sources */,
 				0F01FD762111AC57003448AB /* AxisBase.swift in Sources */,
+				0F01FDED211ACDA7003448AB /* EllipticCurvesView.swift in Sources */,
 				0F01FC34210B2B33003448AB /* FeedNewsCell.swift in Sources */,
 				0F01FD592111AC57003448AB /* ChartViewBase.swift in Sources */,
 				0F01FD3A2111AC57003448AB /* XShapeRenderer.swift in Sources */,
@@ -1317,6 +1332,7 @@
 				0F01FDB02111AC57003448AB /* BubbleChartDataProvider.swift in Sources */,
 				0F01FC36210B2B33003448AB /* FeedNewsTextCell.swift in Sources */,
 				0F01FC67210D49EE003448AB /* ProfilePresenter.swift in Sources */,
+				0F01FDEC211ACDA7003448AB /* EllipsesLogoView.swift in Sources */,
 				0F01FD4A2111AC57003448AB /* RadarHighlighter.swift in Sources */,
 				0F01FD742111AC57003448AB /* LegendEntry.swift in Sources */,
 				0F01FD962111AC57003448AB /* PieChartData.swift in Sources */,
