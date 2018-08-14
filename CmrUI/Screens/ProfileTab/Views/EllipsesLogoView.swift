@@ -22,6 +22,11 @@ class EllipsesLogoView: UIView {
         ellipsesView.logoSuperview = self
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+    }
+    
     func addMaskLayer(bezierPath: UIBezierPath) {
         let currentContext = UIGraphicsGetCurrentContext()
         guard let context = currentContext else { return }
@@ -40,6 +45,14 @@ class EllipsesLogoView: UIView {
         logoBackground.layer.mask = shapeLayer
         logoBackground.bringSubview(toFront: self)
         self.addSubview(logoBackground)
+        logoBackground.translatesAutoresizingMaskIntoConstraints = false
+   
+        NSLayoutConstraint.activate([
+            logoBackground.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            logoBackground.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
+            logoBackground.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
+            logoBackground.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0),
+        ])
         
         logoBackground.addTriangleBorderLayer(bezierPath: bezierPath)
     }

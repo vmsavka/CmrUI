@@ -27,7 +27,6 @@ fileprivate struct LayoutInsets {
 }
 
 private struct Constants {
-    
     let kReuseChartCell = "TotalPhotosChartCell"
     let kReuseBatteryCell = "BatteryRemainingCell"
     let kProfileInfoCell = "ProfileInfoCell"
@@ -37,13 +36,7 @@ private struct Constants {
     let backgroundColor = UIColor(red: 235.0/255.0, green: 235.0/255.0, blue: 235.0/255.0, alpha: 1.0)
 }
 
-public enum ProfileType: Int {
-    case feedImage = 0
-    case feedText = 1
-    case count = 2
-}
-
-class ProfileVC: UICollectionViewController, UINavigationControllerDelegate, NewsFeedVMProtocol, ProfileLayoutDelegate, ProfileTabView {
+class ProfileVC: UICollectionViewController, UINavigationControllerDelegate, NewsFeedVMProtocol, ProfileLayoutDelegate, ProfileTabView, AddChildVCProtocol {
 
     var configurator = ProfileConfiguratorImplementation()
     var presenter: ProfilePresenter!
@@ -76,6 +69,11 @@ class ProfileVC: UICollectionViewController, UINavigationControllerDelegate, New
         collectionView?.register(UINib(nibName: "\(TotalPhotosChartCell.self)", bundle: nil), forCellWithReuseIdentifier: Constants().kReuseChartCell)
         collectionView?.register(UINib(nibName: "\(SunsetRemainingCell.self)", bundle: nil), forCellWithReuseIdentifier: Constants().kSunsetRemainingCell)
         collectionView?.register(UINib(nibName: "\(BatteryRemainingCell.self)", bundle: nil), forCellWithReuseIdentifier: Constants().kReuseBatteryCell)
+        
+        
+        collectionView?.register(UINib(nibName: "ProfileInfoCell", bundle: nil), forCellWithReuseIdentifier: "ProfileInfoCell")
+        
+        
 
         customCollectionViewLayout?.delegate = self
         customCollectionViewLayout?.interItemsSpacing = Insets.kInterItemsSpacing
@@ -140,8 +138,9 @@ class ProfileVC: UICollectionViewController, UINavigationControllerDelegate, New
         let type = ProfileItemType(rawValue: indexPath.row)
         switch (type) {
         case .profileInfo?:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants().kProfileInfoCell, for: indexPath) as! ProfileInfoCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileInfoCell", for: indexPath) as! ProfileInfoCell
             presenter.configure(cell: cell, forRow: type?.rawValue ?? 0)
+            cell.parentVC = self
             return cell
         case .batteryRemaining?:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants().kReuseBatteryCell, for: indexPath) as! BatteryRemainingCell
@@ -188,6 +187,12 @@ class ProfileVC: UICollectionViewController, UINavigationControllerDelegate, New
                 self.collectionView?.collectionViewLayout = newValue!
             }
         }
+    }
+    
+    func addChildVC(childController: UIViewController, containerView: UIView) {
+        self.addChildViewController(childController)
+        containerView.addSubview(childController.view)
+        childController.didMove(toParentViewController: self)
     }
     
     // MARK: Section header

@@ -71,21 +71,29 @@ class ProfilePresenterImplementation: ProfilePresenter {
         let profileItem = profile[row]
         
         cell.display(title: profileItem.title ?? "")
-        cell.setBackground(color: UIColor.red)
+        //cell.setBackground(color: UIColor.grey)
         
-        switch row {
-        case 1:
+        let type = profileItem.profileItemType
+        
+        switch type {
+        case .profileInfo?:
+            if let profileCell = cell as? ProfileInfoCell {
+                profileCell.display(title: "Platinum")
+                profileCell.display(name: "Mathew Frischer")
+                profileCell.display(description: "Member Since '18")
+            }
+        case .batteryRemaining?:
             if let batteryCell = cell as? BatteryRemainingCell {
                 batteryCell.display(title: "Battery Remaining")
                 batteryCell.displayBatteryLevel(percentage: 65.5)
             }
-        case 2:
+        case .sunsetRemaining?:
             if let sunsetCell = cell as? SunsetRemainingCell {
                 sunsetCell.display(title: "hrs.\nuntil sunset")
                 sunsetCell.displayTime(hoursRemaining: 22)
                 sunsetCell.display(image: UIImage(named: "sunset") ?? UIImage())
             }
-        case 3:
+        case .photosTotalChart?:
             if let chartCell = cell as? TotalPhotosChartCell {
                 chartCell.display(title: "Photos - Total")
                 chartCell.displayPhotosCount(totalValue: 179)

@@ -210,6 +210,18 @@
 		0F01FDEB211ACDA7003448AB /* TriangleLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDE8211ACDA7003448AB /* TriangleLogoView.swift */; };
 		0F01FDEC211ACDA7003448AB /* EllipsesLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDE9211ACDA7003448AB /* EllipsesLogoView.swift */; };
 		0F01FDED211ACDA7003448AB /* EllipticCurvesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDEA211ACDA7003448AB /* EllipticCurvesView.swift */; };
+		0F16655D21213341001EB84C /* ProfileBadgesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F16655C21213341001EB84C /* ProfileBadgesCell.xib */; };
+		0F16659A21213910001EB84C /* ProfileBadgesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F16659921213910001EB84C /* ProfileBadgesCollectionVC.swift */; };
+		0F16659C21213929001EB84C /* ProfileBadgesCollectionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F16659B21213929001EB84C /* ProfileBadgesCollectionVM.swift */; };
+		0F16659F2121472D001EB84C /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F16659E2121472D001EB84C /* ProfileManager.swift */; };
+		0F1665A121215315001EB84C /* ProfileBadgesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665A021215315001EB84C /* ProfileBadgesCell.swift */; };
+		0F1665A3212170A9001EB84C /* UICollectionViewRightAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665A2212170A8001EB84C /* UICollectionViewRightAlignedLayout.swift */; };
+		0F1665A821232865001EB84C /* AddNewBadgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665A721232865001EB84C /* AddNewBadgeVC.swift */; };
+		0F1665AA21232879001EB84C /* AddNewBadgeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665A921232879001EB84C /* AddNewBadgeVM.swift */; };
+		0F1665AD2123583E001EB84C /* AddNewBadgeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665AB2123583E001EB84C /* AddNewBadgeCell.swift */; };
+		0F1665B021238223001EB84C /* AddNewBadgeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F1665AF21238223001EB84C /* AddNewBadgeCell.xib */; };
+		0F1665B42123851C001EB84C /* DetailedBadgeInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665B32123851C001EB84C /* DetailedBadgeInfoVC.swift */; };
+		0F1665B62123852F001EB84C /* DetailedBadgeInfoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665B52123852F001EB84C /* DetailedBadgeInfoVM.swift */; };
 		0F4F224D20F3A8DE00A0F5A4 /* CmrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F224C20F3A8DE00A0F5A4 /* CmrUITests.swift */; };
 		0F4F225820F3A8DE00A0F5A4 /* CmrUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F225720F3A8DE00A0F5A4 /* CmrUIUITests.swift */; };
 /* End PBXBuildFile section */
@@ -436,6 +448,18 @@
 		0F01FDE8211ACDA7003448AB /* TriangleLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleLogoView.swift; sourceTree = "<group>"; };
 		0F01FDE9211ACDA7003448AB /* EllipsesLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipsesLogoView.swift; sourceTree = "<group>"; };
 		0F01FDEA211ACDA7003448AB /* EllipticCurvesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticCurvesView.swift; sourceTree = "<group>"; };
+		0F16655C21213341001EB84C /* ProfileBadgesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileBadgesCell.xib; sourceTree = "<group>"; };
+		0F16659921213910001EB84C /* ProfileBadgesCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBadgesCollectionVC.swift; sourceTree = "<group>"; };
+		0F16659B21213929001EB84C /* ProfileBadgesCollectionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBadgesCollectionVM.swift; sourceTree = "<group>"; };
+		0F16659E2121472D001EB84C /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		0F1665A021215315001EB84C /* ProfileBadgesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBadgesCell.swift; sourceTree = "<group>"; };
+		0F1665A2212170A8001EB84C /* UICollectionViewRightAlignedLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewRightAlignedLayout.swift; sourceTree = "<group>"; };
+		0F1665A721232865001EB84C /* AddNewBadgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBadgeVC.swift; sourceTree = "<group>"; };
+		0F1665A921232879001EB84C /* AddNewBadgeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBadgeVM.swift; sourceTree = "<group>"; };
+		0F1665AB2123583E001EB84C /* AddNewBadgeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBadgeCell.swift; sourceTree = "<group>"; };
+		0F1665AF21238223001EB84C /* AddNewBadgeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewBadgeCell.xib; sourceTree = "<group>"; };
+		0F1665B32123851C001EB84C /* DetailedBadgeInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedBadgeInfoVC.swift; sourceTree = "<group>"; };
+		0F1665B52123852F001EB84C /* DetailedBadgeInfoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedBadgeInfoVM.swift; sourceTree = "<group>"; };
 		0F4F223420F3A8DD00A0F5A4 /* CmrUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CmrUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4F224820F3A8DE00A0F5A4 /* CmrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CmrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4F224C20F3A8DE00A0F5A4 /* CmrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmrUITests.swift; sourceTree = "<group>"; };
@@ -540,6 +564,7 @@
 		0F01FBEA210B2B33003448AB /* CoreModel */ = {
 			isa = PBXGroup;
 			children = (
+				0F16659D2121470E001EB84C /* Managers */,
 				0F01FBEB210B2B33003448AB /* Gateways */,
 				0F01FBED210B2B33003448AB /* Handlers */,
 				0F01FBEF210B2B33003448AB /* Entities */,
@@ -662,6 +687,9 @@
 		0F01FC5B210D49EE003448AB /* ProfileTab */ = {
 			isa = PBXGroup;
 			children = (
+				0F1665B221238504001EB84C /* DetailedBadgeInfo */,
+				0F1665A62123283D001EB84C /* AddNewBadge */,
+				0F16659821213910001EB84C /* ProfileBadgesCollection */,
 				0F01FDE7211ACDA7003448AB /* Views */,
 				0F01FC5E210D49EE003448AB /* Cells */,
 				0F01FC5C210D49EE003448AB /* ProfileVC.swift */,
@@ -676,11 +704,13 @@
 		0F01FC5E210D49EE003448AB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0F1665A021215315001EB84C /* ProfileBadgesCell.swift */,
 				0F01FC7B210EF6DC003448AB /* ProfileInfoCell.swift */,
 				0F01FC61210D49EE003448AB /* BatteryRemainingCell.swift */,
 				0F01FC7F210EF6EE003448AB /* SunsetRemainingCell.swift */,
 				0F01FC60210D49EE003448AB /* TotalPhotosChartCell.swift */,
 				0F01FDB12111C625003448AB /* TotalPhotosCirclesView.swift */,
+				0F1665AB2123583E001EB84C /* AddNewBadgeCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -688,9 +718,11 @@
 		0F01FC83210EF7E0003448AB /* ProfileTab */ = {
 			isa = PBXGroup;
 			children = (
+				0F1665AF21238223001EB84C /* AddNewBadgeCell.xib */,
+				0F16655C21213341001EB84C /* ProfileBadgesCell.xib */,
+				0F01FC87210EF7E0003448AB /* ProfileInfoCell.xib */,
 				0F01FC85210EF7E0003448AB /* BatteryRemainingCell.xib */,
 				0F01FC86210EF7E0003448AB /* SunsetRemainingCell.xib */,
-				0F01FC87210EF7E0003448AB /* ProfileInfoCell.xib */,
 				0F01FC84210EF7E0003448AB /* TotalPhotosChartCell.xib */,
 			);
 			path = ProfileTab;
@@ -970,6 +1002,42 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0F16659821213910001EB84C /* ProfileBadgesCollection */ = {
+			isa = PBXGroup;
+			children = (
+				0F16659921213910001EB84C /* ProfileBadgesCollectionVC.swift */,
+				0F16659B21213929001EB84C /* ProfileBadgesCollectionVM.swift */,
+				0F1665A2212170A8001EB84C /* UICollectionViewRightAlignedLayout.swift */,
+			);
+			path = ProfileBadgesCollection;
+			sourceTree = "<group>";
+		};
+		0F16659D2121470E001EB84C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0F16659E2121472D001EB84C /* ProfileManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0F1665A62123283D001EB84C /* AddNewBadge */ = {
+			isa = PBXGroup;
+			children = (
+				0F1665A721232865001EB84C /* AddNewBadgeVC.swift */,
+				0F1665A921232879001EB84C /* AddNewBadgeVM.swift */,
+			);
+			path = AddNewBadge;
+			sourceTree = "<group>";
+		};
+		0F1665B221238504001EB84C /* DetailedBadgeInfo */ = {
+			isa = PBXGroup;
+			children = (
+				0F1665B32123851C001EB84C /* DetailedBadgeInfoVC.swift */,
+				0F1665B52123852F001EB84C /* DetailedBadgeInfoVM.swift */,
+			);
+			path = DetailedBadgeInfo;
+			sourceTree = "<group>";
+		};
 		0F4F222B20F3A8DD00A0F5A4 = {
 			isa = PBXGroup;
 			children = (
@@ -1140,6 +1208,8 @@
 				0F01FC24210B2B33003448AB /* CmrContainer.storyboard in Resources */,
 				0F01FC8B210EF7E0003448AB /* ProfileInfoCell.xib in Resources */,
 				0F01FC26210B2B33003448AB /* NewsFeed.storyboard in Resources */,
+				0F16655D21213341001EB84C /* ProfileBadgesCell.xib in Resources */,
+				0F1665B021238223001EB84C /* AddNewBadgeCell.xib in Resources */,
 				0F01FC8A210EF7E0003448AB /* SunsetRemainingCell.xib in Resources */,
 				0F01FC27210B2B33003448AB /* Settings.storyboard in Resources */,
 			);
@@ -1206,6 +1276,7 @@
 				0F01FC37210B2B33003448AB /* NewsFeedDetailedVC.swift in Sources */,
 				0F01FD302111AC57003448AB /* AxisRendererBase.swift in Sources */,
 				0F01FD2A2111AC57003448AB /* DataApproximator+N.swift in Sources */,
+				0F1665A3212170A9001EB84C /* UICollectionViewRightAlignedLayout.swift in Sources */,
 				0F01FD642111AC57003448AB /* DefaultAxisValueFormatter.swift in Sources */,
 				0F01FD5D2111AC57003448AB /* ScatterChartView.swift in Sources */,
 				0F01FD9B2111AC57003448AB /* BarChartData.swift in Sources */,
@@ -1223,6 +1294,7 @@
 				0F01FDB42111DE00003448AB /* ChartXAxisFormatter.swift in Sources */,
 				0F01FDA92111AC57003448AB /* BarChartDataProvider.swift in Sources */,
 				0F01FC50210B2B33003448AB /* BaseCollectionViewFlowLayout.swift in Sources */,
+				0F1665A121215315001EB84C /* ProfileBadgesCell.swift in Sources */,
 				0F01FDB62111F661003448AB /* BalloonMarker.swift in Sources */,
 				0F01FC4E210B2B33003448AB /* Device.swift in Sources */,
 				0F01FDA82111AC57003448AB /* IBarLineScatterCandleBubbleChartDataSet.swift in Sources */,
@@ -1247,6 +1319,7 @@
 				0F01FD9C2111AC57003448AB /* LineScatterCandleRadarChartDataSet.swift in Sources */,
 				0F01FD422111AC57003448AB /* XAxisRendererHorizontalBarChart.swift in Sources */,
 				0F01FDA72111AC57003448AB /* IBubbleChartDataSet.swift in Sources */,
+				0F16659A21213910001EB84C /* ProfileBadgesCollectionVC.swift in Sources */,
 				0F01FD852111AC57003448AB /* BarLineScatterCandleBubbleChartDataSet.swift in Sources */,
 				0F01FC32210B2B33003448AB /* FeedNewsLayout.swift in Sources */,
 				0F01FC6A210D49EE003448AB /* BatteryRemainingCell.swift in Sources */,
@@ -1259,7 +1332,9 @@
 				0F01FC56210B2B33003448AB /* UIView+Gradient.swift in Sources */,
 				0F01FD4D2111AC57003448AB /* HorizontalBarHighlighter.swift in Sources */,
 				0F01FD6C2111AC57003448AB /* Platform.swift in Sources */,
+				0F1665B62123852F001EB84C /* DetailedBadgeInfoVM.swift in Sources */,
 				0F01FC70210DCD0C003448AB /* ProfileItem.swift in Sources */,
+				0F1665B42123851C001EB84C /* DetailedBadgeInfoVC.swift in Sources */,
 				0F01FD342111AC57003448AB /* CombinedChartRenderer.swift in Sources */,
 				0F01FD702111AC57003448AB /* Description.swift in Sources */,
 				0F01FC59210B2B33003448AB /* UIImage+Color.swift in Sources */,
@@ -1331,16 +1406,20 @@
 				0F01FD432111AC57003448AB /* HorizontalBarChartRenderer.swift in Sources */,
 				0F01FDB02111AC57003448AB /* BubbleChartDataProvider.swift in Sources */,
 				0F01FC36210B2B33003448AB /* FeedNewsTextCell.swift in Sources */,
+				0F1665AA21232879001EB84C /* AddNewBadgeVM.swift in Sources */,
 				0F01FC67210D49EE003448AB /* ProfilePresenter.swift in Sources */,
 				0F01FDEC211ACDA7003448AB /* EllipsesLogoView.swift in Sources */,
 				0F01FD4A2111AC57003448AB /* RadarHighlighter.swift in Sources */,
+				0F16659C21213929001EB84C /* ProfileBadgesCollectionVM.swift in Sources */,
 				0F01FD742111AC57003448AB /* LegendEntry.swift in Sources */,
 				0F01FD962111AC57003448AB /* PieChartData.swift in Sources */,
 				0F01FD942111AC57003448AB /* ScatterChartDataSet.swift in Sources */,
 				0F01FC52210B2B33003448AB /* UIImageView+Tint.swift in Sources */,
 				0F01FD2E2111AC57003448AB /* BubbleChartRenderer.swift in Sources */,
+				0F1665AD2123583E001EB84C /* AddNewBadgeCell.swift in Sources */,
 				0F01FD3F2111AC57003448AB /* CrossShapeRenderer.swift in Sources */,
 				0F01FD782111AC57003448AB /* ChartLimitLine.swift in Sources */,
+				0F1665A821232865001EB84C /* AddNewBadgeVC.swift in Sources */,
 				0F01FD3D2111AC57003448AB /* IShapeRenderer.swift in Sources */,
 				0F01FD2B2111AC57003448AB /* RadarChartRenderer.swift in Sources */,
 				0F01FD472111AC57003448AB /* Renderer.swift in Sources */,
@@ -1350,6 +1429,7 @@
 				0F01FD7A2111AC57003448AB /* ComponentBase.swift in Sources */,
 				0F01FD712111AC57003448AB /* IMarker.swift in Sources */,
 				0F01FD382111AC57003448AB /* LineRadarRenderer.swift in Sources */,
+				0F16659F2121472D001EB84C /* ProfileManager.swift in Sources */,
 				0F01FD3C2111AC57003448AB /* ChevronDownShapeRenderer.swift in Sources */,
 				0F01FC69210D49EE003448AB /* TotalPhotosChartCell.swift in Sources */,
 				0F01FDA12111AC57003448AB /* IRadarChartDataSet.swift in Sources */,

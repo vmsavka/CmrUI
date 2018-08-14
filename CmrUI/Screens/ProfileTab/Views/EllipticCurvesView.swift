@@ -6,15 +6,14 @@
 import UIKit
 
 fileprivate struct Constants {
-    static let ellipseLineWidth: CGFloat = 4
     static let ellipseColor = UIColor.white
     static let kEllipseVisibleWidth: CGFloat = 0.29
     static let kEllipseVisibleHeight: CGFloat = 0.18
     static let kBezierTangent: CGFloat = 0.3
     static let ellipsesEngle: CGFloat = CGFloat.pi / 3.0
     static let kIntersectPos: CGFloat = 0.277
-    static let kIntersectXPos: CGFloat = 0.136
-    static let kIntersectYPos: CGFloat = 0.238
+    static let kIntersectXPos: CGFloat = 0.144
+    static let kIntersectYPos: CGFloat = 0.25
     static let kTriangleControlPoint: CGFloat = 0.195
     static let kTransparentMaskOffset: CGFloat = 0.02
     static let kLogoPositionOffset: CGFloat = 0.014
@@ -41,11 +40,12 @@ class EllipticCurvesView: UIView {
     func complexShape() {
         let width = self.frame.size.width
         let height = self.frame.size.height
+        let ellipseLineWidth: CGFloat = frame.size.width / 40
         let centerPoint: CGPoint = CGPoint(x: width / 2.0, y: height / 2.0)
         
         let currentContext = UIGraphicsGetCurrentContext()
         guard let context = currentContext else { return }
-        context.setLineWidth(Constants.ellipseLineWidth)
+        context.setLineWidth(ellipseLineWidth)
         context.setStrokeColor(Constants.ellipseColor.cgColor)
         
         var startPoint: CGPoint = CGPoint(x: (width - width * c.kEllipseVisibleWidth) / 2.0,
@@ -72,7 +72,7 @@ class EllipticCurvesView: UIView {
         
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
-        shapeLayer.lineWidth = c.ellipseLineWidth
+        shapeLayer.lineWidth = ellipseLineWidth
         shapeLayer.allowsEdgeAntialiasing = true
         shapeLayer.strokeColor = Constants.ellipseColor.cgColor
         shapeLayer.lineCap = "round"
