@@ -1,28 +1,28 @@
 //
-//  DisplayProfileHandler.swift
+//  DisplayDashboardHandler.swift
 //  CmrUI
 //
 
 import UIKit
 import Foundation
 
-typealias DisplayProfileCompletionHandler = (_ profileItemsArray: Result<[ProfileItem]>) -> Void
+typealias DisplayDashboardCompletionHandler = (_ dashboardItemsArray: Result<[DashboardItem]>) -> Void
 
-protocol DisplayProfileHandler {
-    func displayProfile(completionHandler: @escaping DisplayProfileCompletionHandler)
+protocol DisplayDashboardHandler {
+    func displayDashboard(completionHandler: @escaping DisplayDashboardCompletionHandler)
 }
 
-class DisplayProfileHandlerImplementation: DisplayProfileHandler {
-    let profileItemsArray: [ProfileItem]
+class DisplayDashboardHandlerImplementation: DisplayDashboardHandler {
+    let dashboardItemsArray: [DashboardItem]
     
-    init(profileItems: [ProfileItem]?) {
-        self.profileItemsArray = profileItems ?? []
+    init(dashboardItems: [DashboardItem]?) {
+        self.dashboardItemsArray = dashboardItems ?? []
     }
     
-    // MARK: - DisplayProfileHandler
+    // MARK: - DisplayDashboardHandler
     
-    func displayProfile(completionHandler: @escaping (Result<[ProfileItem]>) -> Void) {
+    func displayDashboard(completionHandler: @escaping (Result<[DashboardItem]>) -> Void) {
         
-        completionHandler(.success(profileItemsArray))
+        completionHandler(.success(dashboardItemsArray))
     }
 }

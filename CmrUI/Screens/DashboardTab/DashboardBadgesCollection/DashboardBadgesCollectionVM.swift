@@ -1,5 +1,5 @@
 //
-//  ProfileBadgesCollectionVM.swift
+//  DashboardBadgesCollectionVM.swift
 //  CmrUI
 //
 
@@ -43,24 +43,24 @@ enum Badge {
     }
 }
 
-protocol ProfileBadgesCollectionVMProtocol {
+protocol DashboardBadgesCollectionVMProtocol {
     func reloadCells(indexes: [IndexPath])
     func reloadCollectionView()
 }
 
-class ProfileBadgesCollectionVM: NSObject {
+class DashboardBadgesCollectionVM: NSObject {
     
     var statuses: [Badge]? = nil
     
-    fileprivate var delegate: ProfileBadgesCollectionVMProtocol?
+    fileprivate var delegate: DashboardBadgesCollectionVMProtocol?
     
-    fileprivate lazy var dataManager: ProfileManager = {
-        let manager = ProfileManager.shared
+    fileprivate lazy var dataManager: DashboardManager = {
+        let manager = DashboardManager.shared
         manager.controller = self
         return manager
     }()
     
-    init(delegate: ProfileBadgesCollectionVMProtocol) {
+    init(delegate: DashboardBadgesCollectionVMProtocol) {
         self.delegate = delegate
     }
     
@@ -69,7 +69,7 @@ class ProfileBadgesCollectionVM: NSObject {
     }
 }
 
-extension ProfileBadgesCollectionVM: ProfileManagerProtocol {
+extension DashboardBadgesCollectionVM: DashboardManagerProtocol {
     func onLoadUserBadgesSuccess(badges: [Badge]?) {
         self.statuses = badges
         delegate?.reloadCollectionView()

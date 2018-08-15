@@ -15,8 +15,8 @@ class AddNewBadgeVM: NSObject {
     
     fileprivate var delegate: AddNewBadgeVMProtocol?
     
-    fileprivate lazy var dataManager: ProfileManager = {
-        let manager = ProfileManager.shared
+    fileprivate lazy var dataManager: DashboardManager = {
+        let manager = DashboardManager.shared
         manager.controller = self
         return manager
     }()
@@ -30,7 +30,7 @@ class AddNewBadgeVM: NSObject {
     }
 }
 
-extension AddNewBadgeVM: ProfileManagerProtocol {
+extension AddNewBadgeVM: DashboardManagerProtocol {
     
     func onLoadAvailableBadgesSuccess(badges: [Badge]?) {
         self.badges = badges

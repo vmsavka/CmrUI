@@ -1,12 +1,12 @@
 //
-//  ProfileManager.swift
+//  DashboardManager.swift
 //  CmrUI
 //
 
 import Foundation
 import UIKit
 
-protocol ProfileManagerProtocol {
+protocol DashboardManagerProtocol {
     func onLoadUserBadgesSuccess(badges: [Badge]?)
     func onLoadUserBadgesFail(error: Error?)
     
@@ -17,9 +17,9 @@ protocol ProfileManagerProtocol {
     func onLoadBadgeInfoFail(error: Error?)
 }
 
-class ProfileManager: NSObject {
-    static var shared = ProfileManager()
-    var controller: ProfileManagerProtocol?
+class DashboardManager: NSObject {
+    static var shared = DashboardManager()
+    var controller: DashboardManagerProtocol?
     
     var userBadges: [Badge]? = [Badge.adventurer,
                               Badge.backer,
@@ -56,7 +56,7 @@ class ProfileManager: NSObject {
         controller?.onLoadAvailableBadgesSuccess(badges: availableBadges)
         //    }
         //    .catch { [weak controller] error in
-        //        controller?.onLoadProfileStatusesFail(error: error)
+        //        controller?.onLoadDashboardStatusesFail(error: error)
         //}
     }
     

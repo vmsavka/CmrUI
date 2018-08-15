@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0F01FC23210B2B33003448AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FBDD210B2B33003448AB /* LaunchScreen.storyboard */; };
 		0F01FC24210B2B33003448AB /* CmrContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FBDE210B2B33003448AB /* CmrContainer.storyboard */; };
-		0F01FC25210B2B33003448AB /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FBDF210B2B33003448AB /* Profile.storyboard */; };
 		0F01FC26210B2B33003448AB /* NewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FBE0210B2B33003448AB /* NewsFeed.storyboard */; };
 		0F01FC27210B2B33003448AB /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FBE1210B2B33003448AB /* Settings.storyboard */; };
 		0F01FC28210B2B33003448AB /* CmrBarButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FBE3210B2B33003448AB /* CmrBarButtonCell.xib */; };
@@ -53,21 +52,7 @@
 		0F01FC58210B2B33003448AB /* UITextView+CalculateSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC20210B2B33003448AB /* UITextView+CalculateSize.swift */; };
 		0F01FC59210B2B33003448AB /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC21210B2B33003448AB /* UIImage+Color.swift */; };
 		0F01FC5A210B2B33003448AB /* Date+Equivalent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC22210B2B33003448AB /* Date+Equivalent.swift */; };
-		0F01FC66210D49EE003448AB /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC5C210D49EE003448AB /* ProfileVC.swift */; };
-		0F01FC67210D49EE003448AB /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC5D210D49EE003448AB /* ProfilePresenter.swift */; };
-		0F01FC69210D49EE003448AB /* TotalPhotosChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC60210D49EE003448AB /* TotalPhotosChartCell.swift */; };
-		0F01FC6A210D49EE003448AB /* BatteryRemainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC61210D49EE003448AB /* BatteryRemainingCell.swift */; };
-		0F01FC6C210D49EE003448AB /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC63210D49EE003448AB /* ProfileConfigurator.swift */; };
-		0F01FC6D210D49EE003448AB /* ProfileLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC64210D49EE003448AB /* ProfileLayout.swift */; };
-		0F01FC6E210D49EE003448AB /* ProfileViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC65210D49EE003448AB /* ProfileViewRouter.swift */; };
-		0F01FC70210DCD0C003448AB /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC6F210DCD0C003448AB /* ProfileItem.swift */; };
 		0F01FC72210DCFB8003448AB /* DisplayProfileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC71210DCFB8003448AB /* DisplayProfileHandler.swift */; };
-		0F01FC7D210EF6DC003448AB /* ProfileInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC7B210EF6DC003448AB /* ProfileInfoCell.swift */; };
-		0F01FC81210EF6EE003448AB /* SunsetRemainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC7F210EF6EE003448AB /* SunsetRemainingCell.swift */; };
-		0F01FC88210EF7E0003448AB /* TotalPhotosChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FC84210EF7E0003448AB /* TotalPhotosChartCell.xib */; };
-		0F01FC89210EF7E0003448AB /* BatteryRemainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FC85210EF7E0003448AB /* BatteryRemainingCell.xib */; };
-		0F01FC8A210EF7E0003448AB /* SunsetRemainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FC86210EF7E0003448AB /* SunsetRemainingCell.xib */; };
-		0F01FC8B210EF7E0003448AB /* ProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FC87210EF7E0003448AB /* ProfileInfoCell.xib */; };
 		0F01FD292111AC57003448AB /* DataApproximator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC932111AC57003448AB /* DataApproximator.swift */; };
 		0F01FD2A2111AC57003448AB /* DataApproximator+N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC942111AC57003448AB /* DataApproximator+N.swift */; };
 		0F01FD2B2111AC57003448AB /* RadarChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FC962111AC57003448AB /* RadarChartRenderer.swift */; };
@@ -204,24 +189,39 @@
 		0F01FDAE2111AC57003448AB /* BarLineScatterCandleBubbleChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FD262111AC57003448AB /* BarLineScatterCandleBubbleChartDataProvider.swift */; };
 		0F01FDAF2111AC57003448AB /* ScatterChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FD272111AC57003448AB /* ScatterChartDataProvider.swift */; };
 		0F01FDB02111AC57003448AB /* BubbleChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FD282111AC57003448AB /* BubbleChartDataProvider.swift */; };
-		0F01FDB22111C625003448AB /* TotalPhotosCirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDB12111C625003448AB /* TotalPhotosCirclesView.swift */; };
 		0F01FDB42111DE00003448AB /* ChartXAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDB32111DE00003448AB /* ChartXAxisFormatter.swift */; };
 		0F01FDB62111F661003448AB /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDB52111F661003448AB /* BalloonMarker.swift */; };
-		0F01FDEB211ACDA7003448AB /* TriangleLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDE8211ACDA7003448AB /* TriangleLogoView.swift */; };
-		0F01FDEC211ACDA7003448AB /* EllipsesLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDE9211ACDA7003448AB /* EllipsesLogoView.swift */; };
-		0F01FDED211ACDA7003448AB /* EllipticCurvesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FDEA211ACDA7003448AB /* EllipticCurvesView.swift */; };
-		0F16655D21213341001EB84C /* ProfileBadgesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F16655C21213341001EB84C /* ProfileBadgesCell.xib */; };
-		0F16659A21213910001EB84C /* ProfileBadgesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F16659921213910001EB84C /* ProfileBadgesCollectionVC.swift */; };
-		0F16659C21213929001EB84C /* ProfileBadgesCollectionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F16659B21213929001EB84C /* ProfileBadgesCollectionVM.swift */; };
-		0F16659F2121472D001EB84C /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F16659E2121472D001EB84C /* ProfileManager.swift */; };
-		0F1665A121215315001EB84C /* ProfileBadgesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665A021215315001EB84C /* ProfileBadgesCell.swift */; };
-		0F1665A3212170A9001EB84C /* UICollectionViewRightAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665A2212170A8001EB84C /* UICollectionViewRightAlignedLayout.swift */; };
-		0F1665A821232865001EB84C /* AddNewBadgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665A721232865001EB84C /* AddNewBadgeVC.swift */; };
-		0F1665AA21232879001EB84C /* AddNewBadgeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665A921232879001EB84C /* AddNewBadgeVM.swift */; };
-		0F1665AD2123583E001EB84C /* AddNewBadgeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665AB2123583E001EB84C /* AddNewBadgeCell.swift */; };
-		0F1665B021238223001EB84C /* AddNewBadgeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F1665AF21238223001EB84C /* AddNewBadgeCell.xib */; };
-		0F1665B42123851C001EB84C /* DetailedBadgeInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665B32123851C001EB84C /* DetailedBadgeInfoVC.swift */; };
-		0F1665B62123852F001EB84C /* DetailedBadgeInfoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665B52123852F001EB84C /* DetailedBadgeInfoVM.swift */; };
+		0F1665B82124324D001EB84C /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1665B72124324D001EB84C /* Dashboard.storyboard */; };
+		0F1665C02124327F001EB84C /* TotalPhotosChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F1665BA2124327F001EB84C /* TotalPhotosChartCell.xib */; };
+		0F1665C12124327F001EB84C /* BatteryRemainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F1665BB2124327F001EB84C /* BatteryRemainingCell.xib */; };
+		0F1665C22124327F001EB84C /* DashboardBadgesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F1665BC2124327F001EB84C /* DashboardBadgesCell.xib */; };
+		0F1665C32124327F001EB84C /* DashboardInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F1665BD2124327F001EB84C /* DashboardInfoCell.xib */; };
+		0F1665C42124327F001EB84C /* SunsetRemainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F1665BE2124327F001EB84C /* SunsetRemainingCell.xib */; };
+		0F1665C52124327F001EB84C /* AddNewBadgeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F1665BF2124327F001EB84C /* AddNewBadgeCell.xib */; };
+		0F1665E221243290001EB84C /* SunsetRemainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665C821243290001EB84C /* SunsetRemainingCell.swift */; };
+		0F1665E321243290001EB84C /* DashboardInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665C921243290001EB84C /* DashboardInfoCell.swift */; };
+		0F1665E421243290001EB84C /* TotalPhotosCirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665CA21243290001EB84C /* TotalPhotosCirclesView.swift */; };
+		0F1665E521243290001EB84C /* TotalPhotosChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665CB21243290001EB84C /* TotalPhotosChartCell.swift */; };
+		0F1665E621243290001EB84C /* BatteryRemainingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665CC21243290001EB84C /* BatteryRemainingCell.swift */; };
+		0F1665E721243290001EB84C /* DashboardBadgesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665CD21243290001EB84C /* DashboardBadgesCell.swift */; };
+		0F1665E821243290001EB84C /* AddNewBadgeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665CE21243290001EB84C /* AddNewBadgeCell.swift */; };
+		0F1665E921243290001EB84C /* DashboardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665CF21243290001EB84C /* DashboardLayout.swift */; };
+		0F1665EA21243290001EB84C /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665D021243290001EB84C /* DashboardPresenter.swift */; };
+		0F1665EB21243290001EB84C /* DashboardBadgesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665D221243290001EB84C /* DashboardBadgesCollectionVC.swift */; };
+		0F1665EC21243290001EB84C /* DashboardBadgesCollectionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665D321243290001EB84C /* DashboardBadgesCollectionVM.swift */; };
+		0F1665ED21243290001EB84C /* UICollectionViewRightAlignedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665D421243290001EB84C /* UICollectionViewRightAlignedLayout.swift */; };
+		0F1665EE21243290001EB84C /* DashboardViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665D521243290001EB84C /* DashboardViewRouter.swift */; };
+		0F1665EF21243290001EB84C /* DashboardConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665D621243290001EB84C /* DashboardConfigurator.swift */; };
+		0F1665F021243290001EB84C /* AddNewBadgeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665D821243290001EB84C /* AddNewBadgeVM.swift */; };
+		0F1665F121243290001EB84C /* AddNewBadgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665D921243290001EB84C /* AddNewBadgeVC.swift */; };
+		0F1665F221243290001EB84C /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665DA21243290001EB84C /* DashboardVC.swift */; };
+		0F1665F321243290001EB84C /* TriangleLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665DC21243290001EB84C /* TriangleLogoView.swift */; };
+		0F1665F421243290001EB84C /* EllipsesLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665DD21243290001EB84C /* EllipsesLogoView.swift */; };
+		0F1665F521243290001EB84C /* EllipticCurvesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665DE21243290001EB84C /* EllipticCurvesView.swift */; };
+		0F1665F621243290001EB84C /* DetailedBadgeInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665E021243290001EB84C /* DetailedBadgeInfoVC.swift */; };
+		0F1665F721243290001EB84C /* DetailedBadgeInfoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665E121243290001EB84C /* DetailedBadgeInfoVM.swift */; };
+		0F1665F9212432F4001EB84C /* DashboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665F8212432F3001EB84C /* DashboardManager.swift */; };
+		0F1665FB212432FB001EB84C /* DashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1665FA212432FB001EB84C /* DashboardItem.swift */; };
 		0F4F224D20F3A8DE00A0F5A4 /* CmrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F224C20F3A8DE00A0F5A4 /* CmrUITests.swift */; };
 		0F4F225820F3A8DE00A0F5A4 /* CmrUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F225720F3A8DE00A0F5A4 /* CmrUIUITests.swift */; };
 /* End PBXBuildFile section */
@@ -246,7 +246,6 @@
 /* Begin PBXFileReference section */
 		0F01FBDD210B2B33003448AB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F01FBDE210B2B33003448AB /* CmrContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CmrContainer.storyboard; sourceTree = "<group>"; };
-		0F01FBDF210B2B33003448AB /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		0F01FBE0210B2B33003448AB /* NewsFeed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewsFeed.storyboard; sourceTree = "<group>"; };
 		0F01FBE1210B2B33003448AB /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		0F01FBE3210B2B33003448AB /* CmrBarButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CmrBarButtonCell.xib; sourceTree = "<group>"; };
@@ -291,21 +290,7 @@
 		0F01FC20210B2B33003448AB /* UITextView+CalculateSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+CalculateSize.swift"; sourceTree = "<group>"; };
 		0F01FC21210B2B33003448AB /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		0F01FC22210B2B33003448AB /* Date+Equivalent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Equivalent.swift"; sourceTree = "<group>"; };
-		0F01FC5C210D49EE003448AB /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
-		0F01FC5D210D49EE003448AB /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
-		0F01FC60210D49EE003448AB /* TotalPhotosChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalPhotosChartCell.swift; sourceTree = "<group>"; };
-		0F01FC61210D49EE003448AB /* BatteryRemainingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryRemainingCell.swift; sourceTree = "<group>"; };
-		0F01FC63210D49EE003448AB /* ProfileConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
-		0F01FC64210D49EE003448AB /* ProfileLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileLayout.swift; sourceTree = "<group>"; };
-		0F01FC65210D49EE003448AB /* ProfileViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewRouter.swift; sourceTree = "<group>"; };
-		0F01FC6F210DCD0C003448AB /* ProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItem.swift; sourceTree = "<group>"; };
 		0F01FC71210DCFB8003448AB /* DisplayProfileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayProfileHandler.swift; sourceTree = "<group>"; };
-		0F01FC7B210EF6DC003448AB /* ProfileInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoCell.swift; sourceTree = "<group>"; };
-		0F01FC7F210EF6EE003448AB /* SunsetRemainingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetRemainingCell.swift; sourceTree = "<group>"; };
-		0F01FC84210EF7E0003448AB /* TotalPhotosChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalPhotosChartCell.xib; sourceTree = "<group>"; };
-		0F01FC85210EF7E0003448AB /* BatteryRemainingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BatteryRemainingCell.xib; sourceTree = "<group>"; };
-		0F01FC86210EF7E0003448AB /* SunsetRemainingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SunsetRemainingCell.xib; sourceTree = "<group>"; };
-		0F01FC87210EF7E0003448AB /* ProfileInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileInfoCell.xib; sourceTree = "<group>"; };
 		0F01FC932111AC57003448AB /* DataApproximator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataApproximator.swift; sourceTree = "<group>"; };
 		0F01FC942111AC57003448AB /* DataApproximator+N.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataApproximator+N.swift"; sourceTree = "<group>"; };
 		0F01FC962111AC57003448AB /* RadarChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarChartRenderer.swift; sourceTree = "<group>"; };
@@ -442,24 +427,39 @@
 		0F01FD262111AC57003448AB /* BarLineScatterCandleBubbleChartDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarLineScatterCandleBubbleChartDataProvider.swift; sourceTree = "<group>"; };
 		0F01FD272111AC57003448AB /* ScatterChartDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterChartDataProvider.swift; sourceTree = "<group>"; };
 		0F01FD282111AC57003448AB /* BubbleChartDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleChartDataProvider.swift; sourceTree = "<group>"; };
-		0F01FDB12111C625003448AB /* TotalPhotosCirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPhotosCirclesView.swift; sourceTree = "<group>"; };
 		0F01FDB32111DE00003448AB /* ChartXAxisFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisFormatter.swift; sourceTree = "<group>"; };
 		0F01FDB52111F661003448AB /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
-		0F01FDE8211ACDA7003448AB /* TriangleLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleLogoView.swift; sourceTree = "<group>"; };
-		0F01FDE9211ACDA7003448AB /* EllipsesLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipsesLogoView.swift; sourceTree = "<group>"; };
-		0F01FDEA211ACDA7003448AB /* EllipticCurvesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticCurvesView.swift; sourceTree = "<group>"; };
-		0F16655C21213341001EB84C /* ProfileBadgesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileBadgesCell.xib; sourceTree = "<group>"; };
-		0F16659921213910001EB84C /* ProfileBadgesCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBadgesCollectionVC.swift; sourceTree = "<group>"; };
-		0F16659B21213929001EB84C /* ProfileBadgesCollectionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBadgesCollectionVM.swift; sourceTree = "<group>"; };
-		0F16659E2121472D001EB84C /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
-		0F1665A021215315001EB84C /* ProfileBadgesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBadgesCell.swift; sourceTree = "<group>"; };
-		0F1665A2212170A8001EB84C /* UICollectionViewRightAlignedLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewRightAlignedLayout.swift; sourceTree = "<group>"; };
-		0F1665A721232865001EB84C /* AddNewBadgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBadgeVC.swift; sourceTree = "<group>"; };
-		0F1665A921232879001EB84C /* AddNewBadgeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBadgeVM.swift; sourceTree = "<group>"; };
-		0F1665AB2123583E001EB84C /* AddNewBadgeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBadgeCell.swift; sourceTree = "<group>"; };
-		0F1665AF21238223001EB84C /* AddNewBadgeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewBadgeCell.xib; sourceTree = "<group>"; };
-		0F1665B32123851C001EB84C /* DetailedBadgeInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedBadgeInfoVC.swift; sourceTree = "<group>"; };
-		0F1665B52123852F001EB84C /* DetailedBadgeInfoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedBadgeInfoVM.swift; sourceTree = "<group>"; };
+		0F1665B72124324D001EB84C /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		0F1665BA2124327F001EB84C /* TotalPhotosChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalPhotosChartCell.xib; sourceTree = "<group>"; };
+		0F1665BB2124327F001EB84C /* BatteryRemainingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BatteryRemainingCell.xib; sourceTree = "<group>"; };
+		0F1665BC2124327F001EB84C /* DashboardBadgesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardBadgesCell.xib; sourceTree = "<group>"; };
+		0F1665BD2124327F001EB84C /* DashboardInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardInfoCell.xib; sourceTree = "<group>"; };
+		0F1665BE2124327F001EB84C /* SunsetRemainingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SunsetRemainingCell.xib; sourceTree = "<group>"; };
+		0F1665BF2124327F001EB84C /* AddNewBadgeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewBadgeCell.xib; sourceTree = "<group>"; };
+		0F1665C821243290001EB84C /* SunsetRemainingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunsetRemainingCell.swift; sourceTree = "<group>"; };
+		0F1665C921243290001EB84C /* DashboardInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardInfoCell.swift; sourceTree = "<group>"; };
+		0F1665CA21243290001EB84C /* TotalPhotosCirclesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalPhotosCirclesView.swift; sourceTree = "<group>"; };
+		0F1665CB21243290001EB84C /* TotalPhotosChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalPhotosChartCell.swift; sourceTree = "<group>"; };
+		0F1665CC21243290001EB84C /* BatteryRemainingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryRemainingCell.swift; sourceTree = "<group>"; };
+		0F1665CD21243290001EB84C /* DashboardBadgesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardBadgesCell.swift; sourceTree = "<group>"; };
+		0F1665CE21243290001EB84C /* AddNewBadgeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewBadgeCell.swift; sourceTree = "<group>"; };
+		0F1665CF21243290001EB84C /* DashboardLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardLayout.swift; sourceTree = "<group>"; };
+		0F1665D021243290001EB84C /* DashboardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		0F1665D221243290001EB84C /* DashboardBadgesCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardBadgesCollectionVC.swift; sourceTree = "<group>"; };
+		0F1665D321243290001EB84C /* DashboardBadgesCollectionVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardBadgesCollectionVM.swift; sourceTree = "<group>"; };
+		0F1665D421243290001EB84C /* UICollectionViewRightAlignedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewRightAlignedLayout.swift; sourceTree = "<group>"; };
+		0F1665D521243290001EB84C /* DashboardViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewRouter.swift; sourceTree = "<group>"; };
+		0F1665D621243290001EB84C /* DashboardConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardConfigurator.swift; sourceTree = "<group>"; };
+		0F1665D821243290001EB84C /* AddNewBadgeVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewBadgeVM.swift; sourceTree = "<group>"; };
+		0F1665D921243290001EB84C /* AddNewBadgeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewBadgeVC.swift; sourceTree = "<group>"; };
+		0F1665DA21243290001EB84C /* DashboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		0F1665DC21243290001EB84C /* TriangleLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleLogoView.swift; sourceTree = "<group>"; };
+		0F1665DD21243290001EB84C /* EllipsesLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipsesLogoView.swift; sourceTree = "<group>"; };
+		0F1665DE21243290001EB84C /* EllipticCurvesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticCurvesView.swift; sourceTree = "<group>"; };
+		0F1665E021243290001EB84C /* DetailedBadgeInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedBadgeInfoVC.swift; sourceTree = "<group>"; };
+		0F1665E121243290001EB84C /* DetailedBadgeInfoVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedBadgeInfoVM.swift; sourceTree = "<group>"; };
+		0F1665F8212432F3001EB84C /* DashboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardManager.swift; sourceTree = "<group>"; };
+		0F1665FA212432FB001EB84C /* DashboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardItem.swift; sourceTree = "<group>"; };
 		0F4F223420F3A8DD00A0F5A4 /* CmrUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CmrUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4F224820F3A8DE00A0F5A4 /* CmrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CmrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4F224C20F3A8DE00A0F5A4 /* CmrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmrUITests.swift; sourceTree = "<group>"; };
@@ -540,9 +540,9 @@
 		0F01FBDC210B2B33003448AB /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				0F1665B72124324D001EB84C /* Dashboard.storyboard */,
 				0F01FBDD210B2B33003448AB /* LaunchScreen.storyboard */,
 				0F01FBDE210B2B33003448AB /* CmrContainer.storyboard */,
-				0F01FBDF210B2B33003448AB /* Profile.storyboard */,
 				0F01FBE0210B2B33003448AB /* NewsFeed.storyboard */,
 				0F01FBE1210B2B33003448AB /* Settings.storyboard */,
 			);
@@ -552,7 +552,7 @@
 		0F01FBE2210B2B33003448AB /*  Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				0F01FC83210EF7E0003448AB /* ProfileTab */,
+				0F1665B92124327F001EB84C /* DashboardTab */,
 				0F01FBE3210B2B33003448AB /* CmrBarButtonCell.xib */,
 				0F01FBE4210B2B33003448AB /* FeedNewsCell.xib */,
 				0F01FBE5210B2B33003448AB /* FeedNewsSectionHeader.xib */,
@@ -592,8 +592,8 @@
 		0F01FBEF210B2B33003448AB /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				0F1665FA212432FB001EB84C /* DashboardItem.swift */,
 				0F01FBF0210B2B33003448AB /* GalleryItem.swift */,
-				0F01FC6F210DCD0C003448AB /* ProfileItem.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -601,7 +601,7 @@
 		0F01FBF1210B2B33003448AB /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				0F01FC5B210D49EE003448AB /* ProfileTab */,
+				0F1665C621243290001EB84C /* DashboardTab */,
 				0F01FBF2210B2B33003448AB /* NewsFeedTab */,
 				0F01FBFA210B2B33003448AB /* SettingsTab */,
 			);
@@ -682,50 +682,6 @@
 				0F01FDB32111DE00003448AB /* ChartXAxisFormatter.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		0F01FC5B210D49EE003448AB /* ProfileTab */ = {
-			isa = PBXGroup;
-			children = (
-				0F1665B221238504001EB84C /* DetailedBadgeInfo */,
-				0F1665A62123283D001EB84C /* AddNewBadge */,
-				0F16659821213910001EB84C /* ProfileBadgesCollection */,
-				0F01FDE7211ACDA7003448AB /* Views */,
-				0F01FC5E210D49EE003448AB /* Cells */,
-				0F01FC5C210D49EE003448AB /* ProfileVC.swift */,
-				0F01FC5D210D49EE003448AB /* ProfilePresenter.swift */,
-				0F01FC63210D49EE003448AB /* ProfileConfigurator.swift */,
-				0F01FC64210D49EE003448AB /* ProfileLayout.swift */,
-				0F01FC65210D49EE003448AB /* ProfileViewRouter.swift */,
-			);
-			path = ProfileTab;
-			sourceTree = "<group>";
-		};
-		0F01FC5E210D49EE003448AB /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				0F1665A021215315001EB84C /* ProfileBadgesCell.swift */,
-				0F01FC7B210EF6DC003448AB /* ProfileInfoCell.swift */,
-				0F01FC61210D49EE003448AB /* BatteryRemainingCell.swift */,
-				0F01FC7F210EF6EE003448AB /* SunsetRemainingCell.swift */,
-				0F01FC60210D49EE003448AB /* TotalPhotosChartCell.swift */,
-				0F01FDB12111C625003448AB /* TotalPhotosCirclesView.swift */,
-				0F1665AB2123583E001EB84C /* AddNewBadgeCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		0F01FC83210EF7E0003448AB /* ProfileTab */ = {
-			isa = PBXGroup;
-			children = (
-				0F1665AF21238223001EB84C /* AddNewBadgeCell.xib */,
-				0F16655C21213341001EB84C /* ProfileBadgesCell.xib */,
-				0F01FC87210EF7E0003448AB /* ProfileInfoCell.xib */,
-				0F01FC85210EF7E0003448AB /* BatteryRemainingCell.xib */,
-				0F01FC86210EF7E0003448AB /* SunsetRemainingCell.xib */,
-				0F01FC84210EF7E0003448AB /* TotalPhotosChartCell.xib */,
-			);
-			path = ProfileTab;
 			sourceTree = "<group>";
 		};
 		0F01FC912111AC57003448AB /* Charts */ = {
@@ -992,48 +948,92 @@
 			path = Interfaces;
 			sourceTree = "<group>";
 		};
-		0F01FDE7211ACDA7003448AB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0F01FDE9211ACDA7003448AB /* EllipsesLogoView.swift */,
-				0F01FDE8211ACDA7003448AB /* TriangleLogoView.swift */,
-				0F01FDEA211ACDA7003448AB /* EllipticCurvesView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		0F16659821213910001EB84C /* ProfileBadgesCollection */ = {
-			isa = PBXGroup;
-			children = (
-				0F16659921213910001EB84C /* ProfileBadgesCollectionVC.swift */,
-				0F16659B21213929001EB84C /* ProfileBadgesCollectionVM.swift */,
-				0F1665A2212170A8001EB84C /* UICollectionViewRightAlignedLayout.swift */,
-			);
-			path = ProfileBadgesCollection;
-			sourceTree = "<group>";
-		};
 		0F16659D2121470E001EB84C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				0F16659E2121472D001EB84C /* ProfileManager.swift */,
+				0F1665F8212432F3001EB84C /* DashboardManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		0F1665A62123283D001EB84C /* AddNewBadge */ = {
+		0F1665B92124327F001EB84C /* DashboardTab */ = {
 			isa = PBXGroup;
 			children = (
-				0F1665A721232865001EB84C /* AddNewBadgeVC.swift */,
-				0F1665A921232879001EB84C /* AddNewBadgeVM.swift */,
+				0F1665BA2124327F001EB84C /* TotalPhotosChartCell.xib */,
+				0F1665BB2124327F001EB84C /* BatteryRemainingCell.xib */,
+				0F1665BC2124327F001EB84C /* DashboardBadgesCell.xib */,
+				0F1665BD2124327F001EB84C /* DashboardInfoCell.xib */,
+				0F1665BE2124327F001EB84C /* SunsetRemainingCell.xib */,
+				0F1665BF2124327F001EB84C /* AddNewBadgeCell.xib */,
+			);
+			path = DashboardTab;
+			sourceTree = "<group>";
+		};
+		0F1665C621243290001EB84C /* DashboardTab */ = {
+			isa = PBXGroup;
+			children = (
+				0F1665D721243290001EB84C /* AddNewBadge */,
+				0F1665DF21243290001EB84C /* DetailedBadgeInfo */,
+				0F1665D121243290001EB84C /* DashboardBadgesCollection */,
+				0F1665C721243290001EB84C /* Cells */,
+				0F1665CF21243290001EB84C /* DashboardLayout.swift */,
+				0F1665D021243290001EB84C /* DashboardPresenter.swift */,
+				0F1665D521243290001EB84C /* DashboardViewRouter.swift */,
+				0F1665D621243290001EB84C /* DashboardConfigurator.swift */,
+				0F1665DA21243290001EB84C /* DashboardVC.swift */,
+				0F1665DB21243290001EB84C /* Views */,
+			);
+			path = DashboardTab;
+			sourceTree = "<group>";
+		};
+		0F1665C721243290001EB84C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0F1665C821243290001EB84C /* SunsetRemainingCell.swift */,
+				0F1665C921243290001EB84C /* DashboardInfoCell.swift */,
+				0F1665CA21243290001EB84C /* TotalPhotosCirclesView.swift */,
+				0F1665CB21243290001EB84C /* TotalPhotosChartCell.swift */,
+				0F1665CC21243290001EB84C /* BatteryRemainingCell.swift */,
+				0F1665CD21243290001EB84C /* DashboardBadgesCell.swift */,
+				0F1665CE21243290001EB84C /* AddNewBadgeCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0F1665D121243290001EB84C /* DashboardBadgesCollection */ = {
+			isa = PBXGroup;
+			children = (
+				0F1665D221243290001EB84C /* DashboardBadgesCollectionVC.swift */,
+				0F1665D321243290001EB84C /* DashboardBadgesCollectionVM.swift */,
+				0F1665D421243290001EB84C /* UICollectionViewRightAlignedLayout.swift */,
+			);
+			path = DashboardBadgesCollection;
+			sourceTree = "<group>";
+		};
+		0F1665D721243290001EB84C /* AddNewBadge */ = {
+			isa = PBXGroup;
+			children = (
+				0F1665D821243290001EB84C /* AddNewBadgeVM.swift */,
+				0F1665D921243290001EB84C /* AddNewBadgeVC.swift */,
 			);
 			path = AddNewBadge;
 			sourceTree = "<group>";
 		};
-		0F1665B221238504001EB84C /* DetailedBadgeInfo */ = {
+		0F1665DB21243290001EB84C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0F1665B32123851C001EB84C /* DetailedBadgeInfoVC.swift */,
-				0F1665B52123852F001EB84C /* DetailedBadgeInfoVM.swift */,
+				0F1665DC21243290001EB84C /* TriangleLogoView.swift */,
+				0F1665DD21243290001EB84C /* EllipsesLogoView.swift */,
+				0F1665DE21243290001EB84C /* EllipticCurvesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0F1665DF21243290001EB84C /* DetailedBadgeInfo */ = {
+			isa = PBXGroup;
+			children = (
+				0F1665E021243290001EB84C /* DetailedBadgeInfoVC.swift */,
+				0F1665E121243290001EB84C /* DetailedBadgeInfoVM.swift */,
 			);
 			path = DetailedBadgeInfo;
 			sourceTree = "<group>";
@@ -1195,22 +1195,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F01FC88210EF7E0003448AB /* TotalPhotosChartCell.xib in Resources */,
+				0F1665C02124327F001EB84C /* TotalPhotosChartCell.xib in Resources */,
 				0F01FC23210B2B33003448AB /* LaunchScreen.storyboard in Resources */,
+				0F1665B82124324D001EB84C /* Dashboard.storyboard in Resources */,
 				0F01FC2D210B2B33003448AB /* Default-568h@2x.png in Resources */,
+				0F1665C42124327F001EB84C /* SunsetRemainingCell.xib in Resources */,
 				0F01FC2A210B2B33003448AB /* FeedNewsSectionHeader.xib in Resources */,
+				0F1665C12124327F001EB84C /* BatteryRemainingCell.xib in Resources */,
 				0F01FC29210B2B33003448AB /* FeedNewsCell.xib in Resources */,
-				0F01FC89210EF7E0003448AB /* BatteryRemainingCell.xib in Resources */,
 				0F01FC2B210B2B33003448AB /* FeedNewsTextCell.xib in Resources */,
+				0F1665C32124327F001EB84C /* DashboardInfoCell.xib in Resources */,
+				0F1665C22124327F001EB84C /* DashboardBadgesCell.xib in Resources */,
 				0F01FC2C210B2B33003448AB /* Assets.xcassets in Resources */,
-				0F01FC25210B2B33003448AB /* Profile.storyboard in Resources */,
 				0F01FC28210B2B33003448AB /* CmrBarButtonCell.xib in Resources */,
 				0F01FC24210B2B33003448AB /* CmrContainer.storyboard in Resources */,
-				0F01FC8B210EF7E0003448AB /* ProfileInfoCell.xib in Resources */,
+				0F1665C52124327F001EB84C /* AddNewBadgeCell.xib in Resources */,
 				0F01FC26210B2B33003448AB /* NewsFeed.storyboard in Resources */,
-				0F16655D21213341001EB84C /* ProfileBadgesCell.xib in Resources */,
-				0F1665B021238223001EB84C /* AddNewBadgeCell.xib in Resources */,
-				0F01FC8A210EF7E0003448AB /* SunsetRemainingCell.xib in Resources */,
 				0F01FC27210B2B33003448AB /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1236,7 +1236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F01FDB22111C625003448AB /* TotalPhotosCirclesView.swift in Sources */,
 				0F01FDA32111AC57003448AB /* ILineRadarChartDataSet.swift in Sources */,
 				0F01FD5B2111AC57003448AB /* PieRadarChartViewBase.swift in Sources */,
 				0F01FD392111AC57003448AB /* BarLineScatterCandleBubbleRenderer.swift in Sources */,
@@ -1248,12 +1247,15 @@
 				0F01FD3B2111AC57003448AB /* SquareShapeRenderer.swift in Sources */,
 				0F01FD622111AC57003448AB /* DefaultFillFormatter.swift in Sources */,
 				0F01FD862111AC57003448AB /* PieChartDataEntry.swift in Sources */,
+				0F1665EA21243290001EB84C /* DashboardPresenter.swift in Sources */,
 				0F01FC51210B2B33003448AB /* AppDelegate.swift in Sources */,
+				0F1665F121243290001EB84C /* AddNewBadgeVC.swift in Sources */,
 				0F01FD772111AC57003448AB /* XAxis.swift in Sources */,
 				0F01FD7F2111AC57003448AB /* AnimatedViewPortJob.swift in Sources */,
 				0F01FD902111AC57003448AB /* ChartDataEntry.swift in Sources */,
 				0F01FD662111AC57003448AB /* IFillFormatter.swift in Sources */,
 				0F01FD752111AC57003448AB /* YAxis.swift in Sources */,
+				0F1665F321243290001EB84C /* TriangleLogoView.swift in Sources */,
 				0F01FD912111AC57003448AB /* PieChartDataSet.swift in Sources */,
 				0F01FD6E2111AC57003448AB /* TransformerHorizontalBarChart.swift in Sources */,
 				0F01FC3B210B2B33003448AB /* SettingsVC.swift in Sources */,
@@ -1267,6 +1269,9 @@
 				0F01FDAE2111AC57003448AB /* BarLineScatterCandleBubbleChartDataProvider.swift in Sources */,
 				0F01FD5F2111AC57003448AB /* ChartAnimationEasing.swift in Sources */,
 				0F01FDAC2111AC57003448AB /* CombinedChartDataProvider.swift in Sources */,
+				0F1665E621243290001EB84C /* BatteryRemainingCell.swift in Sources */,
+				0F1665E321243290001EB84C /* DashboardInfoCell.swift in Sources */,
+				0F1665E421243290001EB84C /* TotalPhotosCirclesView.swift in Sources */,
 				0F01FD9F2111AC57003448AB /* IScatterChartDataSet.swift in Sources */,
 				0F01FC39210B2B33003448AB /* SegmentedView.swift in Sources */,
 				0F01FD332111AC57003448AB /* ScatterChartRenderer.swift in Sources */,
@@ -1276,13 +1281,14 @@
 				0F01FC37210B2B33003448AB /* NewsFeedDetailedVC.swift in Sources */,
 				0F01FD302111AC57003448AB /* AxisRendererBase.swift in Sources */,
 				0F01FD2A2111AC57003448AB /* DataApproximator+N.swift in Sources */,
-				0F1665A3212170A9001EB84C /* UICollectionViewRightAlignedLayout.swift in Sources */,
 				0F01FD642111AC57003448AB /* DefaultAxisValueFormatter.swift in Sources */,
+				0F1665EE21243290001EB84C /* DashboardViewRouter.swift in Sources */,
 				0F01FD5D2111AC57003448AB /* ScatterChartView.swift in Sources */,
 				0F01FD9B2111AC57003448AB /* BarChartData.swift in Sources */,
 				0F01FDAB2111AC57003448AB /* CandleChartDataProvider.swift in Sources */,
 				0F01FD8A2111AC57003448AB /* RadarChartData.swift in Sources */,
 				0F01FD542111AC57003448AB /* RadarChartView.swift in Sources */,
+				0F1665F521243290001EB84C /* EllipticCurvesView.swift in Sources */,
 				0F01FD482111AC57003448AB /* LineScatterCandleRadarRenderer.swift in Sources */,
 				0F01FD7E2111AC57003448AB /* ZoomViewJob.swift in Sources */,
 				0F01FD352111AC57003448AB /* CandleStickChartRenderer.swift in Sources */,
@@ -1294,48 +1300,49 @@
 				0F01FDB42111DE00003448AB /* ChartXAxisFormatter.swift in Sources */,
 				0F01FDA92111AC57003448AB /* BarChartDataProvider.swift in Sources */,
 				0F01FC50210B2B33003448AB /* BaseCollectionViewFlowLayout.swift in Sources */,
-				0F1665A121215315001EB84C /* ProfileBadgesCell.swift in Sources */,
 				0F01FDB62111F661003448AB /* BalloonMarker.swift in Sources */,
 				0F01FC4E210B2B33003448AB /* Device.swift in Sources */,
 				0F01FDA82111AC57003448AB /* IBarLineScatterCandleBubbleChartDataSet.swift in Sources */,
 				0F01FD732111AC57003448AB /* Legend.swift in Sources */,
 				0F01FC35210B2B33003448AB /* NewsFeedVC.swift in Sources */,
-				0F01FC66210D49EE003448AB /* ProfileVC.swift in Sources */,
 				0F01FD692111AC57003448AB /* Transformer.swift in Sources */,
 				0F01FC5A210B2B33003448AB /* Date+Equivalent.swift in Sources */,
 				0F01FC3C210B2B33003448AB /* DevicePropertiesView.swift in Sources */,
 				0F01FD8B2111AC57003448AB /* CandleChartDataSet.swift in Sources */,
 				0F01FD4B2111AC57003448AB /* Highlight.swift in Sources */,
 				0F01FD842111AC57003448AB /* RadarChartDataEntry.swift in Sources */,
+				0F1665E721243290001EB84C /* DashboardBadgesCell.swift in Sources */,
 				0F01FC57210B2B33003448AB /* UIStoryboard+Name.swift in Sources */,
 				0F01FC3D210B2B33003448AB /* SwitchView.swift in Sources */,
+				0F1665E821243290001EB84C /* AddNewBadgeCell.swift in Sources */,
 				0F01FC2F210B2B33003448AB /* GalleryGateway.swift in Sources */,
+				0F1665E521243290001EB84C /* TotalPhotosChartCell.swift in Sources */,
 				0F01FC4B210B2B33003448AB /* CustomInteractor.swift in Sources */,
 				0F01FD5C2111AC57003448AB /* BarChartView.swift in Sources */,
+				0F1665FB212432FB001EB84C /* DashboardItem.swift in Sources */,
 				0F01FD4F2111AC57003448AB /* Range.swift in Sources */,
 				0F01FD572111AC57003448AB /* CombinedChartView.swift in Sources */,
 				0F01FDA22111AC57003448AB /* IBarChartDataSet.swift in Sources */,
-				0F01FC7D210EF6DC003448AB /* ProfileInfoCell.swift in Sources */,
 				0F01FD9C2111AC57003448AB /* LineScatterCandleRadarChartDataSet.swift in Sources */,
 				0F01FD422111AC57003448AB /* XAxisRendererHorizontalBarChart.swift in Sources */,
 				0F01FDA72111AC57003448AB /* IBubbleChartDataSet.swift in Sources */,
-				0F16659A21213910001EB84C /* ProfileBadgesCollectionVC.swift in Sources */,
 				0F01FD852111AC57003448AB /* BarLineScatterCandleBubbleChartDataSet.swift in Sources */,
 				0F01FC32210B2B33003448AB /* FeedNewsLayout.swift in Sources */,
-				0F01FC6A210D49EE003448AB /* BatteryRemainingCell.swift in Sources */,
 				0F01FC4A210B2B33003448AB /* CmrContainerVC.swift in Sources */,
 				0F01FD502111AC57003448AB /* ChartHighlighter.swift in Sources */,
 				0F01FC31210B2B33003448AB /* GalleryItem.swift in Sources */,
 				0F01FD6A2111AC57003448AB /* ViewPortHandler.swift in Sources */,
 				0F01FC4C210B2B33003448AB /* Result.swift in Sources */,
+				0F1665F721243290001EB84C /* DetailedBadgeInfoVM.swift in Sources */,
 				0F01FD492111AC57003448AB /* BarHighlighter.swift in Sources */,
+				0F1665F621243290001EB84C /* DetailedBadgeInfoVC.swift in Sources */,
 				0F01FC56210B2B33003448AB /* UIView+Gradient.swift in Sources */,
 				0F01FD4D2111AC57003448AB /* HorizontalBarHighlighter.swift in Sources */,
+				0F1665EB21243290001EB84C /* DashboardBadgesCollectionVC.swift in Sources */,
+				0F1665EC21243290001EB84C /* DashboardBadgesCollectionVM.swift in Sources */,
 				0F01FD6C2111AC57003448AB /* Platform.swift in Sources */,
-				0F1665B62123852F001EB84C /* DetailedBadgeInfoVM.swift in Sources */,
-				0F01FC70210DCD0C003448AB /* ProfileItem.swift in Sources */,
-				0F1665B42123851C001EB84C /* DetailedBadgeInfoVC.swift in Sources */,
 				0F01FD342111AC57003448AB /* CombinedChartRenderer.swift in Sources */,
+				0F1665E221243290001EB84C /* SunsetRemainingCell.swift in Sources */,
 				0F01FD702111AC57003448AB /* Description.swift in Sources */,
 				0F01FC59210B2B33003448AB /* UIImage+Color.swift in Sources */,
 				0F01FD6F2111AC57003448AB /* ChartUtils.swift in Sources */,
@@ -1348,31 +1355,30 @@
 				0F01FD5E2111AC57003448AB /* PieChartView.swift in Sources */,
 				0F01FD7C2111AC57003448AB /* ViewPortJob.swift in Sources */,
 				0F01FC4D210B2B33003448AB /* ZoomTransition.swift in Sources */,
-				0F01FC81210EF6EE003448AB /* SunsetRemainingCell.swift in Sources */,
 				0F01FD972111AC57003448AB /* CandleChartData.swift in Sources */,
-				0F01FDEB211ACDA7003448AB /* TriangleLogoView.swift in Sources */,
 				0F01FD8C2111AC57003448AB /* LineRadarChartDataSet.swift in Sources */,
 				0F01FDAF2111AC57003448AB /* ScatterChartDataProvider.swift in Sources */,
 				0F01FD722111AC57003448AB /* MarkerImage.swift in Sources */,
 				0F01FD762111AC57003448AB /* AxisBase.swift in Sources */,
-				0F01FDED211ACDA7003448AB /* EllipticCurvesView.swift in Sources */,
 				0F01FC34210B2B33003448AB /* FeedNewsCell.swift in Sources */,
 				0F01FD592111AC57003448AB /* ChartViewBase.swift in Sources */,
 				0F01FD3A2111AC57003448AB /* XShapeRenderer.swift in Sources */,
 				0F01FD402111AC57003448AB /* TriangleShapeRenderer.swift in Sources */,
+				0F1665F9212432F4001EB84C /* DashboardManager.swift in Sources */,
 				0F01FD6B2111AC57003448AB /* Platform+Accessibility.swift in Sources */,
 				0F01FD872111AC57003448AB /* CandleChartDataEntry.swift in Sources */,
 				0F01FD292111AC57003448AB /* DataApproximator.swift in Sources */,
 				0F01FD512111AC57003448AB /* IHighlighter.swift in Sources */,
+				0F1665EF21243290001EB84C /* DashboardConfigurator.swift in Sources */,
 				0F01FD632111AC57003448AB /* DefaultValueFormatter.swift in Sources */,
 				0F01FD3E2111AC57003448AB /* CircleShapeRenderer.swift in Sources */,
 				0F01FD922111AC57003448AB /* BubbleChartData.swift in Sources */,
+				0F1665E921243290001EB84C /* DashboardLayout.swift in Sources */,
 				0F01FD532111AC57003448AB /* CandleStickChartView.swift in Sources */,
 				0F01FD652111AC57003448AB /* IndexAxisValueFormatter.swift in Sources */,
 				0F01FD4E2111AC57003448AB /* PieRadarHighlighter.swift in Sources */,
 				0F01FD562111AC57003448AB /* LineChartView.swift in Sources */,
 				0F01FD8D2111AC57003448AB /* BarLineScatterCandleBubbleChartData.swift in Sources */,
-				0F01FC6E210D49EE003448AB /* ProfileViewRouter.swift in Sources */,
 				0F01FC55210B2B33003448AB /* Color+Random.swift in Sources */,
 				0F01FC54210B2B33003448AB /* Array+Grouping.swift in Sources */,
 				0F01FD2D2111AC57003448AB /* YAxisRendererHorizontalBarChart.swift in Sources */,
@@ -1380,16 +1386,16 @@
 				0F01FD372111AC57003448AB /* XAxisRenderer.swift in Sources */,
 				0F01FD522111AC57003448AB /* CombinedHighlighter.swift in Sources */,
 				0F01FD952111AC57003448AB /* ScatterChartData.swift in Sources */,
-				0F01FC6D210D49EE003448AB /* ProfileLayout.swift in Sources */,
 				0F01FD362111AC57003448AB /* BarChartRenderer.swift in Sources */,
 				0F01FD992111AC57003448AB /* BubbleChartDataSet.swift in Sources */,
 				0F01FD7D2111AC57003448AB /* MoveViewJob.swift in Sources */,
 				0F01FC33210B2B33003448AB /* FeedNewsSectionHeader.swift in Sources */,
+				0F1665F221243290001EB84C /* DashboardVC.swift in Sources */,
 				0F01FD822111AC57003448AB /* BarChartDataEntry.swift in Sources */,
 				0F01FD4C2111AC57003448AB /* PieHighlighter.swift in Sources */,
+				0F1665ED21243290001EB84C /* UICollectionViewRightAlignedLayout.swift in Sources */,
 				0F01FDAA2111AC57003448AB /* ChartDataProvider.swift in Sources */,
 				0F01FC72210DCFB8003448AB /* DisplayProfileHandler.swift in Sources */,
-				0F01FC6C210D49EE003448AB /* ProfileConfigurator.swift in Sources */,
 				0F01FD682111AC57003448AB /* Fill.swift in Sources */,
 				0F01FD312111AC57003448AB /* ChartDataRendererBase.swift in Sources */,
 				0F01FD982111AC57003448AB /* LineChartDataSet.swift in Sources */,
@@ -1400,26 +1406,21 @@
 				0F01FDA62111AC57003448AB /* ILineScatterCandleRadarChartDataSet.swift in Sources */,
 				0F01FD792111AC57003448AB /* MarkerView.swift in Sources */,
 				0F01FD9E2111AC57003448AB /* IPieChartDataSet.swift in Sources */,
+				0F1665F021243290001EB84C /* AddNewBadgeVM.swift in Sources */,
 				0F01FD6D2111AC57003448AB /* ChartColorTemplates.swift in Sources */,
 				0F01FD602111AC57003448AB /* Animator.swift in Sources */,
 				0F01FC48210B2B33003448AB /* CmrBarButtonCell.swift in Sources */,
 				0F01FD432111AC57003448AB /* HorizontalBarChartRenderer.swift in Sources */,
 				0F01FDB02111AC57003448AB /* BubbleChartDataProvider.swift in Sources */,
 				0F01FC36210B2B33003448AB /* FeedNewsTextCell.swift in Sources */,
-				0F1665AA21232879001EB84C /* AddNewBadgeVM.swift in Sources */,
-				0F01FC67210D49EE003448AB /* ProfilePresenter.swift in Sources */,
-				0F01FDEC211ACDA7003448AB /* EllipsesLogoView.swift in Sources */,
 				0F01FD4A2111AC57003448AB /* RadarHighlighter.swift in Sources */,
-				0F16659C21213929001EB84C /* ProfileBadgesCollectionVM.swift in Sources */,
 				0F01FD742111AC57003448AB /* LegendEntry.swift in Sources */,
 				0F01FD962111AC57003448AB /* PieChartData.swift in Sources */,
 				0F01FD942111AC57003448AB /* ScatterChartDataSet.swift in Sources */,
 				0F01FC52210B2B33003448AB /* UIImageView+Tint.swift in Sources */,
 				0F01FD2E2111AC57003448AB /* BubbleChartRenderer.swift in Sources */,
-				0F1665AD2123583E001EB84C /* AddNewBadgeCell.swift in Sources */,
 				0F01FD3F2111AC57003448AB /* CrossShapeRenderer.swift in Sources */,
 				0F01FD782111AC57003448AB /* ChartLimitLine.swift in Sources */,
-				0F1665A821232865001EB84C /* AddNewBadgeVC.swift in Sources */,
 				0F01FD3D2111AC57003448AB /* IShapeRenderer.swift in Sources */,
 				0F01FD2B2111AC57003448AB /* RadarChartRenderer.swift in Sources */,
 				0F01FD472111AC57003448AB /* Renderer.swift in Sources */,
@@ -1428,10 +1429,9 @@
 				0F01FC47210B2B33003448AB /* CmrBarButtonsVC.swift in Sources */,
 				0F01FD7A2111AC57003448AB /* ComponentBase.swift in Sources */,
 				0F01FD712111AC57003448AB /* IMarker.swift in Sources */,
+				0F1665F421243290001EB84C /* EllipsesLogoView.swift in Sources */,
 				0F01FD382111AC57003448AB /* LineRadarRenderer.swift in Sources */,
-				0F16659F2121472D001EB84C /* ProfileManager.swift in Sources */,
 				0F01FD3C2111AC57003448AB /* ChevronDownShapeRenderer.swift in Sources */,
-				0F01FC69210D49EE003448AB /* TotalPhotosChartCell.swift in Sources */,
 				0F01FDA12111AC57003448AB /* IRadarChartDataSet.swift in Sources */,
 				0F01FC49210B2B33003448AB /* CmrBarButtonsViewLayout.swift in Sources */,
 			);

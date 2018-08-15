@@ -13,7 +13,7 @@ private struct Constants {
     static let bottomGradientColor = UIColor(red: 231.0/255.0, green: 116.0/255.0, blue: 55.0/255.0, alpha: 1.0)
 }
 
-class SunsetRemainingCell: UICollectionViewCell , ProfileCellView {
+class SunsetRemainingCell: UICollectionViewCell , DashboardCellView {
     
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var sunsetLogoImageView: UIImageView!

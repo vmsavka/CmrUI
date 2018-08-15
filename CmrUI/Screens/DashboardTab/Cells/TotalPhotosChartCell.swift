@@ -20,7 +20,7 @@ private struct Constants {
     static let markerFocusedColor = NSUIColor.yellow
 }
 
-class TotalPhotosChartCell: UICollectionViewCell, ProfileCellView {
+class TotalPhotosChartCell: UICollectionViewCell, DashboardCellView {
     
     
     @IBOutlet weak var photosTotalTitleLabel: UILabel!

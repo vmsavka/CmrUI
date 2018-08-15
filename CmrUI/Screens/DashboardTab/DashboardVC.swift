@@ -1,5 +1,5 @@
 //
-//  ProfileVC.swift
+//  DashboardVC.swift
 //  CmrUI
 //
 //  Created by Vasyl.Savka on 7/23/18.
@@ -29,17 +29,17 @@ fileprivate struct LayoutInsets {
 private struct Constants {
     let kReuseChartCell = "TotalPhotosChartCell"
     let kReuseBatteryCell = "BatteryRemainingCell"
-    let kProfileInfoCell = "ProfileInfoCell"
+    let kDashboardInfoCell = "DashboardInfoCell"
     let kSunsetRemainingCell = "SunsetRemainingCell"
     let kImgCellHeight: CGFloat = 0.866
     
     let backgroundColor = UIColor(red: 235.0/255.0, green: 235.0/255.0, blue: 235.0/255.0, alpha: 1.0)
 }
 
-class ProfileVC: UICollectionViewController, UINavigationControllerDelegate, NewsFeedVMProtocol, ProfileLayoutDelegate, ProfileTabView, AddChildVCProtocol {
+class DashboardVC: UICollectionViewController, UINavigationControllerDelegate, NewsFeedVMProtocol, DashboardLayoutDelegate, DashboardTabView, AddChildVCProtocol {
 
-    var configurator = ProfileConfiguratorImplementation()
-    var presenter: ProfilePresenter!
+    var configurator = DashboardConfiguratorImplementation()
+    var presenter: DashboardPresenter!
     
     fileprivate var transitionIndexPath: IndexPath?
     private var customInteractor : CustomInteractor?
@@ -51,7 +51,7 @@ class ProfileVC: UICollectionViewController, UINavigationControllerDelegate, New
         super.viewDidLoad()
         
         setupAppearance()
-        configurator.configure(profileVC: self)
+        configurator.configure(dashboardVC: self)
         presenter.viewDidLoad()
         
         //self.navigationController?.delegate = self
@@ -65,13 +65,13 @@ class ProfileVC: UICollectionViewController, UINavigationControllerDelegate, New
                                                     left: Insets.kLeftEdgeInset,
                                                     bottom: Insets.kBottomEdgeInset,
                                                     right: Insets.kRightEdgeInset)
-        collectionView?.register(UINib(nibName: "\(ProfileInfoCell.self)", bundle: nil), forCellWithReuseIdentifier: Constants().kProfileInfoCell)
+        collectionView?.register(UINib(nibName: "\(DashboardInfoCell.self)", bundle: nil), forCellWithReuseIdentifier: Constants().kDashboardInfoCell)
         collectionView?.register(UINib(nibName: "\(TotalPhotosChartCell.self)", bundle: nil), forCellWithReuseIdentifier: Constants().kReuseChartCell)
         collectionView?.register(UINib(nibName: "\(SunsetRemainingCell.self)", bundle: nil), forCellWithReuseIdentifier: Constants().kSunsetRemainingCell)
         collectionView?.register(UINib(nibName: "\(BatteryRemainingCell.self)", bundle: nil), forCellWithReuseIdentifier: Constants().kReuseBatteryCell)
         
         
-        collectionView?.register(UINib(nibName: "ProfileInfoCell", bundle: nil), forCellWithReuseIdentifier: "ProfileInfoCell")
+        collectionView?.register(UINib(nibName: "DashboardInfoCell", bundle: nil), forCellWithReuseIdentifier: "DashboardInfoCell")
         
         
 
@@ -113,7 +113,7 @@ class ProfileVC: UICollectionViewController, UINavigationControllerDelegate, New
 //        if type(of: segue.destination) == NewsFeedDetailedVC.self {
 //            let feedDetailedVC = (segue.destination as! NewsFeedDetailedVC)
 //            let item  = viewModel.dataSource[(transitionIndexPath?.row)!]
-//            feedDetailedVC.ProfileItem = item
+//            feedDetailedVC.DashboardItem = item
 //            //feedDetailedVC.transitioningDelegate = self
 //            feedDetailedVC.modalPresentationStyle = UIModalPresentationStyle.custom
 //            feedDetailedVC.navigationItem.hidesBackButton = true
@@ -135,10 +135,10 @@ class ProfileVC: UICollectionViewController, UINavigationControllerDelegate, New
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let type = ProfileItemType(rawValue: indexPath.row)
+        let type = DashboardItemType(rawValue: indexPath.row)
         switch (type) {
-        case .profileInfo?:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileInfoCell", for: indexPath) as! ProfileInfoCell
+        case .dashboardInfo?:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DashboardInfoCell", for: indexPath) as! DashboardInfoCell
             presenter.configure(cell: cell, forRow: type?.rawValue ?? 0)
             cell.parentVC = self
             return cell
@@ -173,14 +173,14 @@ class ProfileVC: UICollectionViewController, UINavigationControllerDelegate, New
         //        let feedDetailedVC = board.instantiateViewController(withIdentifier: "NewsFeedDetailedVC") as! NewsFeedDetailedVC
         //
         //        let item  = dataSource[(transitionIndexPath?.row)!]
-        //        feedDetailedVC.ProfileItem = item
+        //        feedDetailedVC.DashboardItem = item
         //        self.present(feedDetailedVC, animated: true, completion: nil)
     }
     // MARK: UICollectionViewLayout
     
-    public var customCollectionViewLayout: ProfileLayout? {
+    public var customCollectionViewLayout: DashboardLayout? {
         get {
-            return collectionView?.collectionViewLayout as? ProfileLayout
+            return collectionView?.collectionViewLayout as? DashboardLayout
         }
         set {
             if newValue != nil {
@@ -234,7 +234,7 @@ class ProfileVC: UICollectionViewController, UINavigationControllerDelegate, New
     //    }
 }
 
-//extension ProfileVC: CollectionViewFlowLayoutDelegate {
+//extension DashboardVC: CollectionViewFlowLayoutDelegate {
 //    func collectionView(_ collectionView: UICollectionView, widthForItemAt indexPath: IndexPath) -> CGFloat {
 //        return collectionView.frame.size.width
 //    }
@@ -244,17 +244,17 @@ class ProfileVC: UICollectionViewController, UINavigationControllerDelegate, New
 //    }
 //}
 
-extension ProfileVC {
+extension DashboardVC {
     func collectionView(_ collectionView: UICollectionView, frameForItemAt indexPath: IndexPath, columnNumber: Int) -> CGFloat {
         return 0
     }
 }
 
-extension ProfileVC {
-    func refreshProfileView() {
+extension DashboardVC {
+    func refreshDashboardView() {
         self.collectionView?.reloadData()
     }
     
-    func displayProfileRetrievalError(title: String, message: String) {
+    func displayDashboardRetrievalError(title: String, message: String) {
     }
 }

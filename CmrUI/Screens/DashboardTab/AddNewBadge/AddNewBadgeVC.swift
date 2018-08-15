@@ -26,6 +26,11 @@ class AddNewBadgeVC: UITableViewController {
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
     func setupUI() {
         tableView.register(UINib(nibName: "\(AddNewBadgeCell.self)", bundle: nil), forCellReuseIdentifier: c.addBadgeIdentifier)
     }
@@ -59,8 +64,14 @@ class AddNewBadgeVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         badgeCallback?(viewModel.badges![indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: false)
         navigationController?.popViewController(animated: true)
     }
+//    
+//    override func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+//        badgeCallback?(viewModel.badges![indexPath.row])
+//        navigationController?.popViewController(animated: true)
+//    }
 }
 
 extension AddNewBadgeVC: AddNewBadgeVMProtocol {

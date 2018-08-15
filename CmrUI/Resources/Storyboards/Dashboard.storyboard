@@ -11,15 +11,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ProfileVC-->
+        <!--DashboardVC-->
         <scene sceneID="lYR-c4-3Hk">
             <objects>
-                <collectionViewController id="aQn-km-T2b" customClass="ProfileVC" customModule="CmrUI" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="aQn-km-T2b" customClass="DashboardVC" customModule="CmrUI" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="dXL-BL-4yr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewLayout key="collectionViewLayout" id="Xm6-Q3-CBd" customClass="ProfileLayout" customModule="CmrUI" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="Xm6-Q3-CBd" customClass="DashboardLayout" customModule="CmrUI" customModuleProvider="target"/>
                         <cells/>
                         <connections>
                             <outlet property="dataSource" destination="aQn-km-T2b" id="a5b-xX-0zv"/>
@@ -32,11 +32,11 @@
             </objects>
             <point key="canvasLocation" x="908" y="-163"/>
         </scene>
-        <!--Profile Badges CollectionVC-->
+        <!--Dashboard Badges CollectionVC-->
         <scene sceneID="od5-ye-fUc">
             <objects>
-                <collectionViewController storyboardIdentifier="ProfileBadgesCollectionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ipg-iO-Ol5" customClass="ProfileBadgesCollectionVC" customModule="CmrUI" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="XpV-oS-egy">
+                <collectionViewController storyboardIdentifier="DashboardBadgesCollectionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ipg-iO-Ol5" customClass="DashboardBadgesCollectionVC" customModule="CmrUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="XpV-oS-egy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,7 +47,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfilePropertiesCell" id="3K1-oK-sDO" customClass="ProfilePropertiesCell" customModule="CmrUI" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DashboardBadgesCell" id="3K1-oK-sDO" customClass="DashboardBadgesCell" customModule="CmrUI" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -79,7 +79,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WnI-fM-YxT">
-                                <rect key="frame" x="126" y="40" width="125" height="125"/>
+                                <rect key="frame" x="125" y="40" width="125" height="125"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WnI-fM-YxT" secondAttribute="height" multiplier="1:1" id="BTR-yD-TSw"/>
@@ -111,13 +111,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wlz-6e-drk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1654" y="555"/>
+            <point key="canvasLocation" x="1654" y="638"/>
         </scene>
         <!--Add New BadgeVC-->
         <scene sceneID="JAP-wj-Hv4">
             <objects>
                 <tableViewController id="TPD-ME-2sw" customClass="AddNewBadgeVC" customModule="CmrUI" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q2v-zd-qY8">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q2v-zd-qY8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

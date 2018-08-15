@@ -1,11 +1,11 @@
 //
-//  ProfileBadgesCell.swift
+//  DashboardBadgesCell.swift
 //  CmrUI
 //
 
 import UIKit
 
-class ProfileBadgesCell: UICollectionViewCell {
+class DashboardBadgesCell: UICollectionViewCell {
 
     @IBOutlet weak var backgroundImageView: UIImageView!
     

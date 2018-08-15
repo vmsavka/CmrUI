@@ -1,5 +1,5 @@
 //
-//  ProfileItem.swift
+//  DashboardItem.swift
 //  CmrUI
 //
 //  Created by Vasyl.Savka on 7/29/18.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-public enum ProfileItemType: Int {
-    case profileInfo = 0
+public enum DashboardItemType: Int {
+    case dashboardInfo = 0
     case batteryRemaining = 1
     case sunsetRemaining = 2
     case photosTotalChart = 3
@@ -17,17 +17,17 @@ public enum ProfileItemType: Int {
     case count = 4
 }
 
-public class ProfileItem: NSObject {
+public class DashboardItem: NSObject {
     var title: String? = nil
     var subtitle: String? = nil
     var backgroundColor: UIColor? = nil
-    var profileItemType: ProfileItemType? = nil
+    var dashboardItemType: DashboardItemType? = nil
     
     init(title: String,
          background: UIColor,
-         itemType: ProfileItemType) {
+         itemType: DashboardItemType) {
         self.title = title
         self.backgroundColor = background
-        self.profileItemType = itemType
+        self.dashboardItemType = itemType
     }
 }

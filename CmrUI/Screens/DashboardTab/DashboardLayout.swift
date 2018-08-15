@@ -1,5 +1,5 @@
 //
-//  ProfileLayout.swift
+//  DashboardLayout.swift
 //  CmrUI
 //
 
@@ -9,11 +9,11 @@ private let kSideItemWidthCoef: CGFloat = 0.3
 private let kSideItemHeightAspect: CGFloat = 1
 private let kNumberOfSideItems = 1
 
-public protocol ProfileLayoutDelegate {
+public protocol DashboardLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, frameForItemAt indexPath: IndexPath, columnNumber: Int) -> CGFloat
 }
 
-class ProfileLayout: BaseCollectionViewFlowLayout {
+class DashboardLayout: BaseCollectionViewFlowLayout {
     private var _mainItemSize: CGSize!
     private var _sideItemSize: CGSize!
     private var _columnsXoffset: [CGFloat]!
@@ -22,7 +22,7 @@ class ProfileLayout: BaseCollectionViewFlowLayout {
     public var xOffsets: [CGFloat]!
     public var yOffsets: [CGFloat]!
     
-    var delegate: ProfileLayoutDelegate? = nil
+    var delegate: DashboardLayoutDelegate? = nil
     
     //MARK: Init
     required init?(coder aDecoder: NSCoder) {

@@ -14,8 +14,8 @@ class DetailedBadgeInfoVM: NSObject {
     
     fileprivate var delegate: DetailedBadgeInfoVMProtocol?
     
-    fileprivate lazy var dataManager: ProfileManager = {
-        let manager = ProfileManager.shared
+    fileprivate lazy var dataManager: DashboardManager = {
+        let manager = DashboardManager.shared
         manager.controller = self
         return manager
     }()
@@ -29,7 +29,7 @@ class DetailedBadgeInfoVM: NSObject {
     }
 }
 
-extension DetailedBadgeInfoVM: ProfileManagerProtocol {
+extension DetailedBadgeInfoVM: DashboardManagerProtocol {
     func onLoadBadgeInfoSuccess() {
         delegate?.reloadPage()
     }

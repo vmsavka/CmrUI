@@ -1,11 +1,11 @@
 //
-//  ProfileBadgesCollectionVC.swift
+//  DashboardBadgesCollectionVC.swift
 //  CmrUI
 //
 
 import UIKit
 
-private let badgesCellIdentifier = "ProfileBadgesCell"
+private let badgesCellIdentifier = "DashboardBadgesCell"
 
 private struct Constants {
     static let sectionInsets = UIEdgeInsets(top: 1.0, left: 5.0, bottom: 1.0, right: 5.0)
@@ -20,12 +20,12 @@ fileprivate enum SegueID: String {
 
 typealias selectBadgeCallback = ((Badge) -> Void)
 
-class ProfileBadgesCollectionVC: UICollectionViewController {
+class DashboardBadgesCollectionVC: UICollectionViewController {
     
     fileprivate typealias c = Constants
     
-    lazy fileprivate var viewModel: ProfileBadgesCollectionVM = {
-        return ProfileBadgesCollectionVM(delegate: self)
+    lazy fileprivate var viewModel: DashboardBadgesCollectionVM = {
+        return DashboardBadgesCollectionVM(delegate: self)
     }()
 
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class ProfileBadgesCollectionVC: UICollectionViewController {
     func setupUI() {
         collectionView?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
         // Register cell classes
-        self.collectionView!.register(UINib(nibName: "\(ProfileBadgesCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(ProfileBadgesCell.self)")
+        self.collectionView!.register(UINib(nibName: "\(DashboardBadgesCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(DashboardBadgesCell.self)")
     }
 
     // MARK: UICollectionViewDataSource
@@ -49,7 +49,7 @@ class ProfileBadgesCollectionVC: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: badgesCellIdentifier, for: indexPath) as! ProfileBadgesCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: badgesCellIdentifier, for: indexPath) as! DashboardBadgesCell
         
         if viewModel.statuses == nil || indexPath.row == (viewModel.statuses?.count)! {
             cell.setImage(image: UIImage(named: "add_new_status"))
@@ -92,7 +92,7 @@ class ProfileBadgesCollectionVC: UICollectionViewController {
     }
 }
 
-extension ProfileBadgesCollectionVC: UICollectionViewDelegateRightAlignedLayout {
+extension DashboardBadgesCollectionVC: UICollectionViewDelegateRightAlignedLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 5.0
     }
@@ -117,7 +117,7 @@ extension ProfileBadgesCollectionVC: UICollectionViewDelegateRightAlignedLayout 
     }
 }
 
-extension ProfileBadgesCollectionVC: ProfileBadgesCollectionVMProtocol {
+extension DashboardBadgesCollectionVC: DashboardBadgesCollectionVMProtocol {
     func reloadCells(indexes: [IndexPath]) {
         collectionView?.reloadItems(at: indexes)
     }

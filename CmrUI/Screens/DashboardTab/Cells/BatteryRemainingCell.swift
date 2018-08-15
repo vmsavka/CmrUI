@@ -19,7 +19,7 @@ fileprivate struct Constants {
     static let circleColor = UIColor(red: 159.0/255.0, green: 193.0/255.0, blue: 205.0/255.0, alpha: 1.0)
 }
 
-class BatteryRemainingCell: UICollectionViewCell, ProfileCellView {
+class BatteryRemainingCell: UICollectionViewCell, DashboardCellView {
     
     @IBOutlet weak var batteryRemainingTitleLabel: UILabel!
     @IBOutlet weak var batteryRemainingValueLabel: UILabel!
@@ -129,7 +129,7 @@ class BatteryRemainingCell: UICollectionViewCell, ProfileCellView {
     }
 }
 
-// MARK: ProfileCellView protocol
+// MARK: DashboardCellView protocol
 
 extension BatteryRemainingCell {
     func display(title: String) {

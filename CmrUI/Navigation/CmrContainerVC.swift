@@ -37,7 +37,7 @@ class CmrContainerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        dataSource = [.feedItem, .profileItem, .galleryItem, .settingsItem, .shoppingItem]
+        dataSource = [.feedItem, .dashboardItem, .galleryItem, .settingsItem, .shoppingItem]
         setupAppearance()
     }
     
@@ -154,8 +154,8 @@ private extension CmrContainerVC {
             let board = UIStoryboard.storyboardWith(name: .newsFeed)
             let controller = board.instantiateInitialViewController()
             return controller!
-        case .profileItem:
-            let board = UIStoryboard.storyboardWith(name: .profile)
+        case .dashboardItem:
+            let board = UIStoryboard.storyboardWith(name: .dashboard)
             let controller = board.instantiateInitialViewController()
             return controller!
         case .galleryItem:
@@ -176,7 +176,7 @@ enum ContainerTab: Int {
         typealias RawValue = Int
         
         case feedItem = 0
-        case profileItem = 1
+        case dashboardItem = 1
         case galleryItem = 2
         case settingsItem = 3
         case shoppingItem = 4
@@ -185,7 +185,7 @@ enum ContainerTab: Int {
         func tabTitle() -> String {
             switch self {
             case .feedItem: return "Newsfeed"
-            case .profileItem: return "Profile"
+            case .dashboardItem: return "Dashboard"
             case .galleryItem: return "Gallery"
             case .settingsItem: return "Settings"
             case .shoppingItem: return "Shopping"
@@ -197,8 +197,8 @@ enum ContainerTab: Int {
             switch self {
             case .feedItem:
                 return UIImage(named:"FeedTabBarIco")
-            case .profileItem:
-                return UIImage(named:"ProfileTabBarIco")
+            case .dashboardItem:
+                return UIImage(named:"DashboardTabBarIco")
             case .galleryItem:
                 return UIImage(named:"GalleryTabBarIco")
             case .settingsItem:

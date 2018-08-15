@@ -1,5 +1,5 @@
 //
-//  ProfileInfoCell.swift
+//  DashboardInfoCell.swift
 //  CmrUI
 //
 
@@ -9,7 +9,7 @@ protocol AddChildVCProtocol {
     func addChildVC(childController: UIViewController, containerView: UIView)
 }
 
-class ProfileInfoCell: UICollectionViewCell , ProfileCellView {
+class DashboardInfoCell: UICollectionViewCell , DashboardCellView {
     
     //@IBOutlet weak var badgesCollectionView: UICollectionView!
     
@@ -19,6 +19,7 @@ class ProfileInfoCell: UICollectionViewCell , ProfileCellView {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     var parentVC: AddChildVCProtocol?
+    var badgesAdded: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,22 +31,24 @@ class ProfileInfoCell: UICollectionViewCell , ProfileCellView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        setup()
+        if badgesAdded == false {
+            setup()
+        }
     }
 
     func setup() {
-        //ProfilePropertiesCollectionVC
-        let board = UIStoryboard.storyboardWith(name: .profile)
-        let badgesVC = board.instantiateViewController(withIdentifier: "ProfileBadgesCollectionVC") as! ProfileBadgesCollectionVC
+        //DashboardPropertiesCollectionVC
+        let board = UIStoryboard.storyboardWith(name: .dashboard)
+        let badgesVC = board.instantiateViewController(withIdentifier: "DashboardBadgesCollectionVC") as! DashboardBadgesCollectionVC
         badgesVC.view.frame = CGRect(x: 0, y: 0,
                                      width: badgesContainerView.frame.size.width - 10,
                                      height: badgesContainerView.frame.size.height)
-
+        badgesAdded = true
         parentVC?.addChildVC(childController: badgesVC, containerView: badgesContainerView)
     }    
 }
 
-extension ProfileInfoCell {
+extension DashboardInfoCell {
     
     func display(title: String) {
         statusLabel.text = title
