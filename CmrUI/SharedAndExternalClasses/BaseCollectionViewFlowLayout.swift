@@ -72,17 +72,17 @@ class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
                                   height: totalHeight)
     }
     
-//    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-//        var layoutAttributesArray = [UICollectionViewLayoutAttributes]()
-//
-//        for (_, layoutAttributes) in _layoutMap {
-//            if rect.intersects(layoutAttributes.frame) {
-//                layoutAttributesArray.append(layoutAttributes)
-//            }
-//        }
-//
-//        return layoutAttributesArray
-//    }
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        var layoutAttributesArray = [UICollectionViewLayoutAttributes]()
+
+        for (_, layoutAttributes) in _layoutMap {
+            if rect.intersects(layoutAttributes.frame) {
+                layoutAttributesArray.append(layoutAttributes)
+            }
+        }
+
+        return layoutAttributesArray
+    }
     
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         return _layoutMap[indexPath]

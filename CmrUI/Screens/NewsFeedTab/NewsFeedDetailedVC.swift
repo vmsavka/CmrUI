@@ -96,7 +96,6 @@ class NewsFeedDetailedVC: UIViewController, UINavigationControllerDelegate {
         
         //closeButton?.addTarget(self, action: #selector(self.dismissVC()), for: .touchUpInside)
         //self.view.addSubview(closeButton!)
-        //closeButton.translatesAutoresizingMaskIntoConstraints = true
     }
 
     @IBAction func dismissVC() {

@@ -37,7 +37,7 @@ class CmrContainerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        dataSource = [.feedItem, .galleryItem, .itemsItem, .settingsItem, .cartItem]
+        dataSource = [.feedItem, .dashboardItem, .galleryItem, .settingsItem, .shoppingItem]
         setupAppearance()
     }
     
@@ -154,15 +154,17 @@ private extension CmrContainerVC {
             let board = UIStoryboard.storyboardWith(name: .newsFeed)
             let controller = board.instantiateInitialViewController()
             return controller!
+        case .dashboardItem:
+            let board = UIStoryboard.storyboardWith(name: .dashboard)
+            let controller = board.instantiateInitialViewController()
+            return controller!
         case .galleryItem:
-            return UIViewController()
-        case .itemsItem:
             return UIViewController()
         case .settingsItem:
             let board = UIStoryboard.storyboardWith(name: .settings)
             let controller = board.instantiateInitialViewController()
             return controller!
-        case .cartItem:
+        case .shoppingItem:
             return UIViewController()
         case .count:
             return UIViewController()
@@ -174,19 +176,19 @@ enum ContainerTab: Int {
         typealias RawValue = Int
         
         case feedItem = 0
-        case galleryItem = 1
-        case itemsItem = 2
+        case dashboardItem = 1
+        case galleryItem = 2
         case settingsItem = 3
-        case cartItem = 4
+        case shoppingItem = 4
         case count = 5
         
         func tabTitle() -> String {
             switch self {
             case .feedItem: return "Newsfeed"
-            case .galleryItem: return "Profile"
-            case .itemsItem: return "Gallery"
+            case .dashboardItem: return "Dashboard"
+            case .galleryItem: return "Gallery"
             case .settingsItem: return "Settings"
-            case .cartItem: return "Shopping"
+            case .shoppingItem: return "Shopping"
             case .count: return ""
             }
         }
@@ -195,14 +197,14 @@ enum ContainerTab: Int {
             switch self {
             case .feedItem:
                 return UIImage(named:"FeedTabBarIco")
+            case .dashboardItem:
+                return UIImage(named:"DashboardTabBarIco")
             case .galleryItem:
                 return UIImage(named:"GalleryTabBarIco")
-            case .itemsItem:
-                return UIImage(named:"ItemsTabBarIco")
             case .settingsItem:
                 return UIImage(named:"SettingsTabBarIco")
-            case .cartItem:
-                return UIImage(named:"CartTabBarIco")
+            case .shoppingItem:
+                return UIImage(named:"ShoppingTabBarIco")
             case .count:
                 return nil
             }
